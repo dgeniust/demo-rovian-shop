@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "img": "https://www.chanel.com/images/as///f_auto,q_auto:good,dpr_1.1/w_640/-71939155.png",
+    "name": "J12 Vành Kim cương Caliber",
+    "color": "Black and Gold",
+    "price": "Offer"
+  },
+  {
+    "id": 2,
+    "img": "https://www.chanel.com/images/as///f_auto,q_auto:good,dpr_1.1/w_640/-71939150.png",
+    "name": "J12 Vành Kim cương Caliber",
+    "color": "White and Gold",
+    "price": "Offer"
+  },
+  {
+    "id": 3,
+    "img": "https://www.chanel.com/images/as///f_auto,q_auto:good,dpr_1.1/w_640/-37185332.png",
+    "name": "J12 Diamond Tourbillon Caliber",
+    "color": "Black and Diamonds",
+    "price": "Offer"
+  },
+  {
+    "id": 4,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127286tbr-0001.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Platinum and diamonds",
+    "price": "Offer"
+  },
+  {
+    "id": 5,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127285tbr-0002.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Everose gold and diamonds",
+    "price": "Offer"
+  },
+  {
+    "id": 6,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127235-0001.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Everose gold",
+    "price": "Offer"
+  },
+  {
+    "id": 7,
+    "img": "https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/278608-6001_01.png",
+    "name": "Happy Sport",
+    "color": "Rose gold",
+    "price": "Offer"
+  },
+  {
+    "id": 8,
+    "img": "https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/278608-6012_01.png",
+    "name": "Happy Sport",
+    "color": "Rose gold",
+    "price": "Offer"
+  },
+  {
+    "id": 9,
+    "img": "https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/278608-6013_01.png",
+    "name": "Happy Sport",
+    "color": "Rose gold",
+    "price": "Offer"
+  }
+]
