@@ -1,12 +1,10 @@
-import HeaderShop from "../../components/layout/HeaderShop";
 import BrandSection from "./BrandSection";
 import HeroSection from "./HeroSection";
 import ProductList from "./ProductList";
 
 const ShoppingPage = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans mt-[-100px]">
-      {/* <HeaderShop /> */}
+    <div className="min-h-screen bg-white text-black font-sans">
       <main>
         <HeroSection />
 

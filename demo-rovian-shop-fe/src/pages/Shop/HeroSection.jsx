@@ -1,52 +1,55 @@
 import React from "react";
 
-// Bạn có thể thay thế các URL ảnh này bằng ảnh sản phẩm thực tế của ROVIAN
+// Thay thế các URL ảnh này bằng ảnh sản phẩm thực tế của ROVIAN
 const images = {
-  main: "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/accessories/desk-clocks/packshot/rolex-accessories-c909010ln-0001-packshot.webp", // Ảnh chính, lớn (ví dụ: Rolex dây kim loại)
+  main: "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/accessories/desk-clocks/packshot/rolex-accessories-c909010ln-0001-packshot.webp",
   sideTop:
     "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=600&auto=format&fit=crop",
   sideBottom:
-    "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/accessories/cufflinks/packshot/rolex-accessories-a1039-packshot.webp", // Ảnh phụ dưới (ví dụ: Cận cảnh bộ máy hoặc hộp)
+    "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/accessories/cufflinks/packshot/rolex-accessories-a1039-packshot.webp",
 };
 
 export default function RovianHeroSection() {
   return (
-    <section className="bg-white text-black py-16 md:py-24 px-6 md:px-12 lg:px-20">
+    // Đổi bg-white thành nền trắng hồng nhẹ (#fffafb)
+    <section className="bg-[#fffafb] text-black py-16 mt-[-110px] md:py-24 px-6 md:px-12 lg:px-20 border-b border-rose-100">
       <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8">
         {/* --- KHỐI TEXT (BENTO CELL 1 - Chiếm 5/12 cột) --- */}
-        <div className="md:col-span-5 flex flex-col justify-center items-start p-8 lg:p-12 bg-gray-50 rounded-2xl border border-gray-100">
-          {/* Tên thương hiệu nhỏ, tinh tế */}
-          <span className="text-sm font-medium uppercase tracking-[0.2em] text-gray-500 mb-4">
-            ROVIAN Luxury Timepieces
+        {/* Đổi bg-gray-50 thành bg-rose-50 (hồng phấn cực nhạt) và border-gray-100 thành border-rose-100 */}
+        <div className="md:col-span-5 flex flex-col justify-center items-start p-8 lg:p-12 bg-rose-50 rounded-2xl border border-rose-100 shadow-inner">
+          {/* Tên thương hiệu: Đổi text-gray-500 sang tone hồng Rose trung tính */}
+          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-rose-500 mb-5">
+            ROVIAN Luxury Atelier
           </span>
 
-          {/* SLOGAN CHÍNH (Tiếng Anh) */}
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif leading-[1.1] uppercase tracking-tighter mb-6">
+          {/* SLOGAN CHÍNH: Giữ serif italic cho sự sang trọng, đổi text thành stone-900 (xám đá đậm) */}
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light font-serif leading-[1.1] uppercase tracking-tighter mb-6 text-stone-900 italic">
             Timeless
             <br />
-            Elegance,
+            <span className="text-rose-300 not-italic">Elegance,</span>
             <br />
             Redefined.
           </h1>
 
-          {/* Mô tả phụ */}
-          <p className="text-base md:text-lg text-gray-600 max-w-md mb-10 leading-relaxed">
+          {/* Mô tả phụ: Đổi text-gray-600 sang text-stone-600 */}
+          <p className="text-base md:text-lg text-stone-600 max-w-md mb-12 leading-relaxed font-light">
             Discover our curated collection of masterfully crafted watches,
-            where precision meets unparalleled sophistication.
+            where Swiss precision meets unparalleled sophistication.
           </p>
 
-          {/* NÚT BẤM (Tiếng Anh) - Phong cách tối giản */}
+          {/* NÚT BẤM (Tiếng Anh) - Chuyển sang tone hồng đậm hoặc đen với hiệu ứng Rose */}
           <a
             href="#collection"
-            className="group inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full text-sm uppercase font-semibold tracking-wider transition-all duration-300 hover:bg-gray-800 hover:gap-4"
+            // Thay đổi màu nền hover từ đen sang hồng Rose, shadow ấm
+            className="group inline-flex items-center gap-3 bg-black text-white px-8 py-4 rounded-full text-xs uppercase font-bold tracking-wider transition-all duration-300 hover:bg-rose-600 shadow-lg shadow-rose-100 hover:gap-4"
           >
             Explore Now
-            {/* Biểu tượng mũi tên nhỏ */}
+            {/* Biểu tượng mũi tên giữ nguyên, thay đổi stroke mỏng hơn */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth={2}
+              strokeWidth={1.5}
               stroke="currentColor"
               className="w-4 h-4 transition-transform group-hover:translate-x-1"
             >
@@ -60,45 +63,50 @@ export default function RovianHeroSection() {
         </div>
 
         {/* --- KHỐI ẢNH CHÍNH (BENTO CELL 2 - Chiếm 4/12 cột) --- */}
-        <div className="md:col-span-4 relative overflow-hidden rounded-2xl group border border-gray-100 shadow-sm">
+        {/* Đổi border-gray-100 thành border-rose-100 */}
+        <div className="md:col-span-4 relative overflow-hidden rounded-2xl group border border-rose-100 shadow-sm">
           <img
             src={images.main}
             alt="ROVIAN Featured Watch"
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            // Grayscale nhẹ để ấm hơn, không quá lạnh
+            className="w-full h-full object-cover grayscale-[30%] transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
           />
-          {/* Overlay gradient nhẹ để text nổi bật nếu có */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-          {/* Tag nhỏ góc ảnh */}
-          <span className="absolute top-4 right-4 bg-white/80 backdrop-blur-sm text-black text-[10px] uppercase font-bold px-3 py-1 rounded-full tracking-wider">
-            Signature
+          {/* Overlay gradient chuyển sang màu ấm nhẹ */}
+          <div className="absolute inset-0 bg-gradient-to-t from-rose-900/10 to-transparent"></div>
+          {/* Tag nhỏ: Đổi màu text phụ sang hồng phấn */}
+          <span className="absolute top-4 right-4 bg-white text-rose-800 text-[9px] uppercase font-bold px-3 py-1.5 rounded-full tracking-wider font-medium shadow-md">
+            Signature Rose Gold
           </span>
         </div>
 
         {/* --- KHỐI 2 ẢNH PHỤ (BENTO CELL 3 - Chiếm 3/12 cột) --- */}
         <div className="md:col-span-3 grid grid-rows-2 gap-6 lg:gap-8">
           {/* Ảnh phụ trên */}
-          <div className="relative overflow-hidden rounded-2xl group border border-gray-100">
+          <div className="relative overflow-hidden rounded-2xl group border border-rose-100 shadow-inner bg-rose-50">
             <img
               src={images.sideTop}
               alt="ROVIAN Heritage Collection"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              // Grayscale mạnh hơn để làm nổi vật Signature nếu cần
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 grayscale-[60%] hover:grayscale-0 transition-all duration-700"
             />
-            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/50 to-transparent">
-              <p className="text-white text-xs uppercase tracking-widest font-medium">
+            {/* Overlay gradient tone ấm */}
+            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-rose-950/40 to-transparent">
+              <p className="text-white text-[10px] uppercase tracking-[0.3em] font-medium border-l border-rose-300 pl-3">
                 Heritage
               </p>
             </div>
           </div>
 
           {/* Ảnh phụ dưới */}
-          <div className="relative overflow-hidden rounded-2xl group border border-gray-100">
+          <div className="relative overflow-hidden rounded-2xl group border border-rose-100 shadow-inner bg-rose-50">
             <img
               src={images.sideBottom}
               alt="ROVIAN Craftsmanship Detail"
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 hover:grayscale-0 grayscale"
+              // Giữ grayscale 100% khi không hover, chuyển màu khi hover
+              className="w-full h-full object-cover transition-transform duration-700 opacity-80 group-hover:opacity-100 grayscale hover:grayscale-0"
             />
-            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/50 to-transparent">
-              <p className="text-white text-xs uppercase tracking-widest font-medium">
+            <div className="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-rose-950/40 to-transparent">
+              <p className="text-white text-[10px] uppercase tracking-[0.3em] font-medium border-l border-rose-300 pl-3">
                 Craftsmanship
               </p>
             </div>

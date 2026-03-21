@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const StatsSection = () => {
+  // Sử dụng useRef để điều khiển video chạy chắc chắn hơn trong React
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Autoplay bị chặn hoặc lỗi link:", error);
+      });
+    }
+  }, []);
+
   const avatars = [
     "https://i.pravatar.cc/150?u=11",
     "https://i.pravatar.cc/150?u=12",
@@ -10,48 +21,55 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="bg-white py-32 px-6 md:px-12 lg:px-24">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-6">
-        {/* BLOCK 1: MAIN STATEMENT (6 columns) */}
-        <div className="md:col-span-12 lg:col-span-7 bg-black text-white p-12 md:p-20 rounded-[50px] flex flex-col justify-between min-h-[500px] relative overflow-hidden group">
-          <div className="relative z-10">
-            <div className="flex items-center space-x-3 mb-12">
-              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <span className="text-[10px] uppercase tracking-[0.4em] font-bold">
-                The Rovian Legacy
-              </span>
+    <section className="bg-[#fffafb] py-32 px-6 md:px-12 lg:px-24">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+        {/* BLOCK 1 & 2 giữ nguyên... */}
+        <div className="md:col-span-12 lg:col-span-7 relative h-[550px] rounded-[60px] overflow-hidden group shadow-xl shadow-rose-100/20">
+          <img
+            src="https://cdn.ocp.richemont.com/api/public/content/default__2PWlBmWcTxiC4AG85gcBPpfCtyHY294C?v=6c3a68d9"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 brightness-75 grayscale-[20%]"
+            alt="Lobby luxury"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-stone-900/60 via-stone-900/20 to-transparent z-10" />
+          <div className="relative z-20 p-12 md:p-16 h-full flex flex-col justify-between text-white">
+            <div className="space-y-6">
+              <div className="flex items-center space-x-3 text-rose-300">
+                <span className="w-10 h-[1px] bg-current"></span>
+                <span className="text-[10px] uppercase tracking-[0.5em] font-bold">
+                  The Rovian Legacy
+                </span>
+              </div>
+              <h2 className="text-5xl md:text-7xl font-light leading-[0.9] tracking-tighter uppercase font-serif italic">
+                Excellence <br />
+                <span className="font-light not-italic text-rose-100 opacity-90">
+                  In Every Tick.
+                </span>
+              </h2>
             </div>
-            <h2 className="text-5xl md:text-7xl font-light leading-[0.9] tracking-tighter uppercase font-serif italic">
-              Excellence <br />
-              <span className="font-bold not-italic">In Every Tick.</span>
-            </h2>
-          </div>
-
-          <div className="relative z-10 mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-end">
-            <p className="text-gray-400 text-xs leading-relaxed tracking-wide uppercase">
-              Beyond timekeeping, we craft heritage. Our workshop combines
-              centuries-old techniques with future-forward engineering.
-            </p>
-            <div className="flex justify-end">
-              <div className="w-24 h-24 border border-white/20 rounded-full flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-500 cursor-pointer">
-                <ArrowUpRight size={32} strokeWidth={1} />
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
+              <p className="text-white/80 text-[11px] leading-relaxed tracking-widest uppercase max-w-xs font-light">
+                Beyond timekeeping, we craft heritage.
+              </p>
+              <div className="w-20 h-20 bg-rose-400/20 backdrop-blur-md border border-rose-200/30 rounded-full flex items-center justify-center hover:bg-rose-500 transition-all duration-500 cursor-pointer group/btn">
+                <ArrowUpRight
+                  size={28}
+                  strokeWidth={1}
+                  className="text-white"
+                />
               </div>
             </div>
           </div>
-          {/* Decorative element */}
-          <div className="absolute -right-20 -top-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
         </div>
 
-        {/* BLOCK 2: STATS SMALL (5 columns) */}
-        <div className="md:col-span-6 lg:col-span-5 grid grid-cols-1 gap-6">
-          {/* Sub-block: Clients */}
-          <div className="bg-[#f2f2f2] p-10 rounded-[50px] flex flex-col justify-between group hover:bg-[#e5e5e5] transition-colors">
+        <div className="md:col-span-6 lg:col-span-5 grid grid-cols-1 gap-8">
+          <div className="bg-rose-50 border border-rose-100 p-10 rounded-[60px] flex flex-col justify-between transition-all hover:shadow-lg">
+            {/* Nội dung client stats */}
             <div className="flex justify-between items-start">
-              <div>
-                <h3 className="text-6xl font-bold tracking-tighter italic font-serif">
+              <div className="space-y-3">
+                <h3 className="text-6xl font-light tracking-tighter italic font-serif text-stone-800">
                   1450+
                 </h3>
-                <p className="text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400 mt-2">
+                <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-rose-400">
                   Distinguished Clients
                 </p>
               </div>
@@ -60,46 +78,69 @@ const StatsSection = () => {
                   <img
                     key={i}
                     src={url}
-                    className="w-12 h-12 rounded-full border-4 border-[#f2f2f2] grayscale group-hover:grayscale-0 transition-all"
+                    className="w-12 h-12 rounded-full border-4 border-rose-50 grayscale"
                     alt="User"
                   />
                 ))}
               </div>
             </div>
+            <p className="mt-8 text-[11px] text-stone-500 font-light">
+              Trusted across 40 countries.
+            </p>
           </div>
 
-          {/* Sub-block: Grid 2 con số nhỏ */}
-          <div className="grid grid-cols-2 gap-6">
-            <div className="bg-white border border-gray-100 p-10 rounded-[50px] hover:border-black transition-all duration-500">
-              <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-4 font-bold">
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-white border border-rose-100 p-10 rounded-[50px] shadow-sm">
+              <p className="text-[9px] uppercase tracking-widest text-stone-400 mb-4 font-bold">
                 Products
               </p>
-              <h4 className="text-4xl font-bold tracking-tighter">300+</h4>
+              <h4 className="text-4xl font-light font-serif italic text-stone-800">
+                300+
+              </h4>
             </div>
-            <div className="bg-black text-white p-10 rounded-[50px] flex flex-col justify-center items-center text-center">
-              <h4 className="text-4xl font-bold tracking-tighter">20+</h4>
-              <p className="text-[8px] uppercase tracking-[0.2em] opacity-60 mt-2 font-bold">
-                Boutiques
-              </p>
+            <div className="relative overflow-hidden bg-stone-900 text-white p-10 rounded-[50px] flex items-center justify-center">
+              <img
+                src="https://cdn.ocp.richemont.com/api/public/content/default__14BQHyzZZUT8DUvh4XwZ16iZhPgVbK3V?v=255c2087"
+                className="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
+                alt="Atelier"
+              />
+              <div className="relative z-10 text-center">
+                <h4 className="text-4xl font-bold tracking-tighter">20+</h4>
+                <p className="text-[9px] uppercase tracking-[0.2em] opacity-80 font-bold text-rose-200">
+                  Ateliers
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* BLOCK 3: FULL WIDTH IMAGE WITH OVERLAY TEXT (12 columns) */}
-        <div className="md:col-span-12 relative h-[450px] rounded-[50px] overflow-hidden group">
-          <img
-            src="https://rolex.dafc.com.vn/rolex/wp-content/uploads/2024/06/rolex-deepsea-watches-dafc-banner-2048x747.jpg"
-            className="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-110"
-            alt="Craft"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-12">
-            <div className="flex flex-col md:flex-row md:items-center justify-between w-full">
-              <p className="text-white/70 text-[10px] uppercase tracking-[0.5em] font-bold">
-                Precision • Tradition • Luxury
-              </p>
-              <h3 className="text-white text-2xl md:text-3xl font-light tracking-widest uppercase mt-4 md:mt-0">
-                The Masterpiece Collection
+        {/* --- BLOCK 3: VIDEO FIX --- */}
+        <div className="md:col-span-12 relative h-[500px] rounded-[60px] overflow-hidden group shadow-2xl border border-rose-100 bg-stone-200">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover grayscale-[30%] brightness-[0.7] transition-transform duration-[3000ms] group-hover:scale-110"
+          >
+            {/* Link video công cộng ổn định hơn để test */}
+            <source
+              src="https://www.jaeger-lecoultre.com/attachments/JL/JL_MASTER-UI_16-9_V4_WEB.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+
+          {/* Overlay trang trí để block không bị trống trải */}
+          <div className="absolute inset-0 flex items-end p-12">
+            <div className="w-full flex justify-between items-center border-t border-white/20 pt-8">
+              <h3 className="text-white font-serif italic text-2xl tracking-widest uppercase opacity-90">
+                The Art of Precision
               </h3>
+              <div className="text-rose-200 text-[9px] uppercase tracking-[0.4em] font-bold">
+                Cinematic Experience
+              </div>
             </div>
           </div>
         </div>
