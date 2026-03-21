@@ -57,18 +57,15 @@ body {
 }
 
 #root {
-  width: 1126px;
+  width: 100%;
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
 }
 
-h1,
+/* h1,
 h2 {
   font-family: var(--heading);
   font-weight: 500;
@@ -110,4 +107,28 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+} */
+/* Tinh chỉnh thanh cuộn cho Chrome, Safari và Edge */
+::-webkit-scrollbar {
+  width: 6px; /* Độ rộng cực mảnh */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Tiệp màu với nền đen của bạn */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333333; /* Màu xám tối sang trọng */
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555555; /* Sáng nhẹ khi di chuột vào */
+}
+
+/* Cho Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #333333 #000000;
 }

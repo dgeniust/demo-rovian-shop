@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127336-0001.webp",
+    "name": "Rolex Land-Dweller 40",
+    "color": "Platinum (Light Blue Dial)",
+    "price": "Offer"
+  },
+  {
+    "id": 2,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127335-0001.webp",
+    "name": "Rolex Land-Dweller 40",
+    "color": "Everose gold",
+    "price": "Offer"
+  },
+  {
+    "id": 3,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127334-0001.webp",
+    "name": "Rolex Land-Dweller 40",
+    "color": "Oystersteel and white gold",
+    "price": "Offer"
+  },
+  {
+    "id": 4,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127286tbr-0001.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Platinum and diamonds",
+    "price": "Offer"
+  },
+  {
+    "id": 5,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127285tbr-0002.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Everose gold and diamonds",
+    "price": "Offer"
+  },
+  {
+    "id": 6,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m127235-0001.webp",
+    "name": "Rolex Land-Dweller 36",
+    "color": "Everose gold",
+    "price": "Offer"
+  },
+  {
+    "id": 7,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m136668lb-0001.webp",
+    "name": "Rolex Deepsea",
+    "color": "Yellow gold",
+    "price": "Offer"
+  },
+  {
+    "id": 8,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m136660-0006.webp",
+    "name": "Rolex Deepsea",
+    "color": "Oystersteel",
+    "price": "Offer"
+  },
+  {
+    "id": 9,
+    "img": "https://rolex.dafc.com.vn/rolex/wp-content/uploads/model/watch/desktop/m136660-0005.webp",
+    "name": "Rolex Deepsea",
+    "color": "Oystersteel",
+    "price": "Offer"
+  }
+]
