@@ -72,14 +72,22 @@ const LookbookGrid = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1 }}
-          className="mb-20 flex justify-between items-end border-b border-rose-100 pb-10"
+          /* Sử dụng flex-col trên mobile (mặc định) và flex-row trên md (tablet/desktop)
+     items-start trên mobile và items-end trên desktop để tạo độ lệch sang trọng
+  */
+          className="mb-12 md:mb-20 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-rose-100 pb-6 md:pb-10 gap-4"
         >
-          <h2 className="text-6xl font-serif font-light tracking-tighter text-black italic">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-tighter text-black italic leading-tight">
             Bento <span className="text-rose-300 not-italic">Lookbook</span>
           </h2>
-          <span className="text-[11px] uppercase tracking-[0.6em] text-rose-400 font-medium">
-            S/S 2026 Collection
-          </span>
+
+          <div className="flex flex-col items-start md:items-end gap-1">
+            <span className="text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.6em] text-rose-400 font-medium whitespace-nowrap">
+              S/S 2026 Collection
+            </span>
+            {/* Thêm một line nhỏ dưới chữ collection trên mobile để cân bằng layout */}
+            <div className="w-12 h-[1px] bg-rose-200 md:hidden"></div>
+          </div>
         </motion.div>
 
         {/* Bento Grid */}
