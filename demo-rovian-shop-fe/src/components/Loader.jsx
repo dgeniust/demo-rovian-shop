@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Loader = () => {
   return (
     <StyledWrapper>
-      {/* Container bên ngoài có màu nền #fffafb như yêu cầu */}
+      {/* Container bên ngoài có màu nền #fffafb như yêu cầu ban đầu */}
       <div className="loader-container">
         <div className="loader">
           {/* R */}
@@ -58,8 +58,8 @@ const Loader = () => {
   );
 };
 
-// Đặt màu nét vẽ ở đây (nên đậm hơn màu nền để nhìn rõ)
-const strokeColor = "#E2A2B1";
+// Đã cập nhật màu nét vẽ thành mã hex của rose-200
+const strokeColor = "#fecdd3";
 
 const StyledWrapper = styled.div`
   /* Thiết lập nền cho toàn bộ khu vực chứa loader */
@@ -68,8 +68,8 @@ const StyledWrapper = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%; /* Hoặc min-h-screen nếu muốn phủ toàn trang */
-    background-color: #fffafb; /* MÀU NỀN THEO YÊU CẦU */
+    height: 100vh; /* Sửa thành 100vh để bao phủ toàn bộ màn hình */
+    background-color: #fffafb; /* Trả lại MÀU NỀN THEO YÊU CẦU BAN ĐẦU */
   }
 
   .loader {
@@ -87,7 +87,7 @@ const StyledWrapper = styled.div`
 
   .char path {
     fill: none;
-    stroke: ${strokeColor}; /* MÀU NÉT VẼ ĐƠN SẮC */
+    stroke: ${strokeColor}; /* Áp dụng màu nét vẽ mới */
     stroke-width: 7; /* Giảm độ dày nét một chút cho tinh tế */
     stroke-linecap: round;
     stroke-linejoin: round;
