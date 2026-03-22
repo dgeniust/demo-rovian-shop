@@ -17,6 +17,7 @@ import ShopLayout from "./components/layout/ShopLayout";
 import SplashScreen from "./components/SplashScreen";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { PageWrapper } from "./components/PageWrapper";
+import ContactPage from "./pages/Contact/ContactPage";
 
 // Tạo một Component bọc các Route để xử lý hiệu ứng chuyển trang
 const AnimatedRoutes = () => {
@@ -56,6 +57,17 @@ const AnimatedRoutes = () => {
             <PageWrapper>
               <Header variant="shop" />
               <AboutPage />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
+        {/* Trang Contact */}
+        <Route
+          path="/contact"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              <ContactPage />
               <Footer variant="light" />
             </PageWrapper>
           }

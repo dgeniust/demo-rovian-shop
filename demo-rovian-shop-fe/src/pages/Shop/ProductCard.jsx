@@ -34,7 +34,7 @@ export default function ProductCard({ product }) {
 
         {/* --- Nút "Discover" (Sakura Style) --- */}
         <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 bg-rose-50/80 backdrop-blur-sm py-3 text-center z-20 border-t border-rose-100">
-          <span className="text-[9px] uppercase tracking-[0.3em] font-bold text-rose-600">
+          <span className="text-[11px] uppercase tracking-[0.3em] font-bold text-rose-600">
             Discover Details
           </span>
         </div>
@@ -42,10 +42,10 @@ export default function ProductCard({ product }) {
 
       {/* --- Thông tin sản phẩm --- */}
       <div className="space-y-1.5 px-1 text-center md:text-left">
-        <h3 className="text-[12px] md:text-[12px] font-bold tracking-[0.2em] uppercase leading-tight text-stone-800 group-hover:text-rose-600 transition-colors duration-300">
+        <h3 className="text-[14px] md:text-[14px] font-semibold tracking-[0.2em] uppercase leading-tight text-stone-800 group-hover:text-rose-600 transition-colors duration-300">
           {product.name}
         </h3>
-        <p className="text-[11px] text-rose-400 font-medium tracking-[0.1em] italic">
+        <p className="text-[13px] text-rose-400 font-medium tracking-[0.1em] italic">
           {product.price}
         </p>
       </div>
