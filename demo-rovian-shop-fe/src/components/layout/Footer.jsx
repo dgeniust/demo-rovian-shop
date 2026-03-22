@@ -47,7 +47,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium">
                 {["Collections", "Store", "About", "Journal"].map((item) => (
-                  <li key={item}>
+                  <li key={item} className="flex justify-center">
                     <NavLink
                       to={`/${item.toLowerCase()}`}
                       className="text-stone-600 hover:text-rose-500 transition-colors flex items-center group"

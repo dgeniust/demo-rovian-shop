@@ -35,7 +35,7 @@ const Header = () => {
         />
       </NavLink>
 
-      <nav className="hidden md:flex items-center space-x-10 text-[12px] font-medium uppercase tracking-[0.3em]">
+      <nav className="hidden md:flex items-center space-x-10 text-[14px] font-medium uppercase tracking-[0.3em]">
         {[
           { name: "Lookbook", path: "/" },
           { name: "Shop", path: "/shop" },

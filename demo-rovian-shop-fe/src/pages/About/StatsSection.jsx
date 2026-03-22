@@ -21,7 +21,7 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="bg-[#fffafb] py-32 px-6 md:px-12 lg:px-24">
+    <section className="bg-[#fffafb] py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* BLOCK 1 & 2 giữ nguyên... */}
         <div className="md:col-span-12 lg:col-span-7 relative h-[550px] rounded-[60px] overflow-hidden group shadow-xl shadow-rose-100/20">

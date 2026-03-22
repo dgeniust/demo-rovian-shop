@@ -6,7 +6,7 @@ const AboutPage = () => {
     // Đổi nền sang trắng kem hồng (#fffafb)
     <div className="bg-[#fffafb] text-stone-900 min-h-screen pt-32 pb-20 px-6 md:px-12 lg:px-24 font-sans">
       {/* SECTION 1: HERO ABOUT */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-40">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
         {/* Left: Text Content */}
         <div className="lg:col-span-4 space-y-8">
           <h1 className="text-8xl md:text-9xl font-light tracking-tighter leading-[0.8] uppercase italic font-serif text-stone-900">
@@ -118,7 +118,7 @@ const AboutPage = () => {
       </div>
 
       {/* STATS SECTION */}
-      <div className="border-t border-rose-100 pt-16">
+      <div className="border-t border-rose-100 pt-8">
         <StatsSection />
       </div>
     </div>

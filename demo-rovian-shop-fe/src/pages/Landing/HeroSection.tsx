@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
 
         {/* Product Showcase */}
-        <div className="relative flex items-center justify-center w-full max-w-[1600px] mt-24 gap-0 md:gap-4 px-4">
+        <div className="relative flex items-center justify-center w-full max-w-[1600px] mt-12 gap-0 md:gap-4 px-4">
           {/* Background Glow Effect */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-rose-200/20 rounded-[100%] blur-[120px] pointer-events-none"></div>
 
@@ -96,7 +96,7 @@ const HeroSection = () => {
         </div>
 
         {/* Technical Footer Section */}
-        <div className="mt-40 mb-16 grid grid-cols-1 md:grid-cols-3 w-full max-w-6xl border-t border-rose-100 pt-12 gap-12 text-center md:text-left">
+        <div className="mt-20 mb-8 grid grid-cols-1 md:grid-cols-3 w-full max-w-6xl border-t border-rose-100 pt-12 gap-12 text-center md:text-left">
           <div>
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-rose-500 mb-4 font-bold">
               Precision

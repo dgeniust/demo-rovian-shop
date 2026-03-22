@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
     // Đổi bg-black sang trắng hồng nhẹ, text-white sang text-black
-    <section className="bg-[#fffafb] text-black py-32 px-6 md:px-12 lg:px-24 overflow-hidden">
+    <section className="bg-[#fffafb] text-black py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         {/* CỘT TRÁI: Typography lớn làm điểm nhấn */}
         <div className="lg:col-span-5">
