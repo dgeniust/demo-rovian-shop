@@ -11,9 +11,9 @@ const ContactPage = () => {
           <div className="space-y-12">
             <div className="aspect-[4/3] bg-white border border-neutral-100 p-2 shadow-inner">
               <img
-                src="https://i.pinimg.com/736x/fa/5c/3b/fa5c3ba91c1ddcf3c87186c3b0bf10be.jpg"
+                src="https://i.pinimg.com/736x/bc/b8/43/bcb8433ec35ddfc79a6ffe2b2b312ba1.jpg"
                 alt="ROVIAN watch"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover "
               />
             </div>
 
