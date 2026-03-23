@@ -1,6 +1,11 @@
 export default function ProductCard({ product }) {
+  const handleRedirect = () => {
+    if (product.url_redirect) {
+      window.open(product.url_redirect, "_blank");
+    }
+  };
   return (
-    <div className="group cursor-pointer w-full">
+    <div className="group cursor-pointer w-full" onClick={handleRedirect}>
       {/* Khối chứa ảnh: Nền hồng kem cực nhạt để đồng bộ Sakura Atelier */}
       <div className="relative aspect-[4/5] bg-[#fffafb] mb-6 overflow-hidden flex items-center justify-center transition-all duration-700 border border-rose-50/50 group-hover:bg-[#fdf2f4]">
         {/* --- HIỆU ỨNG BLUR HỒNG PHÍA SAU (Sakura Glow) --- */}
@@ -13,7 +18,7 @@ export default function ProductCard({ product }) {
         <div className="absolute w-32 h-32 bg-rose-200/20 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0" />
 
         {/* --- Tag thông tin (Góc trái/phải) --- */}
-        <div className="absolute top-4 left-4 z-20">
+        {/* <div className="absolute top-4 left-4 z-20">
           <span className="text-[9px] font-bold tracking-[0.15em] uppercase border-[0.5px] border-rose-200 px-2.5 py-1 rounded-full bg-white/80 text-stone-600 backdrop-blur-md">
             {product.color}
           </span>
@@ -23,11 +28,11 @@ export default function ProductCard({ product }) {
           <span className="text-[9px] font-bold tracking-[0.15em] uppercase border-[0.5px] border-rose-200 px-2.5 py-1 rounded-full bg-white/80 text-stone-600 backdrop-blur-md">
             {product.size || "40mm"}
           </span>
-        </div>
+        </div> */}
 
         {/* --- Ảnh sản phẩm (Scale và nổi bật trên nền glow) --- */}
         <img
-          src={product.img}
+          src={product.image_url}
           alt={product.name}
           className="w-[80%] h-auto object-contain z-10 transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-110 group-hover:drop-shadow-[0_10px_20px_rgba(251,113,133,0.1)]"
         />

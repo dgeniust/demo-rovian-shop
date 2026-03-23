@@ -18,6 +18,9 @@ import SplashScreen from "./components/SplashScreen";
 import ScrollToTop from "./hooks/ScrollToTop";
 import { PageWrapper } from "./components/PageWrapper";
 import ContactPage from "./pages/Contact/ContactPage";
+import AuthPage from "./pages/Auth/AuthPage";
+import AdminLayout from "./components/layout/AdminLayout";
+import ProductManager from "./pages/Admin/ProductManager";
 
 // Tạo một Component bọc các Route để xử lý hiệu ứng chuyển trang
 const AnimatedRoutes = () => {
@@ -26,6 +29,15 @@ const AnimatedRoutes = () => {
     // mode="wait": Chờ trang cũ biến mất xong mới hiện trang mới
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        {/* Trang Chủ */}
+        <Route
+          path="/auth"
+          element={
+            <PageWrapper>
+              <AuthPage />
+            </PageWrapper>
+          }
+        />
         {/* Trang Chủ */}
         <Route
           path="/"
@@ -72,6 +84,11 @@ const AnimatedRoutes = () => {
             </PageWrapper>
           }
         />
+
+        {/* Trang ADMIN */}
+        <Route element={<AdminLayout />}>
+          <Route path="/admin" element={<ProductManager />} />
+        </Route>
       </Routes>
     </AnimatePresence>
   );
