@@ -1,6 +1,5 @@
 import React from "react";
 import HeroSection from "./HeroSection";
-import Header from "../../components/layout/Header";
 import LookbookGrid from "./LookbookGrid";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
