@@ -1,7 +1,10 @@
-import React from "react";
 import logo from "../../assets/blackHorizontal_final.png";
-import celeb from "../../assets/kjw.jpg";
+import { MessageCircle, Send } from "lucide-react"; // Dùng icon tạm từ lucide
 const ContactPage = () => {
+  const contactLinks = {
+    zalo: "https://zalo.me/0xxxxxxxxx", // Thay số điện thoại zalo của bạn
+    messenger: "https://m.me/yourfacebookpage", // Thay ID page facebook
+  };
   return (
     <div className="min-h-screen bg-[#fffafb] text-black font-sans antialiased">
       {/* Main Content */}
@@ -77,18 +80,62 @@ const ContactPage = () => {
             <div className="flex justify-center mb-2">
               <img src={logo} alt="" className="w-[50%] h-[50%] " />
             </div>
-            {/* <h3 className="text-3xl font-semibold tracking-tight mb-1">
-              Connect with ROVIAN.
-            </h3> */}
-            <p className="text-sm text-neutral-600 mb-8">
-              Or just reach out manually to{" "}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              {/* Messenger Button */}
               <a
-                href="mailto:hello@rovianwatch.com"
-                className="text-black font-medium hover:underline"
+                href={contactLinks.messenger}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-4 p-3 bg-white border border-neutral-100 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-50 hover:border-blue-100"
               >
-                hello@rovianwatch.com
+                <div className="w-12 h-12 flex-shrink-0 bg-blue-50 rounded-xl p-2 group-hover:bg-white transition-colors">
+                  <img
+                    src="https://www.computerhope.com/jargon/f/facebook-messenger.png"
+                    alt="Messenger"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest leading-none mb-1">
+                    Facebook
+                  </span>
+                  <span className="text-sm font-black text-slate-800 tracking-tight group-hover:text-blue-600 transition-colors">
+                    Messenger
+                  </span>
+                </div>
               </a>
-            </p>
+
+              {/* Zalo Button */}
+              <a
+                href={contactLinks.zalo}
+                target="_blank"
+                rel="noreferrer"
+                className="group flex items-center gap-4 p-3 bg-white border border-neutral-100 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-sky-50 hover:border-sky-100"
+              >
+                <div className="w-12 h-12 flex-shrink-0 bg-sky-50 rounded-xl p-2 group-hover:bg-white transition-colors">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/960px-Icon_of_Zalo.svg.png"
+                    alt="Zalo"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest leading-none mb-1">
+                    Official Chat
+                  </span>
+                  <span className="text-sm font-black text-slate-800 tracking-tight group-hover:text-sky-600 transition-colors">
+                    Zalo Chat
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div className="relative flex items-center justify-center mb-8">
+              <div className="flex-grow border-t border-neutral-100"></div>
+              <span className="flex-shrink mx-4 text-[10px] text-neutral-400 uppercase tracking-[0.3em]">
+                Or Send an Inquiry
+              </span>
+              <div className="flex-grow border-t border-neutral-100"></div>
+            </div>
             <form className="space-y-6 text-sm">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>

@@ -4,6 +4,7 @@ import Header from "../../components/layout/Header";
 import LookbookGrid from "./LookbookGrid";
 import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
+import FeaturedProducts from "./FeaturedProducts";
 
 const LandingPage = () => {
   return (
@@ -16,6 +17,8 @@ const LandingPage = () => {
 
       {/* LOOKBOOK GRID */}
       <LookbookGrid />
+
+      <FeaturedProducts />
 
       <AboutSection />
 

@@ -18,7 +18,7 @@ const AdminLayout = () => (
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col min-w-0 overflow-hidden">
         {/* Vùng cuộn nội dung */}
-        <div className="flex-1 overflow-y-auto p-4 lg:p-8 custom-scrollbar">
+        <div className="flex-1 overflow-y-auto p-2 lg:p-4 custom-scrollbar">
           <div className="max-w-[1600px] mx-auto mt-12">
             <Outlet />
           </div>

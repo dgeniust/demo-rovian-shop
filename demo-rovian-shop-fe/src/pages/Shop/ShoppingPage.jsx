@@ -6,10 +6,9 @@ const ShoppingPage = () => {
   return (
     <div className="min-h-screen bg-white text-black font-sans">
       <main>
-        <HeroSection />
-
         {/* Section List sản phẩm từ JSON */}
-        <ProductList />
+        <ProductList /> 
+        <HeroSection />
 
         <BrandSection />
       </main>

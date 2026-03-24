@@ -1,5 +1,13 @@
-import React, { useState } from "react";
-import { X, Upload, Loader2 } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import {
+  X,
+  Loader2,
+  DollarSign,
+  Link as LinkIcon,
+  PackagePlus,
+  Image as ImageIcon,
+  Type,
+} from "lucide-react";
 import productService from "../services/productService";
 
 const AddProductModal = ({ isOpen, onClose, onRefresh }) => {
@@ -12,10 +20,15 @@ const AddProductModal = ({ isOpen, onClose, onRefresh }) => {
   const [imageFile, setImageFile] = useState(null);
   const [preview, setPreview] = useState(null);
 
+  useEffect(() => {
+    return () => {
+      if (preview) URL.revokeObjectURL(preview);
+    };
+  }, [preview]);
+
   if (!isOpen) return null;
 
   const handleChange = (e) => {
-    // Đảm bảo name của input khớp với key trong formData
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -29,48 +42,26 @@ const AddProductModal = ({ isOpen, onClose, onRefresh }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Kiểm tra dữ liệu
     if (!imageFile) {
       alert("Vui lòng chọn ảnh sản phẩm!");
       return;
     }
 
     setLoading(true);
-
     try {
       const data = new FormData();
-      // Đảm bảo các key này khớp chính xác với yêu cầu của Backend (FastAPI/Django/Node)
       data.append("name", formData.name.trim());
-
-      // Chuyển đổi sang số nguyên trước khi append
-      const priceValue = parseInt(formData.price, 10);
-      data.append("price", priceValue);
-
+      data.append("price", parseInt(formData.price, 10));
       data.append("url_redirect", formData.url_redirect.trim());
-
-      // Gửi file thực tế
       data.append("image", imageFile);
 
-      // Log để kiểm tra (Xóa khi chạy thật)
-      console.log("Dữ liệu gửi đi:");
-      for (let pair of data.entries()) {
-        console.log(pair[0] + ": ", pair[1]);
-      }
-
       await productService.createProduct(data);
-      alert("Thêm sản phẩm thành công!");
-
-      // Reset form sau khi thành công
       setFormData({ name: "", price: "", url_redirect: "" });
       setImageFile(null);
       setPreview(null);
-
-      // onRefresh();
+      if (onRefresh) onRefresh();
       onClose();
     } catch (err) {
-      // Sửa cách log lỗi để tránh [object Object]
-      console.error("API Error Detail:", JSON.stringify(err));
       alert(
         "Lỗi: " +
           (err.response?.data?.detail?.[0]?.msg || "Không thể thêm sản phẩm"),
@@ -81,116 +72,168 @@ const AddProductModal = ({ isOpen, onClose, onRefresh }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
-      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in fade-in zoom-in duration-200">
-        <div className="flex justify-between items-center p-6 border-b">
-          <h3 className="text-xl font-bold text-gray-900">Add New Product</h3>
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      {/* Overlay - Glassmorphism nhẹ */}
+      <div
+        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+        onClick={onClose}
+      />
+
+      {/* Modal Card */}
+      <div className="relative bg-white rounded-[32px] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] w-full max-w-xl overflow-hidden animate-in fade-in zoom-in duration-300">
+        {/* Header Section */}
+        <div className="px-8 pt-8 pb-4 flex justify-between items-start">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-[#f26522]">
+              <PackagePlus size={24} strokeWidth={2.5} />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
+                Create Product
+              </h3>
+              <p className="text-sm text-slate-500 font-medium">
+                Add a new item to your showcase
+              </p>
+            </div>
+          </div>
           <button
             onClick={onClose}
-            className="text-gray-400 hover:text-gray-600"
+            className="p-2 bg-slate-50 text-slate-400 hover:text-slate-600 rounded-full transition-colors"
           >
-            <X size={24} />
+            <X size={20} strokeWidth={3} />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-6 space-y-4">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Product Name
+        <form onSubmit={handleSubmit} className="p-8 pt-4 space-y-6">
+          {/* Upload Area - Phá cách hơn */}
+          <div className="space-y-2">
+            <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1">
+              Product Visual
             </label>
-            <input
-              name="name"
-              value={formData.name} // Thêm value để kiểm soát input
-              required
-              onChange={handleChange}
-              className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
-              placeholder="e.g. Macbook Pro M2"
-            />
-          </div>
-
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Price ($)
-              </label>
-              <input
-                name="price"
-                type="number"
-                value={formData.price}
-                required
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
-                placeholder="0"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
-                Redirect URL
-              </label>
-              <input
-                name="url_redirect"
-                value={formData.url_redirect}
-                required
-                onChange={handleChange}
-                className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-orange-500 outline-none"
-                placeholder="https://..."
-              />
-            </div>
-          </div>
-
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">
-              Product Image
-            </label>
-            <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-orange-500 transition-colors relative">
+            <div
+              className={`relative group border-2 border-dashed rounded-[24px] transition-all duration-300 overflow-hidden
+              ${preview ? "border-orange-500 bg-orange-50/20" : "border-slate-100 bg-slate-50 hover:bg-slate-100"}`}
+            >
               {preview ? (
-                <div className="relative w-full">
+                <div className="p-3 relative group">
                   <img
                     src={preview}
                     alt="Preview"
-                    className="h-32 w-full object-contain"
+                    className="h-48 w-full object-cover rounded-[18px] shadow-sm"
                   />
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setPreview(null);
-                      setImageFile(null);
-                    }}
-                    className="absolute top-0 right-0 bg-red-500 text-white rounded-full p-1"
-                  >
-                    <X size={12} />
-                  </button>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-[18px] flex items-center justify-center">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setPreview(null);
+                        setImageFile(null);
+                      }}
+                      className="bg-white text-red-500 p-3 rounded-2xl font-bold text-sm shadow-xl hover:scale-105 transition-transform"
+                    >
+                      Remove and Change
+                    </button>
+                  </div>
                 </div>
               ) : (
-                <div className="space-y-1 text-center">
-                  <Upload className="mx-auto h-12 w-12 text-gray-400" />
-                  <div className="flex text-sm text-gray-600">
-                    <label className="relative cursor-pointer font-medium text-orange-600 hover:text-orange-500">
-                      <span>Upload a file</span>
-                      <input
-                        type="file"
-                        className="sr-only"
-                        accept="image/*"
-                        onChange={handleFileChange}
-                      />
-                    </label>
+                <label className="flex flex-col items-center justify-center py-12 cursor-pointer">
+                  <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-400 group-hover:text-orange-500 group-hover:scale-110 transition-all">
+                    <ImageIcon size={28} />
                   </div>
-                  <p className="text-xs text-gray-500">PNG, JPG up to 10MB</p>
-                </div>
+                  <span className="mt-4 text-sm font-bold text-slate-700">
+                    Drop your image here
+                  </span>
+                  <span className="text-xs text-slate-400 mt-1 font-medium">
+                    Supports JPG, PNG (Max 10MB)
+                  </span>
+                  <input
+                    type="file"
+                    className="hidden"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                  />
+                </label>
               )}
             </div>
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-[#f26522] hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-all flex items-center justify-center gap-2"
-          >
-            {loading ? <Loader2 className="animate-spin" /> : "Create Product"}
-          </button>
+          <div className="grid grid-cols-1 gap-5">
+            {/* Input Tên */}
+            <div className="space-y-2">
+              <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
+                <Type size={14} /> Product Name
+              </label>
+              <input
+                name="name"
+                value={formData.name}
+                required
+                onChange={handleChange}
+                placeholder="Name of your awesome product"
+                className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-semibold focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
+              />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {/* Input Giá */}
+              <div className="space-y-2">
+                <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
+                  <DollarSign size={14} /> Price (VND)
+                </label>
+                <input
+                  name="price"
+                  type="number"
+                  value={formData.price}
+                  required
+                  onChange={handleChange}
+                  placeholder="0.00"
+                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-bold focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
+                />
+              </div>
+
+              {/* Input Link */}
+              <div className="space-y-2">
+                <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
+                  <LinkIcon size={14} /> Affiliate Link
+                </label>
+                <input
+                  name="url_redirect"
+                  value={formData.url_redirect}
+                  required
+                  onChange={handleChange}
+                  placeholder="https://shope.ee/..."
+                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-medium focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Footer Actions */}
+          <div className="flex items-center gap-4 pt-4">
+            <button
+              type="button"
+              onClick={onClose}
+              className="flex-1 px-6 py-4 bg-slate-50 text-slate-500 font-bold rounded-2xl hover:bg-slate-100 transition-all active:scale-95"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              disabled={loading}
+              className="flex-[2] bg-[#f26522] hover:bg-[#d4541a] text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-orange-100 active:scale-95 disabled:opacity-50 flex items-center justify-center gap-3"
+            >
+              {loading ? (
+                <Loader2 className="animate-spin" size={20} />
+              ) : (
+                <>
+                  <span>Publish Item</span>
+                  <PackagePlus size={20} />
+                </>
+              )}
+            </button>
+          </div>
         </form>
       </div>
     </div>
   );
 };
+
 export default AddProductModal;
