@@ -21,7 +21,7 @@ import ContactPage from "./pages/Contact/ContactPage";
 import AuthPage from "./pages/Auth/AuthPage";
 import AdminLayout from "./components/layout/AdminLayout";
 import ProductManager from "./pages/Admin/ProductManager";
-
+import ProtectedRoute from "./components/layout/ProtectedRoute";
 // Tạo một Component bọc các Route để xử lý hiệu ứng chuyển trang
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -86,8 +86,10 @@ const AnimatedRoutes = () => {
         />
 
         {/* Trang ADMIN */}
-        <Route element={<AdminLayout />}>
-          <Route path="/admin" element={<ProductManager />} />
+        <Route element={<ProtectedRoute />}>
+          <Route element={<AdminLayout />}>
+            <Route path="/admin" element={<ProductManager />} />
+          </Route>
         </Route>
       </Routes>
     </AnimatePresence>

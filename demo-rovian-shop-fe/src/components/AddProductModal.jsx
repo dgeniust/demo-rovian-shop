@@ -7,6 +7,13 @@ import {
   PackagePlus,
   Image as ImageIcon,
   Type,
+  Plus,
+  RotateCcw,
+  Paperclip,
+  Clock,
+  FileText,
+  User,
+  ChevronDown,
 } from "lucide-react";
 import productService from "../services/productService";
 
@@ -72,163 +79,166 @@ const AddProductModal = ({ isOpen, onClose, onRefresh }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Overlay - Glassmorphism nhẹ */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 font-sans">
+      {/* Overlay - Glassmorphism */}
       <div
-        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-slate-200/40 backdrop-blur-md"
         onClick={onClose}
       />
 
-      {/* Modal Card */}
-      <div className="relative bg-white rounded-[32px] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] w-full max-w-xl overflow-hidden animate-in fade-in zoom-in duration-300">
-        {/* Header Section */}
-        <div className="px-8 pt-8 pb-4 flex justify-between items-start">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-orange-50 rounded-2xl flex items-center justify-center text-[#f26522]">
-              <PackagePlus size={24} strokeWidth={2.5} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-                Create Product
-              </h3>
-              <p className="text-sm text-slate-500 font-medium">
-                Add a new item to your showcase
-              </p>
-            </div>
+      {/* Modal Container */}
+      <div className="relative bg-white/95 backdrop-blur-xl rounded-[28px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] w-full max-w-xl overflow-hidden border border-white/50 animate-in fade-in zoom-in duration-300">
+        {/* Header - Minimalist */}
+        <div className="px-6 py-5 flex justify-between items-center border-b border-slate-100/50">
+          <div className="flex items-center gap-2">
+            <Plus size={18} className="text-slate-800" />
+            <span className="text-[15px] font-semibold text-slate-800">
+              New Product
+            </span>
           </div>
           <button
             onClick={onClose}
-            className="p-2 bg-slate-50 text-slate-400 hover:text-slate-600 rounded-full transition-colors"
+            className="p-1.5 text-slate-400 hover:bg-slate-100 rounded-lg transition-colors"
           >
-            <X size={20} strokeWidth={3} />
+            <X size={20} />
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-8 pt-4 space-y-6">
-          {/* Upload Area - Phá cách hơn */}
-          <div className="space-y-2">
-            <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1">
-              Product Visual
-            </label>
-            <div
-              className={`relative group border-2 border-dashed rounded-[24px] transition-all duration-300 overflow-hidden
-              ${preview ? "border-orange-500 bg-orange-50/20" : "border-slate-100 bg-slate-50 hover:bg-slate-100"}`}
-            >
-              {preview ? (
-                <div className="p-3 relative group">
-                  <img
-                    src={preview}
-                    alt="Preview"
-                    className="h-48 w-full object-cover rounded-[18px] shadow-sm"
-                  />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity rounded-[18px] flex items-center justify-center">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setPreview(null);
-                        setImageFile(null);
-                      }}
-                      className="bg-white text-red-500 p-3 rounded-2xl font-bold text-sm shadow-xl hover:scale-105 transition-transform"
-                    >
-                      Remove and Change
-                    </button>
+        <form onSubmit={handleSubmit} className="p-8 space-y-7">
+          {/* Image Section - Click directly on image to change */}
+          <div className="flex w-full items-center justify-center p-4 bg-white rounded-2xl border border-slate-200/60 shadow-sm relative group">
+            <div className="flex flex-col items-center gap-3">
+              <label className="relative group cursor-pointer transition-transform active:scale-95">
+                <div className="w-40 h-40 bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:border-black/20 group-hover:shadow-md flex items-center justify-center">
+                  {preview ? (
+                    <img
+                      src={preview}
+                      alt="Preview"
+                      className="w-full h-full object-cover transition-opacity group-hover:opacity-90"
+                    />
+                  ) : (
+                    <div className="flex flex-col items-center text-slate-300">
+                      <ImageIcon size={48} strokeWidth={1.5} />
+                      <span className="text-[11px] font-bold mt-2 uppercase tracking-widest text-slate-400">
+                        No Image
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                    <ImageIcon
+                      className="text-white drop-shadow-md"
+                      size={32}
+                    />
                   </div>
                 </div>
-              ) : (
-                <label className="flex flex-col items-center justify-center py-12 cursor-pointer">
-                  <div className="w-14 h-14 bg-white rounded-2xl shadow-sm flex items-center justify-center text-slate-400 group-hover:text-orange-500 group-hover:scale-110 transition-all">
-                    <ImageIcon size={28} />
-                  </div>
-                  <span className="mt-4 text-sm font-bold text-slate-700">
-                    Drop your image here
-                  </span>
-                  <span className="text-xs text-slate-400 mt-1 font-medium">
-                    Supports JPG, PNG (Max 10MB)
-                  </span>
-                  <input
-                    type="file"
-                    className="hidden"
-                    accept="image/*"
-                    onChange={handleFileChange}
-                  />
-                </label>
+
+                <input
+                  type="file"
+                  className="hidden"
+                  accept="image/*"
+                  onChange={handleFileChange}
+                />
+              </label>
+
+              <p className="text-[13px] font-bold text-slate-500 group-hover:text-black transition-colors">
+                {preview ? "Click vào ảnh để thay đổi" : "Click để tải ảnh lên"}
+              </p>
+
+              {imageFile && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setPreview(null);
+                    setImageFile(null);
+                  }}
+                  className="text-[11px] font-bold text-red-500 hover:bg-red-50 px-2 py-1 rounded-lg transition-all"
+                >
+                  <RotateCcw size={12} className="inline mr-1" /> Xóa ảnh vừa
+                  chọn
+                </button>
               )}
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-5">
-            {/* Input Tên */}
-            <div className="space-y-2">
-              <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                <Type size={14} /> Product Name
-              </label>
+          {/* Form Fields Section */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 group">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                Name
+              </span>
               <input
                 name="name"
                 value={formData.name}
                 required
                 onChange={handleChange}
-                placeholder="Name of your awesome product"
-                className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-semibold focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
+                placeholder="Product name..."
+                className="flex-1 bg-transparent text-[16px] font-semibold text-slate-800 outline-none placeholder:text-slate-300"
               />
             </div>
+            <div className="h-[1px] bg-slate-100 w-full" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {/* Input Giá */}
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                  <DollarSign size={14} /> Price (VND)
-                </label>
+            <div className="flex items-center gap-3">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                Price
+              </span>
+              <div className="relative flex-1 max-w-[200px]">
                 <input
                   name="price"
                   type="number"
                   value={formData.price}
                   required
                   onChange={handleChange}
-                  placeholder="0.00"
-                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-bold focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
+                  placeholder="0"
+                  className="w-full bg-[#F4F4F5]/50 px-4 py-2 rounded-xl text-[14px] font-bold text-slate-700 outline-none border border-transparent focus:border-slate-200 transition-all"
                 />
+                <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-slate-400">
+                  VND
+                </span>
               </div>
+            </div>
+            <div className="h-[1px] bg-slate-100 w-full" />
 
-              {/* Input Link */}
-              <div className="space-y-2">
-                <label className="text-[13px] font-bold text-slate-400 uppercase tracking-widest px-1 flex items-center gap-2">
-                  <LinkIcon size={14} /> Affiliate Link
-                </label>
-                <input
-                  name="url_redirect"
-                  value={formData.url_redirect}
-                  required
-                  onChange={handleChange}
-                  placeholder="https://shope.ee/..."
-                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-medium focus:ring-2 focus:ring-orange-500/20 outline-none transition-all placeholder:text-slate-300"
-                />
-              </div>
+            <div className="flex items-center gap-3">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                Link
+              </span>
+              <input
+                name="url_redirect"
+                value={formData.url_redirect}
+                required
+                onChange={handleChange}
+                placeholder="https://shope.ee/..."
+                className="flex-1 bg-transparent text-[14px] text-slate-600 outline-none placeholder:text-slate-300"
+              />
             </div>
           </div>
 
-          {/* Footer Actions */}
-          <div className="flex items-center gap-4 pt-4">
+          {/* Action Footer */}
+          <div className="flex items-center justify-between pt-6 border-t border-slate-100/50">
             <button
-              type="button"
               onClick={onClose}
-              className="flex-1 px-6 py-4 bg-slate-50 text-slate-500 font-bold rounded-2xl hover:bg-slate-100 transition-all active:scale-95"
+              className="px-5 py-2.5 text-[14px] font-semibold text-slate-600 hover:bg-slate-100 rounded-full transition-all cursor-pointer"
             >
-              Cancel
+              Hủy
             </button>
-            <button
-              type="submit"
-              disabled={loading}
-              className="flex-[2] bg-[#f26522] hover:bg-[#d4541a] text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-orange-100 active:scale-95 disabled:opacity-50 flex items-center justify-center gap-3"
-            >
-              {loading ? (
-                <Loader2 className="animate-spin" size={20} />
-              ) : (
-                <>
-                  <span>Publish Item</span>
-                  <PackagePlus size={20} />
-                </>
-              )}
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex items-center gap-3 px-8 py-2.5 bg-black text-white rounded-full text-[14px] font-bold hover:bg-zinc-800 transition-all active:scale-95 disabled:opacity-50 shadow-lg shadow-zinc-200 cursor-pointer"
+              >
+                {loading ? (
+                  <Loader2 className="animate-spin" size={18} />
+                ) : (
+                  <>
+                    <span>Create</span>
+                    <Plus size={18} />
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </form>
       </div>

@@ -1,4 +1,4 @@
-import { EyeOff } from "lucide-react";
+import { Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import authService from "../../services/authService";
 import { useNavigate } from "react-router-dom";
@@ -50,7 +50,8 @@ const AuthPage = () => {
               </label>
               <div className="relative">
                 <input
-                  type="password"
+                  // Thay đổi type ở đây: nếu showPassword là true thì hiện 'text', ngược lại hiện 'password'
+                  type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
                   onChange={(e) => setPassword(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-black focus:border-transparent outline-none transition-all placeholder:text-gray-400"

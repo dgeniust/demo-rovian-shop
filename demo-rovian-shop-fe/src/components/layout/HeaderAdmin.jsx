@@ -6,6 +6,7 @@ import {
   LogOut,
   User,
   Settings,
+  House,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom"; // Giả sử bạn dùng react-router
 import logo from "../../assets/blackHorizontal_final.png";
@@ -27,10 +28,12 @@ export const HeaderAdmin = () => {
   }, []);
 
   const handleLogout = () => {
-    // Thêm logic xóa token/session ở đây
-    console.log("Logging out...");
-    // localStorage.removeItem("token");
-    // navigate("/login");
+    localStorage.removeItem("access_token");
+    navigate("/auth");
+  };
+  const handleNavigateHomePage = () => {
+    localStorage.removeItem("access_token");
+    navigate("/");
   };
 
   return (
@@ -70,7 +73,7 @@ export const HeaderAdmin = () => {
         >
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className={`flex items-center gap-3 p-1.5 rounded-[18px] transition-all hover:bg-slate-50 ${
+            className={`flex items-center gap-3 p-1.5 rounded-[18px] transition-all hover:bg-slate-50 cursor-pointer ${
               isDropdownOpen ? "bg-slate-50" : ""
             }`}
           >
@@ -104,21 +107,24 @@ export const HeaderAdmin = () => {
                 </p>
               </div>
 
-              <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-[16px] transition-all">
+              <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-[16px] transition-all cursor-pointer">
                 <User size={18} className="text-slate-400" />
                 Profile Details
               </button>
 
-              <button className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-[16px] transition-all">
-                <Settings size={18} className="text-slate-400" />
-                Settings
+              <button
+                onClick={handleNavigateHomePage}
+                className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-600 hover:bg-slate-50 hover:text-slate-900 rounded-[16px] transition-all cursor-pointer"
+              >
+                <House size={18} className="text-slate-400" />
+                Homepage
               </button>
 
               <hr className="my-1 border-slate-50" />
 
               <button
                 onClick={handleLogout}
-                className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-red-500 hover:bg-red-50 rounded-[16px] transition-all"
+                className="w-full flex items-center gap-3 px-4 py-3 text-sm font-bold text-red-500 hover:bg-red-50 rounded-[16px] transition-all cursor-pointer"
               >
                 <LogOut size={18} />
                 Sign Out

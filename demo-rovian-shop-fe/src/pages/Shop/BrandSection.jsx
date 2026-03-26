@@ -12,12 +12,11 @@ const BrandSection = () => {
 
   return (
     // Đổi bg-white sang trắng kem hồng (#fffafb)
-    <section className="bg-[#fffafb] text-stone-900 py-24 px-6 md:px-12 lg:px-24 font-sans border-t border-rose-100">
+    <section className="bg-[#fffafb] text-stone-900 py-24 px-6 md:px-12 lg:px-24 border-t border-rose-100">
       {/* Header */}
       <div className="mb-20 text-center lg:text-left">
-        <h2 className="text-5xl md:text-7xl font-light uppercase tracking-tighter italic font-serif">
-          Shop Our{" "}
-          <span className="font-light not-italic text-rose-300">Brands</span>
+        <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tighter italic font-serif">
+          Khám Phá <span className="not-italic text-rose-300">Thương Hiệu</span>
         </h2>
         <div className="h-[1px] w-20 bg-rose-200 mt-6 mx-auto lg:mx-0"></div>
       </div>
@@ -97,7 +96,7 @@ const BrandSection = () => {
                 </span>
               </h3>
               <p className="text-rose-400 font-serif italic text-xl">
-                Contact Us
+                Liên hệ chúng tôi
               </p>
               <div className="pt-6">
                 <span className="text-[10px] text-stone-400 font-sans tracking-[0.4em] border-t border-rose-200 pt-4 px-8 uppercase">

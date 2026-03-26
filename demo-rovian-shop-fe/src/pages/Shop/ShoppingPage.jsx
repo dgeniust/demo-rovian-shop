@@ -4,11 +4,11 @@ import ProductList from "./ProductList";
 
 const ShoppingPage = () => {
   return (
-    <div className="min-h-screen bg-white text-black font-sans">
+    <div className="min-h-screen bg-white text-black font-['Google_Sans_Flex']">
       <main>
         {/* Section List sản phẩm từ JSON */}
-        <ProductList /> 
-        <HeroSection />
+        <ProductList />
+        {/* <HeroSection /> */}
 
         <BrandSection />
       </main>

@@ -20,7 +20,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="bg-[#fffafb] text-black py-16 md:py-24 px-6 md:px-12 lg:px-24 overflow-hidden border-t border-rose-100">
+    <section className="bg-[#fffafb] text-black py-16 md:py-24 px-6 md:px-12 lg:px-24 overflow-hidden border-t border-rose-100 font-['Google_Sans_Flex']">
       <div className="max-w-[1400px] mx-auto">
         {/* HEADER SECTION */}
         <motion.div
@@ -32,21 +32,20 @@ const ContactSection = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-5xl sm:text-7xl md:text-8xl font-light font-serif tracking-tighter mb-6 italic text-stone-900"
+            className="text-4xl sm:text-6xl md:text-7xl font-light font-serif tracking-tighter mb-6 italic text-stone-900"
           >
-            Contact
+            Liên hệ
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] text-rose-400 font-medium flex items-center gap-4 justify-start"
           >
             <span className="w-8 h-[1px] bg-rose-200"></span>
-            At your service, always.
+            Luôn sẵn sàng đồng hành cùng bạn
           </motion.p>
         </motion.div>
 
         {/* MAIN CONTENT GRID */}
-        {/* Chuyển sang grid: 1 cột trên mobile, 2 cột trên desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           {/* CỘT 1: Philosophy */}
           <motion.div
@@ -58,9 +57,9 @@ const ContactSection = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-light font-serif italic text-black leading-tight"
+              className="text-3xl md:text-4xl font-light italic text-black leading-tight"
             >
-              The Art of <br /> Discretionary Care
+              Nghệ thuật của <br /> Sự tận tâm thầm lặng
             </motion.h3>
 
             <motion.div
@@ -68,17 +67,17 @@ const ContactSection = () => {
               className="space-y-6 text-stone-600 font-light leading-relaxed max-w-xl text-base md:text-lg"
             >
               <p>
-                At{" "}
+                Tại{" "}
                 <span className="text-black font-medium border-b border-rose-100">
                   ROVIAN
                 </span>
-                , our relationship with you begins long before a purchase and
-                extends far beyond the delivery.
+                , mối quan hệ giữa chúng tôi và bạn không chỉ bắt đầu từ một đơn
+                hàng, mà khởi nguồn từ sự thấu hiểu và kéo dài mãi về sau.
               </p>
               <p>
-                Every inquiry is handled with absolute precision. Our concierge
-                team is dedicated to ensuring your experience is as seamless as
-                our collections.
+                Mọi yêu cầu đều được chúng tôi xử lý với sự chuẩn xác tuyệt đối.
+                Đội ngũ tư vấn tận tâm sẽ đảm bảo trải nghiệm của bạn luôn mượt
+                mà và tinh tế như chính những bộ sưu tập của chúng tôi.
               </p>
 
               {/* Quote Line */}
@@ -86,7 +85,8 @@ const ContactSection = () => {
                 className="mt-10 pt-2 border-l-2 border-rose-200 pl-6 italic text-rose-800 text-base font-light"
                 whileHover={{ borderLeftColor: "#fb7185", x: 5 }}
               >
-                "True luxury is felt in the silence of perfect service."
+                "Sự xa xỉ đích thực được cảm nhận qua sự tĩnh lặng của một dịch
+                vụ hoàn hảo."
               </motion.div>
             </motion.div>
           </motion.div>
@@ -102,11 +102,11 @@ const ContactSection = () => {
             {/* Email */}
             <motion.div variants={itemVariants} className="group">
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-rose-400 mb-3 font-semibold lg:justify-end">
-                Inquiries
+                Yêu cầu tư vấn
               </h4>
               <a
                 href="mailto:concierge@rovian.com"
-                className="text-xl sm:text-2xl md:text-3xl font-light text-stone-800 hover:text-black transition-colors block break-words"
+                className="text-xl sm:text-2xl md:text-3xl font-light text-stone-800 hover:text-black transition-colors block break-words tracking-tight"
               >
                 concierge@rovian.com
               </a>
@@ -115,9 +115,9 @@ const ContactSection = () => {
             {/* Address */}
             <motion.div variants={itemVariants}>
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-rose-400 mb-3 font-semibold lg:justify-end">
-                Flagship Atelier
+                Xưởng chế tác Flagship
               </h4>
-              <p className="text-xl md:text-2xl font-light leading-snug text-stone-900">
+              <p className="text-xl md:text-2xl font-light leading-snug text-stone-900 tracking-tight">
                 24 Rue du Faubourg <br /> Saint-Honoré, Paris
               </p>
             </motion.div>
@@ -125,7 +125,7 @@ const ContactSection = () => {
             {/* Socials */}
             <motion.div variants={itemVariants}>
               <h4 className="text-[10px] uppercase tracking-[0.4em] text-rose-400 mb-6 font-semibold lg:justify-end">
-                Follow us
+                Theo dõi chúng tôi
               </h4>
               <div className="flex flex-wrap gap-6 justify-start lg:justify-end">
                 {["Instagram", "Pinterest", "LinkedIn"].map((link) => (
@@ -143,11 +143,11 @@ const ContactSection = () => {
             {/* Footer nhỏ bên dưới */}
             <div className="pt-8 border-t border-rose-100 flex flex-row justify-between lg:justify-end lg:gap-12 items-center">
               <div className="text-left lg:text-right">
-                <p className="text-[9px] text-rose-400 tracking-[0.2em] mb-1">
-                  OPERATING HOURS
+                <p className="text-[9px] text-rose-400 tracking-[0.2em] mb-1 font-bold">
+                  GIỜ LÀM VIỆC
                 </p>
                 <p className="text-[10px] text-stone-500 uppercase">
-                  MON — FRI: 09:00 - 18:00
+                  THỨ 2 — THỨ 6: 09:00 - 18:00
                 </p>
               </div>
               <div className="text-[10px] text-rose-300 italic">

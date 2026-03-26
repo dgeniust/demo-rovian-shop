@@ -7,10 +7,7 @@ import FeaturedProducts from "./FeaturedProducts";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-serif">
-      {/* HEADER */}
-      {/* <Header /> */}
-
+    <div className="min-h-screen bg-black text-white font-['Google_Sans_Flex']">
       {/* HERO SECTION (LOOKBOOK) */}
       <HeroSection />
 

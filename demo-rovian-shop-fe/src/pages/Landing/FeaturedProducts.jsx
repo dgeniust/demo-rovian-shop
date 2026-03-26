@@ -4,16 +4,16 @@ import productService from "../../services/productService";
 
 const FeaturedProducts = () => {
   const [products, setProducts] = useState([]);
+
   useEffect(() => {
     const handleProduct = async () => {
       try {
         const res = await productService.getAllProducts({
           limit: 3,
         });
-        console.log("Featured products:", JSON.stringify(res.data));
         setProducts(res.data);
       } catch (error) {
-        console.error("Error fetching featured products:", error);
+        console.error("Lỗi khi lấy sản phẩm nổi bật:", error);
       }
     };
     handleProduct();
@@ -28,30 +28,28 @@ const FeaturedProducts = () => {
             <div className="flex items-center gap-3">
               <span className="w-12 h-[1px] bg-rose-200"></span>
               <span className="text-xs uppercase tracking-[0.5em] text-rose-400 font-bold">
-                Timeless Elegance
+                Vẻ Đẹp Vĩnh Cửu
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl font-light tracking-tight text-stone-900">
-              Featured{" "}
-              <span className="italic font-serif text-rose-300">
-                Collections
-              </span>
+              Bộ Sưu Tập{" "}
+              <span className="italic font-serif text-rose-300">Tiêu Biểu</span>
             </h2>
           </div>
 
           <div className="flex flex-col items-start md:items-end">
             <p className="text-stone-400 text-sm max-w-[300px] mb-4 md:text-right leading-relaxed italic">
-              "Every second is a blooming petal in the garden of time."
+              "Mỗi giây trôi qua là một cánh hoa nở rộ trong khu vườn thời
+              gian."
             </p>
             <button className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-stone-800 hover:text-rose-500 transition-colors">
-              View All Masterpieces
+              Xem Tất Cả Tuyệt Tác
               <span className="w-6 h-[1px] bg-stone-300 group-hover:bg-rose-500 group-hover:w-10 transition-all duration-500"></span>
             </button>
           </div>
         </div>
 
         {/* --- PRODUCTS GRID --- */}
-        {/* Grid tự động nhảy: 1 cột (mobile) -> 2 cột (tablet) -> 3 hoặc 4 cột (desktop) */}
         <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-16">
           {products.map((product) => (
             <div
@@ -63,10 +61,10 @@ const FeaturedProducts = () => {
           ))}
         </div>
 
-        {/* --- DECORATIVE TEXT (Chạy ngang nền - Tùy chọn) --- */}
+        {/* --- DECORATIVE TEXT --- */}
         <div className="absolute left-0 w-full overflow-hidden pointer-events-none opacity-[0.03] select-none -z-10 mt-12">
           <span className="text-[15vw] font-black uppercase tracking-tighter whitespace-nowrap text-stone-900">
-            SAKURA ATELIER SAKURA ATELIER
+            ROVIAN ATELIER ROVIAN ATELIER
           </span>
         </div>
       </div>

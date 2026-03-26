@@ -102,11 +102,11 @@ export default function ProductList() {
 
   // Các tùy chọn sắp xếp
   const sortOptions = [
-    { label: "Latest Pieces", sort: "id", order: "desc" },
-    { label: "Price: Low to High", sort: "price", order: "asc" },
-    { label: "Price: High to Low", sort: "price", order: "desc" },
-    { label: "Alphabet: A - Z", sort: "name", order: "asc" },
-    { label: "Alphabet: Z - A", sort: "name", order: "desc" },
+    { label: "Tuyệt tác mới nhất", sort: "id", order: "desc" },
+    { label: "Giá: Thấp đến Cao", sort: "price", order: "asc" },
+    { label: "Giá: Cao đến Thấp", sort: "price", order: "desc" },
+    { label: "Bảng chữ cái: A - Z", sort: "name", order: "asc" },
+    { label: "Bảng chữ cái: Z - A", sort: "name", order: "desc" },
   ];
 
   // Lấy nhãn (label) đang được chọn để hiển thị lên nút
@@ -123,15 +123,15 @@ export default function ProductList() {
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-rose-100 pb-10 gap-8">
         <div className="space-y-4">
           <h2 className="text-5xl font-extralight font-serif uppercase tracking-tight italic text-stone-900 leading-none">
-            Collections{" "}
+            Bộ sưu tập{" "}
             <span className="not-italic text-rose-300 font-sans text-4xl block md:inline">
-              / Atelier
+              / Xưởng chế tác
             </span>
           </h2>
           <div className="flex items-center gap-4">
             <span className="h-px w-8 bg-rose-200"></span>
             <p className="text-[11px] text-rose-400 uppercase tracking-[0.4em] font-bold">
-              Est. 2026 — Found {totalItems} Masterpieces
+              Est. 2026 — Tìm thấy {totalItems} Tuyệt tác thời gian
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function ProductList() {
             />
             <input
               type="text"
-              placeholder="Search pieces..."
+              placeholder="Tìm kiếm tạo tác..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full bg-[#fffafb] border border-stone-200 pl-11 pr-10 py-3 rounded-full text-[12px] font-medium tracking-wider outline-none transition-all focus:border-rose-300 focus:bg-white focus:shadow-lg focus:shadow-rose-50/50"
@@ -214,7 +214,7 @@ export default function ProductList() {
         <div className="flex flex-col items-center justify-center py-40 space-y-4">
           <Loader2 className="animate-spin text-rose-200" size={40} />
           <p className="text-serif italic text-stone-400 tracking-widest text-xs">
-            Curating Collection...
+            Đang chuẩn bị bộ sưu tập...
           </p>
         </div>
       ) : (
@@ -224,7 +224,7 @@ export default function ProductList() {
           ) : (
             <div className="col-span-3 text-center py-20">
               <p className="text-stone-400 font-serif italic text-lg mb-4">
-                No pieces available matching your criteria.
+                Không tìm thấy tạo tác nào phù hợp với tiêu chí của bạn.
               </p>
               <button
                 onClick={() => {

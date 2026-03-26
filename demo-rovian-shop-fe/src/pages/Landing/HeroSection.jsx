@@ -4,28 +4,30 @@ import { useNavigate } from "react-router-dom";
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen bg-[#fffafb] text-black font-sans selection:bg-rose-100 overflow-hidden">
+    <div className="min-h-screen bg-[#fffafb] text-black selection:bg-rose-100 overflow-hidden">
       {/* Main Content */}
       <main className="flex flex-col items-center justify-center pt-25 px-4">
         {/* Brand Narrative Section */}
-        <div className="text-center mb-12 max-w-3xl mx-auto">
+        <div className="text-center mb-12 max-w-4xl mx-auto">
           <p className="text-xs md:text-sm uppercase tracking-[0.4em] text-rose-400 mb-6 animate-pulse font-medium">
-            Established 2024 — ROVIAN Atelier
+            Thành lập năm 2026 — ROVIAN
           </p>
 
-          <h2 className="text-5xl md:text-8xl font-serif italic tracking-tighter uppercase leading-none mb-8 text-black">
-            ONE SECOND <br />
-            <span className="not-italic font-extralight text-rose-300">
-              at a
-            </span>{" "}
-            TIME
+          {/* NEW SLOGAN DESIGN */}
+          <h2 className="flex flex-col items-center mb-10 font-['Playwrite_IE'] text-5xl md:text-7xl ">
+            <span className="font-light tracking-[0.2em] text-black mb-4">
+              Thay đồng hồ
+            </span>
+            <span className="text-rose-400/80 mt-[-2px] md:mt-[-3px] ml-22 md:ml-30">
+              Đổi phong cách
+            </span>
           </h2>
 
           <div className="space-y-4 max-w-lg mx-auto">
             <p className="text-gray-600 text-sm md:text-base leading-relaxed font-light italic">
-              "Beyond the mechanical precision lies an eternal soul. ROVIAN
-              transcends traditional horology, blending soft elegance with the
-              unwavering heritage of master craftsmanship."
+              "Vượt xa sự chính xác của cơ học là một linh hồn vĩnh cửu. ROVIAN
+              bước qua ranh giới của nghệ thuật chế tác đồng hồ truyền thống,
+              hòa quyện giữa nét thanh lịch tinh tế và di sản chế tác bậc thầy."
             </p>
 
             <div className="flex justify-center gap-4 pt-4">
@@ -33,13 +35,13 @@ const HeroSection = () => {
                 onClick={() => navigate("/shop")}
                 className="bg-black text-white px-8 py-3 rounded-full font-medium hover:bg-rose-500 transition-all duration-300 uppercase text-[13px] tracking-[0.2em] active:scale-95 shadow-lg shadow-rose-100 cursor-pointer"
               >
-                Buy Now
+                Mua Ngay
               </button>
               <button
                 onClick={() => navigate("/about")}
                 className="border border-rose-200 text-rose-500 px-8 py-3 rounded-full font-medium hover:bg-rose-50 hover:text-rose-600 transition-all duration-300 uppercase text-[13px] tracking-[0.2em] cursor-pointer"
               >
-                Discover Story
+                Khám Phá Câu Chuyện
               </button>
             </div>
           </div>
@@ -99,26 +101,27 @@ const HeroSection = () => {
         <div className="mt-20 mb-8 grid grid-cols-1 md:grid-cols-3 w-full max-w-6xl border-t border-rose-100 pt-12 gap-12 text-center md:text-left">
           <div>
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-rose-500 mb-4 font-bold">
-              Precision
+              Độ Chính Xác
             </h4>
             <p className="text-gray-500 text-[13px] leading-relaxed">
-              Equipped with our proprietary Caliber-R1 movement, ensuring a
-              72-hour power reserve with elegant fluidity.
+              Được trang bị bộ máy Caliber-R1 độc quyền, đảm bảo khả năng dự trữ
+              năng lượng lên đến 72 giờ với sự chuyển động mượt mà và thanh
+              lịch.
             </p>
           </div>
           <div className="flex flex-col items-center">
             <div className="h-12 w-[1px] bg-gradient-to-b from-rose-200 to-transparent hidden md:block"></div>
             <p className="text-[11px] tracking-[0.4em] uppercase text-rose-300 mt-4">
-              Softness Redefined
+              Định Nghĩa Lại Sự Tinh Tế
             </p>
           </div>
           <div className="md:text-right">
             <h4 className="text-[10px] tracking-[0.3em] uppercase text-rose-500 mb-4 font-bold">
-              Material
+              Chất Liệu
             </h4>
             <p className="text-gray-500 text-[13px] leading-relaxed">
-              Forged in Polished Rose Gold and shielded by double-domed sapphire
-              crystal with soft-glare coating.
+              Được chế tác từ Vàng Hồng đánh bóng và bảo vệ bởi lớp kính
+              sapphire vòm kép kết hợp lớp phủ chống lóa dịu nhẹ.
             </p>
           </div>
         </div>

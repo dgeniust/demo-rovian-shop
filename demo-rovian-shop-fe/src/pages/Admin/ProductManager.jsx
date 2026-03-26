@@ -14,6 +14,7 @@ import {
 import AddProductModal from "../../components/AddProductModal";
 import productService from "../../services/productService";
 import EditProductModal from "../../components/EditProductModal";
+import DeleteConfirmModal from "../../components/DeleteConfirmModal";
 
 const ProductManager = () => {
   const [products, setProducts] = useState([]);
@@ -25,7 +26,8 @@ const ProductManager = () => {
   const [totalItems, setTotalItems] = useState(0);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [productToDelete, setProductToDelete] = useState(null);
   const pageSize = 6;
   const totalPages = Math.ceil(totalItems / pageSize);
 
@@ -73,14 +75,13 @@ const ProductManager = () => {
     }
   };
 
-  const handleDeleteClick = async (id) => {
-    if (window.confirm("Bạn có chắc chắn muốn xóa sản phẩm này?")) {
-      try {
-        await productService.deleteProduct(id);
-        fetchProducts();
-      } catch (err) {
-        alert("Lỗi khi xóa sản phẩm.");
-      }
+  const confirmDelete = async (id) => {
+    try {
+      await productService.deleteProduct(id);
+      fetchProducts();
+      // Có thể thêm thông báo thành công ở đây
+    } catch (err) {
+      alert("Lỗi khi xóa sản phẩm.");
     }
   };
 
@@ -219,7 +220,10 @@ const ProductManager = () => {
                           <Edit3 size={18} />
                         </button>
                         <button
-                          onClick={() => handleDeleteClick(item.id)}
+                          onClick={() => {
+                            setProductToDelete(item);
+                            setIsDeleteModalOpen(true);
+                          }}
                           className="p-2.5 text-slate-400 hover:text-red-500 hover:bg-red-50 rounded-xl transition-all"
                         >
                           <Trash2 size={18} />
@@ -296,7 +300,15 @@ const ProductManager = () => {
         product={selectedProduct}
         onRefresh={fetchProducts}
       />
-
+      <DeleteConfirmModal
+        isOpen={isDeleteModalOpen}
+        onClose={() => {
+          setIsDeleteModalOpen(false);
+          setProductToDelete(null);
+        }}
+        onConfirm={confirmDelete}
+        product={productToDelete}
+      />
       {selectedImg && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/90 backdrop-blur-md p-4 transition-all"

@@ -9,6 +9,12 @@ import {
   Image as ImageIcon,
   RotateCcw,
   Type,
+  Paperclip,
+  Clock,
+  FileText,
+  User,
+  Sparkles,
+  ChevronDown,
 } from "lucide-react";
 import productService from "../services/productService";
 
@@ -78,157 +84,173 @@ const EditProductModal = ({ isOpen, onClose, onRefresh, product }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
-      {/* Overlay - Glassmorphism */}
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 font-sans">
+      {/* Overlay - Mờ mịn theo style ảnh */}
       <div
-        className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-slate-200/40 backdrop-blur-md transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Container */}
-      <div className="relative bg-white rounded-[32px] shadow-[0_32px_64px_-12px_rgba(0,0,0,0.14)] w-full max-w-xl overflow-hidden animate-in fade-in zoom-in duration-300">
-        {/* Header - Indigo Accent */}
-        <div className="px-8 pt-8 pb-4 flex justify-between items-start">
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 bg-indigo-50 rounded-2xl flex items-center justify-center text-indigo-600">
-              <Edit3 size={24} strokeWidth={2.5} />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 tracking-tight">
-                Edit Product
-              </h3>
-              <p className="text-sm text-slate-500 font-medium italic">
-                Modifying ID: #{product.id}
-              </p>
-            </div>
+      <div className="relative bg-white/95 backdrop-blur-xl rounded-[28px] shadow-[0_40px_80px_-15px_rgba(0,0,0,0.1)] w-full max-w-xl overflow-hidden border border-white/50 animate-in fade-in zoom-in duration-300">
+        {/* Header - Minimalist Style */}
+        <div className="px-6 py-5 flex justify-between items-center border-b border-slate-100/50">
+          <div className="flex items-center gap-2">
+            <span className="text-[15px] font-semibold text-slate-800">
+              Edit Product
+            </span>
+            <span className="text-[13px] text-slate-400 font-medium">
+              #{product.id}
+            </span>
           </div>
-          <button
-            onClick={onClose}
-            className="p-2 bg-slate-50 text-slate-400 hover:text-red-500 rounded-full transition-all"
-          >
-            <X size={20} strokeWidth={3} />
-          </button>
+          <div className="flex gap-2">
+            <button
+              onClick={onClose}
+              className="p-1.5 text-slate-400 hover:bg-slate-100 rounded-lg transition-colors"
+            >
+              <X size={20} />
+            </button>
+          </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="p-8 pt-4 space-y-6">
-          {/* Image Section - Interactive Overlay */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-end px-1">
-              <label className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em]">
-                Product Image
-              </label>
-              {imageFile && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setPreview(product.image_url);
-                    setImageFile(null);
-                  }}
-                  className="text-[11px] font-bold text-indigo-600 flex items-center gap-1 hover:bg-indigo-50 px-2 py-1 rounded-lg transition-all"
-                >
-                  <RotateCcw size={12} strokeWidth={3} /> RESET TO ORIGINAL
-                </button>
-              )}
-            </div>
-
-            <div
-              className={`relative group border-2 border-dashed rounded-[24px] transition-all duration-300 overflow-hidden
-              ${imageFile ? "border-indigo-500 bg-indigo-50/20" : "border-slate-100 bg-slate-50"}`}
-            >
-              <div className="p-3">
-                <div className="relative h-44 w-full group">
-                  <img
-                    src={preview}
-                    alt="Preview"
-                    className="h-full w-full object-cover rounded-[18px] shadow-sm transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
-                  <label className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-all rounded-[18px] flex flex-col items-center justify-center cursor-pointer backdrop-blur-[2px]">
-                    <div className="bg-white p-3 rounded-2xl text-indigo-600 shadow-xl mb-2">
-                      <ImageIcon size={24} />
-                    </div>
-                    <span className="text-white text-xs font-bold uppercase tracking-wider">
-                      Change Photo
-                    </span>
-                    <input
-                      type="file"
-                      className="hidden"
-                      accept="image/*"
-                      onChange={handleFileChange}
-                    />
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Form Fields */}
-          <div className="space-y-5">
-            <div className="space-y-2">
-              <label className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] px-1 flex items-center gap-2">
-                <Type size={14} /> Product Name
-              </label>
+        <form onSubmit={handleSubmit} className="p-8 space-y-7">
+          {/* Product Info Section (Giống phần To/Subject) */}
+          <div className="space-y-4">
+            <div className="flex items-center gap-3 group">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                Name
+              </span>
               <input
                 name="name"
                 value={formData.name}
                 required
                 onChange={handleChange}
-                className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all"
+                placeholder="Enter product name..."
+                className="flex-1 bg-transparent text-[16px] font-semibold text-slate-800 outline-none placeholder:text-slate-300"
               />
             </div>
+            <div className="h-[1px] bg-slate-100 w-full" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="space-y-2">
-                <label className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] px-1 flex items-center gap-2">
-                  <DollarSign size={14} /> Price (VND)
-                </label>
-                <input
-                  name="price"
-                  type="number"
-                  value={formData.price}
-                  required
-                  onChange={handleChange}
-                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-bold focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all"
-                />
+            <div className="flex items-center gap-3">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                Price
+              </span>
+              <div className="flex gap-3 flex-1">
+                <div className="relative flex-1">
+                  <input
+                    name="price"
+                    type="number"
+                    value={formData.price}
+                    required
+                    onChange={handleChange}
+                    className="w-full bg-[#F4F4F5]/50 px-4 py-2 rounded-xl text-[14px] font-bold text-slate-700 outline-none border border-transparent focus:border-slate-200 transition-all"
+                  />
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[10px] font-bold text-slate-400">
+                    VND
+                  </span>
+                </div>
               </div>
+            </div>
+            <div className="h-[1px] bg-slate-100 w-full" />
 
-              <div className="space-y-2">
-                <label className="text-[11px] font-black text-slate-400 uppercase tracking-[0.2em] px-1 flex items-center gap-2">
-                  <LinkIcon size={14} /> Redirect Link
+            <div className="flex items-center gap-3 group">
+              <span className="text-[14px] text-slate-400 min-w-[60px]">
+                URL
+              </span>
+              <input
+                name="url_redirect"
+                value={formData.url_redirect}
+                required
+                onChange={handleChange}
+                placeholder="Redirect URL"
+                className="flex-[2] bg-[#F4F4F5]/50 px-4 py-2 rounded-xl text-[14px] text-slate-600 outline-none border border-transparent focus:border-slate-200 transition-all"
+              />
+            </div>
+          </div>
+
+          {/* Image Section - Attachment Card Style */}
+          <div className="space-y-3">
+            <label className="text-[12px] font-bold text-slate-400 uppercase tracking-widest px-1">
+              Media Asset
+            </label>
+
+            <div className="flex w-full items-center justify-center p-4 bg-white rounded-2xl border border-slate-200/60 shadow-sm ">
+              <div className="flex flex-col items-center gap-3">
+                {/* Bọc toàn bộ Preview bằng label để click là chọn file */}
+                <label className="relative group cursor-pointer transition-transform active:scale-95">
+                  <div className="w-40 h-40 bg-slate-50 rounded-2xl overflow-hidden border border-slate-200 shadow-sm transition-all group-hover:border-black/20 group-hover:shadow-md">
+                    <img
+                      src={preview}
+                      alt="Preview"
+                      className="w-full h-full object-cover transition-opacity group-hover:opacity-90"
+                    />
+
+                    {/* Lớp overlay hiện chữ khi hover (tùy chọn - giúp người dùng biết là click được) */}
+                    <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                      <ImageIcon
+                        className="text-white drop-shadow-md"
+                        size={32}
+                      />
+                    </div>
+                  </div>
+
+                  <input
+                    type="file"
+                    className="hidden"
+                    accept="image/*"
+                    onChange={handleFileChange}
+                  />
                 </label>
-                <input
-                  name="url_redirect"
-                  value={formData.url_redirect}
-                  required
-                  onChange={handleChange}
-                  className="w-full px-5 py-4 bg-slate-50 border-none rounded-2xl text-slate-800 font-medium focus:ring-2 focus:ring-indigo-500/20 outline-none transition-all"
-                />
+
+                {/* Nút text hỗ trợ phía dưới, vẫn hoạt động vì nằm trong flow chọn file nếu bạn muốn, 
+        hoặc đơn giản là một chỉ dẫn */}
+                <p className="text-[13px] font-bold text-slate-500 group-hover:text-black transition-colors">
+                  Click vào ảnh để thay đổi
+                </p>
+
+                {/* Nút Reset (nếu có file mới chọn) */}
+                {imageFile && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault(); // Ngăn click lan ra label
+                      setPreview(product.image_url);
+                      setImageFile(null);
+                    }}
+                    className="text-[11px] font-bold text-red-500 hover:bg-red-50 px-2 py-1 rounded-lg transition-all"
+                  >
+                    <RotateCcw size={12} className="inline mr-1" /> Khôi phục
+                    ảnh gốc
+                  </button>
+                )}
               </div>
             </div>
           </div>
 
-          {/* Action Footer */}
-          <div className="flex items-center gap-4 pt-4">
+          {/* Action Footer - Tái hiện thanh Toolbar của New Email */}
+          <div className="flex items-center justify-between pt-6 border-t border-slate-100/50">
             <button
-              type="button"
               onClick={onClose}
-              className="flex-1 px-6 py-4 bg-slate-50 text-slate-500 font-bold rounded-2xl hover:bg-slate-100 transition-all active:scale-95"
+              className="px-5 py-2.5 text-[14px] font-semibold text-slate-600 hover:bg-slate-100 rounded-full transition-all cursor-pointer"
             >
-              Discard
+              Hủy
             </button>
-            <button
-              type="submit"
-              disabled={loading}
-              className="flex-[2] bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 rounded-2xl transition-all shadow-lg shadow-indigo-100 active:scale-95 disabled:opacity-50 flex items-center justify-center gap-3"
-            >
-              {loading ? (
-                <Loader2 className="animate-spin" size={20} />
-              ) : (
-                <>
-                  <Save size={20} strokeWidth={2.5} />
-                  <span>Update Changes</span>
-                </>
-              )}
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                type="submit"
+                disabled={loading}
+                className="flex items-center gap-3 px-8 py-2.5 bg-black text-white rounded-full text-[14px] font-bold hover:bg-zinc-800 transition-all active:scale-95 disabled:opacity-50 shadow-lg shadow-zinc-200 cursor-pointer disabled:cursor-not-allowed"
+              >
+                {loading ? (
+                  <Loader2 className="animate-spin" size={18} />
+                ) : (
+                  <>
+                    <span>Update</span>
+                    <Save size={16} />
+                  </>
+                )}
+              </button>
+            </div>
           </div>
         </form>
       </div>
