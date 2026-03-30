@@ -8,7 +8,7 @@ const AboutPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
         {/* Left: Text Content */}
         <div className="lg:col-span-4 space-y-8">
-          <h1 className="text-8xl md:text-9xl font-light tracking-tighter leading-[0.8] uppercase italic font-serif text-stone-900">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tighter leading-[0.8] uppercase italic font-serif text-stone-900">
             CÂU <br /> <span className="text-rose-300 not-italic">CHUYỆN</span>
           </h1>
           <div className="space-y-6 pt-10 flex justify-center flex-col items-center lg:items-start">

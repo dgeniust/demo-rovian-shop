@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-
+import h1 from "../../assets/SRWATCH_SL1611.1302TE-removebg-preview.png";
 const BrandSection = () => {
   const brands = [
     "Rolex",
@@ -80,9 +80,8 @@ const BrandSection = () => {
             {/* Product Image */}
             <div className="relative mb-10 bg-white/40 transform transition-all duration-700 group-hover:scale-105 group-hover:drop-shadow-xl">
               <img
-                src="https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/c_lpad,w_iw,h_ih/c_lpad,ar_1:1,w_800,g_center/ProductsAssets/Web/385388-5001_01.png"
-                alt="IMPERIALE Day & Night
-"
+                src={h1}
+                alt="SRWATCH SL1611.1302TE"
                 className="w-full object-contain mix-blend-multiply opacity-90 group-hover:opacity-100"
               />
             </div>
@@ -90,9 +89,9 @@ const BrandSection = () => {
             {/* Product Info */}
             <div className="space-y-3 relative z-10">
               <h3 className="text-lg font-bold uppercase tracking-[0.2em] text-stone-800">
-                IMPERIALE{" "}
+                SRWATCH{" "}
                 <span className="italic font-serif font-light text-rose-500">
-                  Day & Night
+                  SL1611.1302TE
                 </span>
               </h3>
               <p className="text-rose-400 font-serif italic text-xl">

@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import h1 from "../../assets/SRWATCH_SL1611.1302TE-removebg-preview.png";
+import h2 from "../../assets/SRWATCH_SL5010.1302BL-removebg-preview.png";
+import h3 from "../../assets/SRWATCH_SL5011.9102BL-removebg-preview.png";
 const HeroSection = () => {
   const navigate = useNavigate();
   return (
@@ -57,11 +59,11 @@ const HeroSection = () => {
             {/* Hover Text cho đồng hồ trái */}
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
               <span className="text-[12px] tracking-[0.5em] text-rose-400 uppercase font-medium">
-                IMPERIALE Métier d'art
+                SRWATCH SL5010.1302BL
               </span>
             </div>
             <img
-              src="https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/385392-1001_01.png"
+              src={h2}
               alt="IMPERIALE Métier d'art"
               className="w-full h-auto filter sepia-[0.1] hover:sepia-0 transition-all duration-700"
             />
@@ -71,13 +73,13 @@ const HeroSection = () => {
           <div className="z-30 w-full md:w-[40%] transform transition-all duration-1000 group cursor-crosshair">
             <div className="absolute -top-16 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
               <span className="text-[12px] tracking-[0.5em] text-rose-400 uppercase font-medium">
-                IMPERIALE Joaillerie Rainbow
+                SRWATCH SL1611.1302TE
               </span>
             </div>
             <img
-              src="https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/384239-5009_01.png"
+              src={h1}
               alt="Main Watch"
-              className="w-full drop-shadow-[0_30px_60px_rgba(251,113,133,0.3)] scale-110 group-hover:scale-125 transition-transform duration-1000"
+              className="w-full drop-shadow-[0_30px_60px_rgba(251,113,133,0.3)] scale-90 group-hover:scale-105 transition-transform duration-1000"
             />
           </div>
 
@@ -86,11 +88,11 @@ const HeroSection = () => {
             {/* Hover Text cho đồng hồ phải */}
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-4 group-hover:translate-y-0">
               <span className="text-[12px] tracking-[0.5em] text-rose-400 uppercase font-medium">
-                IMPERIALE Flying Tourbillon
+                SRWATCH SL5011.9102BL
               </span>
             </div>
             <img
-              src="https://objects-prod.cdn.chopard.com/q_auto,f_auto,dpr_auto/e_trim/w_iw,h_ih,c_lpad,g_center/c_pad,ar_1:1,w_1490,e_sharpen:60/ProductsAssets/Web/385389-1001_01.png"
+              src={h3}
               alt="Rovian Series 2"
               className="w-full h-auto filter sepia-[0.1] hover:sepia-0 transition-all duration-700"
             />
