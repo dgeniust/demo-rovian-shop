@@ -94,7 +94,7 @@ const ContactPage = () => {
                   href="mailto:hello@rovianwatch.com"
                   className="font-medium text-black underline underline-offset-2"
                 >
-                  hello@rovianwatch.com
+                  rovianwatch@gmail.com
                 </a>
               </p>
 
@@ -103,17 +103,17 @@ const ContactPage = () => {
                   {
                     title: "Chăm sóc khách hàng",
                     desc: "Hỗ trợ bảo dưỡng, sửa chữa và các câu hỏi kỹ thuật chuyên sâu.",
-                    contact: "care@rovianwatch.com",
+                    contact: "rovianwatch@gmail.com",
                   },
                   {
                     title: "Trải nghiệm trực tiếp",
                     desc: "Ghé thăm cửa hàng flagship của ROVIAN tại trung tâm London.",
-                    contact: "15 Savile Row, London, W1S 3PF",
+                    contact: "",
                   },
                   {
                     title: "Tư vấn chuyên gia",
                     desc: "Dành cho những yêu cầu tư vấn cá nhân hóa và lựa chọn mẫu độc bản.",
-                    contact: "+44 (0) 20 7123 4567",
+                    contact: "0708110906",
                   },
                 ].map((item, index) => (
                   <div
