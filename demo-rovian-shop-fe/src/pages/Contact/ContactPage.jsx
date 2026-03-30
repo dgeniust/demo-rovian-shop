@@ -2,7 +2,7 @@ import logo from "../../assets/blackHorizontal_final.png";
 
 const ContactPage = () => {
   const contactLinks = {
-    zalo: "https://zalo.me/0xxxxxxxxx", // Thay số điện thoại zalo của bạn
+    zalo: "https://zalo.me/0708110906", // Thay số điện thoại zalo của bạn
     messenger: "https://m.me/yourfacebookpage", // Thay ID page facebook
   };
 
