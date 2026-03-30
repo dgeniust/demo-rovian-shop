@@ -113,107 +113,117 @@ const ProductDetail = ({ productId }) => {
           </div>
         </div>
 
-        {/* RIGHT: Info - Typography tinh tế */}
-        <div className="lg:col-span-5 space-y-8 text-left">
-          <div className="space-y-4">
-            <h1 className="text-4xl font-light text-gray-900 leading-tight">
+        {/* RIGHT: Info - Redesigned Layout */}
+        <div className="lg:col-span-5 flex flex-col text-left">
+          {/* HEADER SECTION - Name & Price */}
+          <div className="pb-8 border-b border-gray-200">
+            <h1 className="text-4xl font-light text-gray-900 leading-tight mb-6">
               {product.name}
             </h1>
-            <div className="flex items-baseline gap-4">
-              <span className="text-3xl font-medium text-rose-500">
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium">
+                Giá
+              </p>
+              <span className="text-4xl font-semibold text-rose-500">
                 {formatPrice(product.price)}
               </span>
-              {/* <span className="text-gray-400 line-through text-sm">
-                {formatPrice(product.originalPrice)}
-              </span> */}
             </div>
           </div>
 
-          <div className="h-[1px] w-full bg-gradient-to-r from-gray-200 to-transparent"></div>
-
-          <p className="text-gray-500 leading-relaxed font-light text-[15px]">
-            {product.description}
-          </p>
-
-          {/* Action Area */}
-          <div className="space-y-6 pt-4">
-            <div className="grid grid-cols-2 gap-4">
-              <button
-                className="bg-white border border-black text-black py-4 rounded-full font-medium hover:bg-black hover:text-white transition-all active:scale-95 shadow-sm"
-                onClick={() => {
-                  handleOpenURL(product.url_redirect);
-                }}
-              >
-                Mua ngay
-              </button>
-            </div>
-          </div>
-
-          {/* Contact & Trust */}
-          <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-5">
-            <div className="relative">
-              <p className="text-center">Hoặc liên hệ qua các kênh thông tin</p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
-              {/* Messenger Button */}
-              <a
-                href={contactLinks.messenger}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex items-center gap-4 p-3 bg-white border border-neutral-100 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-50 hover:border-blue-100"
-              >
-                <div className="w-12 h-12 flex-shrink-0 bg-blue-50 rounded-xl p-2 group-hover:bg-white transition-colors">
-                  <img
-                    src={fb}
-                    alt="Messenger"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest leading-none mb-1">
-                    Facebook
-                  </span>
-                  <span className="text-sm font-black text-slate-800 tracking-tight group-hover:text-blue-600 transition-colors">
-                    Messenger
-                  </span>
-                </div>
-              </a>
-
-              {/* Zalo Button */}
-              <a
-                href={contactLinks.zalo}
-                target="_blank"
-                rel="noreferrer"
-                className="group flex items-center gap-4 p-3 bg-white border border-neutral-100 rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-sky-50 hover:border-sky-100"
-              >
-                <div className="w-12 h-12 flex-shrink-0 bg-sky-50 rounded-xl p-2 group-hover:bg-white transition-colors">
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/960px-Icon_of_Zalo.svg.png"
-                    alt="Zalo"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest leading-none mb-1">
-                    Kênh chính thức
-                  </span>
-                  <span className="text-sm font-black text-slate-800 tracking-tight group-hover:text-sky-600 transition-colors">
-                    Zalo Chat
-                  </span>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div className="flex gap-8 text-[10px] text-gray-400 uppercase tracking-[0.15em]">
-            <p>
-              SKU: <span className="text-black ml-1">{product.sku}</span>
+          {/* DESCRIPTION SECTION */}
+          <div className="py-8 border-b border-gray-200">
+            <p className="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium mb-4">
+              Mô tả sản phẩm
             </p>
-            <p>
-              Category:{" "}
-              <span className="text-black ml-1">{product.category}</span>
+            <p className="text-gray-700 leading-relaxed font-light text-base">
+              {product.description}
             </p>
+          </div>
+
+          {/* DETAILS SECTION */}
+          <div className="py-8 border-b border-gray-200 space-y-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium mb-2">
+                Danh mục
+              </p>
+              <p className="text-gray-800 font-light">{product.category}</p>
+            </div>
+          </div>
+
+          {/* ACTION BUTTON */}
+          <div className="py-8 border-b border-gray-200">
+            <button
+              className="w-full bg-black text-white py-4 rounded-lg font-medium hover:bg-gray-800 transition-all active:scale-95 tracking-wide uppercase text-sm"
+              onClick={() => {
+                handleOpenURL(product.url_redirect);
+              }}
+            >
+              Mua ngay
+            </button>
+          </div>
+
+          {/* CONTACT SECTION */}
+          <div className="py-8 space-y-6">
+            <div>
+              <p className="text-xs uppercase tracking-[0.2em] text-gray-400 font-medium mb-4">
+                Liên hệ tư vấn
+              </p>
+              <div className="space-y-3">
+                {/* Messenger */}
+                <a
+                  href={contactLinks.messenger}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between p-4 border-l-4 border-blue-400 bg-blue-50 hover:bg-blue-100 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 flex-shrink-0 p-1.5">
+                      <img
+                        src={fb}
+                        alt="Messenger"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-xs font-semibold text-blue-600">
+                        Facebook Messenger
+                      </span>
+                      <span className="text-[11px] text-gray-500">
+                        Hỗ trợ 24/7
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-gray-400">→</span>
+                </a>
+
+                {/* Zalo */}
+                <a
+                  href={contactLinks.zalo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center justify-between p-4 border-l-4 border-sky-400 bg-sky-50 hover:bg-sky-100 transition-all"
+                >
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 flex-shrink-0 p-1.5">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/960px-Icon_of_Zalo.svg.png"
+                        alt="Zalo"
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    <div className="flex flex-col">
+                      <span className="text-xs font-semibold text-sky-600">
+                        Zalo Official
+                      </span>
+                      <span className="text-[11px] text-gray-500">
+                        Phản hồi nhanh
+                      </span>
+                    </div>
+                  </div>
+                  <span className="text-gray-400">→</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
