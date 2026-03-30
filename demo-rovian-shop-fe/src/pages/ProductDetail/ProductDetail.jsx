@@ -68,7 +68,7 @@ const ProductDetail = ({ productId }) => {
     window.open(url, "_blank");
   };
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 lg:py-20 bg-[#fafafa] min-h-screen font-sans selection:bg-rose-100">
+    <section className="max-w-7xl mx-auto px-4 py-12 lg:py-20 min-h-screen font-sans selection:bg-rose-100">
       {/* Breadcrumb nhỏ xinh */}
       <nav className="flex items-center space-x-2 text-[11px] uppercase tracking-[0.2em] text-gray-400 mb-10">
         <a href="/" className="hover:text-black transition">
@@ -79,33 +79,33 @@ const ProductDetail = ({ productId }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
         {/* LEFT: Gallery - Thiết kế thoáng đãng */}
-        <div className="lg:col-span-7 flex flex-col md:flex-row-reverse gap-4">
+        <div className="lg:col-span-7 flex flex-col md:flex-row-reverse gap-6">
           {/* Main Image */}
-          <div className="flex-1 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 group">
-            <div className="aspect-[4/5] relative flex items-center justify-center p-8">
+          <div className="flex-1 overflow-hidden border border-gray-200 group">
+            <div className="aspect-[4/5] relative flex items-center justify-center p-12 ">
               <img
                 src={product.images[activeImg]}
                 alt={product.name}
-                className="w-full h-full object-contain mix-blend-multiply transition-transform duration-700 ease-out group-hover:scale-110"
+                className="w-full h-full object-contain transition-all duration-700 ease-out group-hover:scale-105"
               />
             </div>
           </div>
 
           {/* Thumbnails - Chuyển sang dọc trên desktop để tiết kiệm không gian */}
-          <div className="flex md:flex-col gap-3 w-full md:w-20 overflow-x-auto pb-2 md:pb-0">
+          <div className="flex md:flex-col gap-3 w-full md:w-24 overflow-x-auto pb-2 md:pb-0">
             {product.images.map((img, index) => (
               <button
                 key={index}
                 onClick={() => setActiveImg(index)}
-                className={`relative flex-shrink-0 w-20 h-20 md:w-full aspect-square rounded-xl border-2 transition-all duration-300 overflow-hidden ${
+                className={`relative flex-shrink-0 w-24 h-24 md:w-full aspect-square rounded-2xl transition-all duration-300 overflow-hidden border-2 group/thumb ${
                   activeImg === index
-                    ? "border-rose-400 shadow-md"
-                    : "border-transparent opacity-60 hover:opacity-100 bg-white"
+                    ? "border-rose-500 shadow-lg scale-100 bg-gradient-to-br from-white to-gray-50"
+                    : "border-gray-200 opacity-70 hover:opacity-100 bg-gradient-to-br from-gray-50 to-white hover:border-rose-300 hover:shadow-md"
                 }`}
               >
                 <img
                   src={img}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover/thumb:scale-110"
                   alt="thumb"
                 />
               </button>
