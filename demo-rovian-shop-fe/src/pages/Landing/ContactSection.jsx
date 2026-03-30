@@ -105,10 +105,10 @@ const ContactSection = () => {
                 Yêu cầu tư vấn
               </h4>
               <a
-                href="mailto:concierge@rovian.com"
+                href="mailto:rovianwatch@gmail.com"
                 className="text-xl sm:text-2xl md:text-3xl font-light text-stone-800 hover:text-black transition-colors block break-words tracking-tight"
               >
-                concierge@rovian.com
+                rovianwatch@gmail.com
               </a>
             </motion.div>
 
