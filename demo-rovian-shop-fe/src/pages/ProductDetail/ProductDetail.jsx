@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { ShoppingBag, ChevronRight, Phone, MessageCircle } from "lucide-react";
 import productService from "../../services/productService";
-
+import fb from "../../assets/fb.png";
 const ProductDetail = ({ productId }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [activeImg, setActiveImg] = useState(0);
@@ -27,8 +27,9 @@ const ProductDetail = ({ productId }) => {
   }, [productId]);
 
   const contactLinks = {
-    zalo: "https://zalo.me/0xxxxxxxxx",
-    messenger: "https://m.me/yourfacebookpage",
+    zalo: "https://zalo.me/0708110906",
+    messenger:
+      "https://www.facebook.com/profile.php?id=61578455405363&locale=vi_VN",
   };
 
   const product = selectedProduct
@@ -151,17 +152,10 @@ const ProductDetail = ({ productId }) => {
           {/* Contact & Trust */}
           <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm space-y-5">
             <div className="relative">
-              <input
-                type="text"
-                placeholder="Số điện thoại nhận tư vấn..."
-                className="w-full bg-gray-50 border-none rounded-xl py-4 pl-4 pr-32 text-sm focus:ring-2 focus:ring-rose-200 outline-none transition"
-              />
-              <button className="absolute right-2 top-2 bottom-2 bg-rose-500 text-white px-5 rounded-lg text-[11px] font-bold uppercase hover:bg-rose-600 transition">
-                Gửi ngay
-              </button>
+              <p className="text-center">Hoặc liên hệ qua các kênh thông tin</p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
               {/* Messenger Button */}
               <a
                 href={contactLinks.messenger}
@@ -171,9 +165,9 @@ const ProductDetail = ({ productId }) => {
               >
                 <div className="w-12 h-12 flex-shrink-0 bg-blue-50 rounded-xl p-2 group-hover:bg-white transition-colors">
                   <img
-                    src="https://www.computerhope.com/jargon/f/facebook-messenger.png"
+                    src={fb}
                     alt="Messenger"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="flex flex-col">
