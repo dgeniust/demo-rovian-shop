@@ -39,7 +39,7 @@ export const HeaderAdmin = () => {
   return (
     <header className="fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-100 z-[100] flex items-center justify-between px-8">
       {/* Logo Section */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2" onClick={handleNavigateHomePage}>
         <img src={logo} alt="Logo" className="h-7" />
       </div>
 
