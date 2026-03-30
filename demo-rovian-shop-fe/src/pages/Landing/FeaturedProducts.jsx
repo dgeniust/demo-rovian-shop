@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "../Shop/ProductCard";
 import productService from "../../services/productService";
+import { useNavigate } from "react-router-dom";
 
 const FeaturedProducts = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -42,7 +44,10 @@ const FeaturedProducts = () => {
               "Mỗi giây trôi qua là một cánh hoa nở rộ trong khu vườn thời
               gian."
             </p>
-            <button className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-stone-800 hover:text-rose-500 transition-colors">
+            <button
+              className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-stone-800 hover:text-rose-500 transition-colors cursor-pointer"
+              onClick={() => navigate("/shop")}
+            >
               Xem Tất Cả Tuyệt Tác
               <span className="w-6 h-[1px] bg-stone-300 group-hover:bg-rose-500 group-hover:w-10 transition-all duration-500"></span>
             </button>

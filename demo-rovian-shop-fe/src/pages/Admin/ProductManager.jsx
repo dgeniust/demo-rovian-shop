@@ -10,11 +10,13 @@ import {
   Edit3,
   Trash2,
   Package,
+  Eye,
 } from "lucide-react";
 import AddProductModal from "../../components/AddProductModal";
 import productService from "../../services/productService";
 import EditProductModal from "../../components/EditProductModal";
 import DeleteConfirmModal from "../../components/DeleteConfirmModal";
+import ProductDetailModal from "../../components/ProductDetailModal";
 
 const ProductManager = () => {
   const [products, setProducts] = useState([]);
@@ -26,7 +28,9 @@ const ProductManager = () => {
   const [totalItems, setTotalItems] = useState(0);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [selectedId, setSelectedId] = useState(null);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
+  const [isDetailModalOpen, setIsDetailModalOpen] = useState(false);
   const [productToDelete, setProductToDelete] = useState(null);
   const pageSize = 6;
   const totalPages = Math.ceil(totalItems / pageSize);
@@ -84,7 +88,19 @@ const ProductManager = () => {
       alert("Lỗi khi xóa sản phẩm.");
     }
   };
-
+  const fetchProductDetails = async (id) => {
+    try {
+      const res = await productService.detailProduct(id);
+      console.log("Product details response:", JSON.stringify(res));
+      if (res) {
+        setSelectedProduct(res);
+      } else {
+        console.error("Failed to fetch product details:", res.message);
+      }
+    } catch (error) {
+      console.error("Error fetching product details:", error);
+    }
+  };
   return (
     <div className="p-6 bg-[#F8F9FB] min-h-screen font-sans text-slate-700">
       {/* Header Section */}
@@ -168,6 +184,10 @@ const ProductManager = () => {
                   <tr
                     key={item.id}
                     className="hover:bg-slate-50/80 transition-colors group"
+                    // onClick={() => {
+                    //   fetchProductDetails(item.id);
+                    //   setIsDetailModalOpen(true);
+                    // }}
                   >
                     <td className="px-6 py-5">
                       <div className="flex items-center gap-4">
@@ -212,7 +232,16 @@ const ProductManager = () => {
                       <div className="flex justify-end gap-2">
                         <button
                           onClick={() => {
-                            setSelectedProduct(item);
+                            fetchProductDetails(item.id);
+                            setIsDetailModalOpen(true);
+                          }}
+                          className="p-2.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded-xl transition-all"
+                        >
+                          <Eye size={18} />
+                        </button>
+                        <button
+                          onClick={() => {
+                            fetchProductDetails(item.id);
                             setIsEditModalOpen(true);
                           }}
                           className="p-2.5 text-slate-400 hover:text-blue-500 hover:bg-blue-50 rounded-xl transition-all"
@@ -308,6 +337,14 @@ const ProductManager = () => {
         }}
         onConfirm={confirmDelete}
         product={productToDelete}
+      />
+      <ProductDetailModal
+        isOpen={isDetailModalOpen}
+        onClose={() => {
+          setIsDetailModalOpen(false);
+          setSelectedProduct(null);
+        }}
+        product={selectedProduct}
       />
       {selectedImg && (
         <div

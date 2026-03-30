@@ -117,7 +117,7 @@ export default function ProductList() {
   return (
     <section
       id="product-grid-section"
-      className="max-w-[1600px] mx-auto px-6 md:px-10 py-24 text-black min-h-screen"
+      className="max-w-[1600px] mx-auto px-6 md:px-10 py-6 text-black min-h-screen"
     >
       {/* HEADER: Chứa tiêu đề, Tìm kiếm và Sắp xếp */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-rose-100 pb-10 gap-8">

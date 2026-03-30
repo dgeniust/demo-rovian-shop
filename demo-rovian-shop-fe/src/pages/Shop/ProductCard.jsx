@@ -1,9 +1,10 @@
+import { useNavigate } from "react-router-dom";
+
 export default function ProductCard({ product }) {
-  const handleRedirect = (e) => {
+  const navigate = useNavigate();
+  const handleRedirect = (id) => {
     // Ngăn chặn sự kiện click lan ra ngoài nếu click vào nút con (nếu cần)
-    if (product.url_redirect) {
-      window.open(product.url_redirect, "_blank");
-    }
+    navigate(`/detail/${id || product.id}`);
   };
 
   const formatCurrency = (amount) => {
@@ -11,11 +12,14 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="group cursor-pointer w-full" onClick={handleRedirect}>
+    <div
+      className="group cursor-pointer w-full"
+      onClick={() => handleRedirect(product.id)}
+    >
       {/* Khối chứa ảnh */}
-      <div className="relative aspect-[4/5] bg-[#fffafb] mb-5 overflow-hidden flex items-center justify-center transition-all duration-700 border border-rose-50/50 group-hover:bg-[#fdf2f4] rounded-2xl">
+      <div className="relative aspect-[4/5] mb-5 overflow-hidden flex items-center justify-center transition-all duration-700 border border-rose-50/50 rounded-2xl">
         {/* Glow Effects (Giữ nguyên của bạn) */}
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 ease-out bg-[radial-gradient(circle,_rgba(251,113,133,0.15)_0%,_transparent_70%)] z-0 scale-50 group-hover:scale-150" />
+        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-1000 ease-out z-0 scale-50 group-hover:scale-150" />
         <div className="absolute w-32 h-32 bg-rose-200/20 blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-0" />
 
         {/* Ảnh sản phẩm */}

@@ -21,7 +21,6 @@ const productService = {
     return apiClient(`/products/${id}`, {
       method: "PUT",
       body: formData,
-      // Lưu ý: Tương tự POST, để trống Content-Type nếu gửi FormData
     });
   },
 
@@ -29,6 +28,11 @@ const productService = {
   deleteProduct: async (id) => {
     return apiClient(`/products/${id}`, {
       method: "DELETE",
+    });
+  },
+  detailProduct: async (id) => {
+    return apiClient(`/detail/${id}`, {
+      method: "GET",
     });
   },
 };
