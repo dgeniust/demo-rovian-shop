@@ -22,34 +22,34 @@ const FeaturedProducts = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-24 bg-[#0a0a0a] overflow-hidden relative text-white">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* --- HEADER SECTION --- */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <span className="w-12 h-[1px] bg-rose-200"></span>
-              <span className="text-xs uppercase tracking-[0.5em] text-rose-400 font-bold">
-                Vẻ Đẹp Vĩnh Cửu
+              <span className="w-12 h-[1px] bg-zinc-600"></span>
+              <span className="text-xs uppercase tracking-[0.5em] text-zinc-400 font-bold">
+                Dấu Ấn Thời Gian
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-stone-900">
+            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-white">
               Bộ Sưu Tập{" "}
-              <span className="italic font-serif text-rose-300">Tiêu Biểu</span>
+              <span className="italic font-serif text-zinc-500">Tiêu Biểu</span>
             </h2>
           </div>
 
           <div className="flex flex-col items-start md:items-end">
-            <p className="text-stone-400 text-sm max-w-[300px] mb-4 md:text-right leading-relaxed italic">
-              "Mỗi giây trôi qua là một cánh hoa nở rộ trong khu vườn thời
-              gian."
+            <p className="text-zinc-500 text-sm max-w-[300px] mb-4 md:text-right leading-relaxed italic">
+              "Mỗi tích tắc trôi qua là một lời khẳng định cho bản lĩnh và phong
+              thái của người dẫn đầu."
             </p>
             <button
-              className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-stone-800 hover:text-rose-500 transition-colors cursor-pointer"
+              className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-300 hover:text-white transition-colors cursor-pointer"
               onClick={() => navigate("/shop")}
             >
               Xem Tất Cả Tuyệt Tác
-              <span className="w-6 h-[1px] bg-stone-300 group-hover:bg-rose-500 group-hover:w-10 transition-all duration-500"></span>
+              <span className="w-6 h-[1px] bg-zinc-600 group-hover:bg-white group-hover:w-10 transition-all duration-500"></span>
             </button>
           </div>
         </div>
@@ -65,13 +65,13 @@ const FeaturedProducts = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* --- DECORATIVE TEXT --- */}
-        <div className="absolute left-0 w-full overflow-hidden pointer-events-none opacity-[0.03] select-none -z-10 mt-12">
-          <span className="text-[15vw] font-black uppercase tracking-tighter whitespace-nowrap text-stone-900">
-            ROVIAN ATELIER ROVIAN ATELIER
-          </span>
-        </div>
+      {/* --- DECORATIVE TEXT --- */}
+      <div className="absolute top-1/2 left-0 w-full overflow-hidden pointer-events-none opacity-[0.02] select-none z-0 -translate-y-1/2 mt-12">
+        <span className="text-[15vw] font-black uppercase tracking-tighter whitespace-nowrap text-white">
+          ROVIAN ATELIER ROVIAN ATELIER
+        </span>
       </div>
     </section>
   );

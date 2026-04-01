@@ -5,9 +5,8 @@ import Footer from "./Footer";
 const ShopLayout = () => (
   <>
     <Header variant="shop" />
-    <main className="pt-24">
-      <Outlet />
-    </main>
+
+    <Outlet />
     <Footer variant="light" />
   </>
 );

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Loader = () => {
   return (
     <StyledWrapper>
-      {/* Container bên ngoài có màu nền #fffafb như yêu cầu ban đầu */}
+      {/* Container bên ngoài nền đen tối giản */}
       <div className="loader-container">
         <div className="loader">
           {/* R */}
@@ -58,18 +58,18 @@ const Loader = () => {
   );
 };
 
-// Đã cập nhật màu nét vẽ thành mã hex của rose-200
-const strokeColor = "#fecdd3";
+// Sử dụng màu trắng để tạo tương phản cao cấp trên nền đen
+const strokeColor = "#ffffff";
 
 const StyledWrapper = styled.div`
-  /* Thiết lập nền cho toàn bộ khu vực chứa loader */
+  /* Thiết lập nền tối cho toàn bộ khu vực chứa loader */
   .loader-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh; /* Sửa thành 100vh để bao phủ toàn bộ màn hình */
-    background-color: #fffafb; /* Trả lại MÀU NỀN THEO YÊU CẦU BAN ĐẦU */
+    height: 100vh;
+    background-color: #0a0a0a; /* Chuyển sang nền đen tuyền */
   }
 
   .loader {
@@ -80,22 +80,22 @@ const StyledWrapper = styled.div`
   }
 
   .char {
-    width: 40px; /* Thu nhỏ một chút để thanh thoát hơn */
+    width: 40px;
     height: 40px;
     display: inline-block;
   }
 
   .char path {
     fill: none;
-    stroke: ${strokeColor}; /* Áp dụng màu nét vẽ mới */
-    stroke-width: 7; /* Giảm độ dày nét một chút cho tinh tế */
+    stroke: ${strokeColor}; /* Nét vẽ màu trắng sáng */
+    stroke-width: 6; /* Giảm nhẹ độ dày nét để trông thanh lịch và sắc sảo hơn */
     stroke-linecap: round;
     stroke-linejoin: round;
   }
 
   /* Riêng chữ O nét dày hơn chút để giữ hiệu ứng quay đẹp */
   .char-o path {
-    stroke-width: 9;
+    stroke-width: 8;
   }
 
   .dash {

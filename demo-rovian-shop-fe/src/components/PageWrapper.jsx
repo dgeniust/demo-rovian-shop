@@ -35,9 +35,9 @@ export const PageWrapper = ({ children }) => {
       exit="exit"
       className="relative"
     >
-      {/* LỚP MÀN CHE */}
+      {/* LỚP MÀN CHE - Nền đen tuyệt đối */}
       <motion.div
-        className="fixed inset-0 bg-[#fffafb] z-[9999] pointer-events-none flex items-center justify-center"
+        className="fixed inset-0 bg-[#0a0a0a] z-[9999] pointer-events-none flex items-center justify-center"
         variants={{
           initial: { opacity: 1 },
           animate: {

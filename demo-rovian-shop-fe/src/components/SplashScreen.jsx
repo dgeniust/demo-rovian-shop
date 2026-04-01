@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/blackHorizontal_final.png"; // Sử dụng logo đen cho nền sáng
+import logo from "../assets/whiteHorizontal_final.png"; // Sử dụng logo trắng cho nền tối
 
 const SplashScreen = ({ finishLoading }) => {
   const [startFade, setStartFade] = useState(false);
@@ -24,7 +24,7 @@ const SplashScreen = ({ finishLoading }) => {
     <AnimatePresence>
       {!startFade && (
         <motion.div
-          className="fixed inset-0 flex flex-col items-center justify-center z-[100] bg-[#fffafb] overflow-hidden"
+          className="fixed inset-0 flex flex-col items-center justify-center z-[100] bg-[#0a0a0a] overflow-hidden"
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
@@ -34,9 +34,9 @@ const SplashScreen = ({ finishLoading }) => {
         >
           {/* 1. Visual Center: Logo Image & Glow Effect */}
           <div className="relative flex items-center justify-center mb-5">
-            {/* Sakura Glow Effect - Tạo chiều sâu cho Logo */}
+            {/* Dark/Masculine Glow Effect - Ánh sáng xám khói */}
             <motion.div
-              className="absolute w-48 h-48 bg-rose-200/30 rounded-full blur-[60px]"
+              className="absolute w-48 h-48 bg-zinc-600/20 rounded-full blur-[60px]"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{
                 scale: 1.5,
@@ -71,9 +71,9 @@ const SplashScreen = ({ finishLoading }) => {
                 transition: { delay: 0.8, duration: 0.8 },
               }}
             >
-              <h1 className="text-3xl font-light uppercase tracking-[0.6em] text-gray-900">
+              <h1 className="text-3xl font-light uppercase tracking-[0.6em] text-white">
                 ROVIAN{" "}
-                <span className="text-rose-400/80 font-serif italic ml-[-0.2em]">
+                <span className="text-zinc-500 font-serif italic ml-[-0.2em]">
                   Horology
                 </span>
               </h1>
@@ -81,7 +81,7 @@ const SplashScreen = ({ finishLoading }) => {
 
             {/* Divider Line */}
             <motion.div
-              className="w-16 h-[1px] bg-gradient-to-r from-transparent via-rose-300 to-transparent mx-auto"
+              className="w-16 h-[1px] bg-gradient-to-r from-transparent via-zinc-500 to-transparent mx-auto"
               initial={{ width: 0, opacity: 0 }}
               animate={{
                 width: 64,
@@ -92,33 +92,33 @@ const SplashScreen = ({ finishLoading }) => {
 
             <div className="space-y-2">
               <motion.p
-                className="text-[15px] uppercase tracking-[0.4em] text-gray-500 font-light"
+                className="text-[15px] uppercase tracking-[0.4em] text-zinc-400 font-light"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
                   transition: { delay: 1.3, duration: 0.8 },
                 }}
               >
-                Timeless Precision • Absolute Devotion
+                Timeless Precision • Absolute Mastery
               </motion.p>
 
               <motion.p
-                className="text-[12px] italic tracking-[0.2em] text-rose-400/70"
+                className="text-[12px] italic tracking-[0.2em] text-zinc-500"
                 initial={{ opacity: 0 }}
                 animate={{
                   opacity: 1,
                   transition: { delay: 1.6, duration: 0.8 },
                 }}
               >
-                Honoring your time, every second counts.
+                Excellence in every second.
               </motion.p>
             </div>
           </div>
 
           {/* 3. Luxury Loading Progress */}
-          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-gray-100 overflow-hidden">
+          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-32 h-[1px] bg-zinc-800 overflow-hidden">
             <motion.div
-              className="h-full bg-rose-300"
+              className="h-full bg-white"
               initial={{ width: "0%" }}
               animate={{
                 width: "100%",

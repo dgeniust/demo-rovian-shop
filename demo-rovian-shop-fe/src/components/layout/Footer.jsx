@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 import { Instagram, Twitter, Facebook, ArrowUpRight } from "lucide-react";
 
 const Footer = () => {
-  // Tông màu cố định theo style Sakura Atelier (Trắng hồng - Text xám đá - Nhấn hồng Rose)
-  const themeClass = "bg-[#fffafb] text-stone-900 border-t border-rose-100";
-  const textMuted = "text-stone-500";
-  const borderClass = "border-rose-200";
+  // Tông màu Masculine Luxury (Đen - Xám khói - Trắng)
+  const themeClass = "bg-[#0a0a0a] text-zinc-300 border-t border-zinc-800";
+  const textMuted = "text-zinc-500";
+  const borderClass = "border-zinc-800";
 
   return (
     <footer
@@ -16,22 +16,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           {/* Brand Section */}
           <div className="lg:col-span-4 space-y-8">
-            <h2 className="text-3xl font-serif font-light tracking-[0.2em] uppercase italic text-stone-900">
+            <h2 className="text-3xl font-serif font-light tracking-[0.2em] uppercase italic text-white">
               ROVIAN
             </h2>
             <p
               className={`text-[13px] leading-relaxed max-w-xs font-light ${textMuted}`}
             >
-              Crafting timeless elegance since 1994. Our pieces represent the
-              intersection of contemporary silhouettes and heritage
-              craftsmanship.
+              Crafting timeless elegance since 2026. Our pieces represent the
+              intersection of mechanical precision and absolute masculinity.
             </p>
             <div className="flex space-x-6">
               {[Instagram, Twitter, Facebook].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
-                  className="text-stone-400 hover:text-rose-400 transition-all duration-300"
+                  className="text-zinc-600 hover:text-white transition-all duration-300"
                 >
                   <Icon size={18} strokeWidth={1.2} />
                 </a>
@@ -42,15 +41,15 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-8">
             <div className="space-y-8">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-rose-400">
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
                 Explore
               </h4>
               <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium">
                 {["Collections", "Store", "About", "Journal"].map((item) => (
-                  <li key={item} className="flex justify-center">
+                  <li key={item} className="flex justify-start">
                     <NavLink
                       to={`/${item.toLowerCase()}`}
-                      className="text-stone-600 hover:text-rose-500 transition-colors flex items-center group"
+                      className="text-zinc-500 hover:text-white transition-colors flex items-center group"
                     >
                       {item}
                       <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
@@ -60,14 +59,14 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-8">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-rose-400">
+              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
                 Service
               </h4>
-              <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium text-stone-600">
+              <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium text-zinc-500">
                 {["Shipping", "Returns", "Warranty", "Faq"].map((item) => (
                   <li
                     key={item}
-                    className="hover:text-rose-500 cursor-pointer transition-colors"
+                    className="hover:text-white cursor-pointer transition-colors"
                   >
                     {item}
                   </li>
@@ -78,7 +77,7 @@ const Footer = () => {
 
           {/* Newsletter Section */}
           <div className="lg:col-span-4 space-y-8">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-rose-400">
+            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
               Newsletter
             </h4>
             <p className={`text-[13px] font-light ${textMuted}`}>
@@ -88,29 +87,29 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="ENTER YOUR EMAIL"
-                className="bg-transparent w-full text-[10px] outline-none placeholder:text-stone-300 tracking-widest uppercase text-stone-800"
+                className="bg-transparent w-full text-[10px] outline-none placeholder:text-zinc-600 tracking-widest uppercase text-white"
               />
-              <button className="absolute right-0 top-0 text-[10px] font-bold uppercase text-stone-400 hover:text-rose-500 hover:italic transition-all duration-300">
+              <button className="absolute right-0 top-0 text-[10px] font-bold uppercase text-zinc-500 hover:text-white hover:italic transition-all duration-300">
                 Submit
               </button>
               {/* Line effect khi focus */}
-              <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-rose-400 group-focus-within:w-full transition-all duration-500"></div>
+              <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-white group-focus-within:w-full transition-all duration-500"></div>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div
-          className={`flex flex-col md:flex-row justify-between items-center pt-10 border-t border-rose-100`}
+          className={`flex flex-col md:flex-row justify-between items-center pt-10 border-t border-zinc-900`}
         >
-          <span className="text-[9px] uppercase tracking-[0.4em] text-stone-400 font-light">
+          <span className="text-[9px] uppercase tracking-[0.4em] text-zinc-600 font-light">
             © 2026 ROVIAN Luxury Group. All rights reserved.
           </span>
           <div className="flex space-x-10 mt-6 md:mt-0">
             {["Privacy Policy", "Terms of Use"].map((text) => (
               <span
                 key={text}
-                className="text-[9px] uppercase tracking-[0.4em] text-stone-400 cursor-pointer hover:text-rose-400 transition-colors font-light"
+                className="text-[9px] uppercase tracking-[0.4em] text-zinc-600 cursor-pointer hover:text-white transition-colors font-light"
               >
                 {text}
               </span>

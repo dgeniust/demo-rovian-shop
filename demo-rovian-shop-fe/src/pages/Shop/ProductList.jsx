@@ -7,39 +7,38 @@ import {
   ChevronDown,
   Check,
   Search,
-  X, // Đã thêm: Import icon X để không bị lỗi crash trang
+  X,
 } from "lucide-react";
 import productService from "../../services/productService";
 
 export default function ProductList() {
   // --- 1. KHỞI TẠO STATE ---
-  const [products, setProducts] = useState([]); // Danh sách sản phẩm từ API
-  const [loading, setLoading] = useState(true); // Trạng thái chờ khi gọi API
-  const [currentPage, setCurrentPage] = useState(1); // Trang hiện tại
-  const [totalItems, setTotalItems] = useState(0); // Tổng số sản phẩm để tính phân trang
-  const [isOpen, setIsOpen] = useState(false); // Đóng/mở dropdown Sort
-  const dropdownRef = useRef(null); // Ref để xử lý click out-side dropdown
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalItems, setTotalItems] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   // State cho Sắp xếp (Sort)
   const [sortBy, setSortBy] = useState("id");
   const [order, setOrder] = useState("desc");
 
   // State cho Tìm kiếm (Search)
-  const [searchTerm, setSearchTerm] = useState(""); // Giá trị người dùng gõ vào ô input
-  const [debouncedSearch, setDebouncedSearch] = useState(""); // Giá trị đã qua bộ lọc hoãn (debounce)
+  const [searchTerm, setSearchTerm] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
 
-  const productsPerPage = 9; // Số sản phẩm trên mỗi trang
+  const productsPerPage = 9;
 
-  // --- 2. LOGIC DEBOUNCE (Hạn chế gọi API liên tục) ---
+  // --- 2. LOGIC DEBOUNCE ---
   useEffect(() => {
-    // Khi người dùng gõ, đợi 500ms sau khi họ ngừng gõ mới cập nhật debouncedSearch
     const timer = setTimeout(() => {
       setDebouncedSearch(searchTerm);
     }, 500);
-    return () => clearTimeout(timer); // Xóa timer cũ nếu người dùng tiếp tục gõ
+    return () => clearTimeout(timer);
   }, [searchTerm]);
 
-  // --- 3. XỬ LÝ CLICK OUTSIDE (Đóng dropdown khi click ra ngoài) ---
+  // --- 3. XỬ LÝ CLICK OUTSIDE ---
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -54,7 +53,6 @@ export default function ProductList() {
   const fetchProducts = useCallback(async () => {
     setLoading(true);
     try {
-      // Gọi service lấy data với đầy đủ các tham số: trang, giới hạn, sắp xếp và từ khóa tìm kiếm
       const response = await productService.getAllProducts({
         page: currentPage,
         limit: productsPerPage,
@@ -70,14 +68,12 @@ export default function ProductList() {
     } finally {
       setLoading(false);
     }
-  }, [currentPage, sortBy, order, debouncedSearch]); // Chạy lại khi một trong các giá trị này thay đổi
+  }, [currentPage, sortBy, order, debouncedSearch]);
 
-  // Tự động đưa về trang 1 khi người dùng thay đổi tiêu chí tìm kiếm hoặc sắp xếp
   useEffect(() => {
     setCurrentPage(1);
   }, [debouncedSearch, sortBy, order]);
 
-  // Thực thi gọi API
   useEffect(() => {
     fetchProducts();
   }, [fetchProducts]);
@@ -85,7 +81,6 @@ export default function ProductList() {
   // --- 5. HÀM XỬ LÝ SỰ KIỆN ---
   const totalPages = Math.ceil(totalItems / productsPerPage);
 
-  // Chuyển trang
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
     document
@@ -93,14 +88,12 @@ export default function ProductList() {
       ?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Thay đổi kiểu sắp xếp
   const handleSelectSort = (option) => {
     setSortBy(option.sort);
     setOrder(option.order);
     setIsOpen(false);
   };
 
-  // Các tùy chọn sắp xếp
   const sortOptions = [
     { label: "Tuyệt tác mới nhất", sort: "id", order: "desc" },
     { label: "Giá: Thấp đến Cao", sort: "price", order: "asc" },
@@ -109,7 +102,6 @@ export default function ProductList() {
     { label: "Bảng chữ cái: Z - A", sort: "name", order: "desc" },
   ];
 
-  // Lấy nhãn (label) đang được chọn để hiển thị lên nút
   const currentLabel = sortOptions.find(
     (opt) => opt.sort === sortBy && opt.order === order,
   )?.label;
@@ -117,45 +109,45 @@ export default function ProductList() {
   return (
     <section
       id="product-grid-section"
-      className="max-w-[1600px] mx-auto px-6 md:px-10 py-6 text-black min-h-screen"
+      className="max-w-[1600px] mx-auto px-6 md:px-10 pt-24 pb-6 text-white bg-[#0a0a0a] min-h-screen"
     >
       {/* HEADER: Chứa tiêu đề, Tìm kiếm và Sắp xếp */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-rose-100 pb-10 gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-zinc-800 pb-10 gap-8">
         <div className="space-y-4">
-          <h2 className="text-5xl font-extralight font-serif uppercase tracking-tight italic text-stone-900 leading-none">
+          <h2 className="text-5xl font-extralight font-serif uppercase tracking-tight italic text-white leading-none">
             Bộ sưu tập{" "}
-            <span className="not-italic text-rose-300 font-sans text-4xl block md:inline">
-              / Xưởng chế tác
+            <span className="not-italic text-zinc-500 font-sans text-4xl block md:inline">
+              / Tuyệt Tác Cơ Khí
             </span>
           </h2>
           <div className="flex items-center gap-4">
-            <span className="h-px w-8 bg-rose-200"></span>
-            <p className="text-[11px] text-rose-400 uppercase tracking-[0.4em] font-bold">
-              Est. 2026 — Tìm thấy {totalItems} Tuyệt tác thời gian
+            <span className="h-px w-8 bg-zinc-600"></span>
+            <p className="text-[11px] text-zinc-400 uppercase tracking-[0.4em] font-bold">
+              Est. 2026 — Khám phá {totalItems} Cỗ máy thời gian
             </p>
           </div>
         </div>
 
         {/* CỤM ĐIỀU KHIỂN: Search & Sort */}
         <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-          {/* Ô TÌM KIẾM */}
+          {/* Ô TÌM KIẾM */}
           <div className="relative group w-full sm:w-64">
             <Search
               size={16}
-              className="absolute left-4 top-1/2 -translate-y-1/2 text-stone-400 group-focus-within:text-rose-400 transition-colors"
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-600 group-focus-within:text-white transition-colors"
             />
             <input
               type="text"
-              placeholder="Tìm kiếm tạo tác..."
+              placeholder="Tìm kiếm cỗ máy..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-[#fffafb] border border-stone-200 pl-11 pr-10 py-3 rounded-full text-[12px] font-medium tracking-wider outline-none transition-all focus:border-rose-300 focus:bg-white focus:shadow-lg focus:shadow-rose-50/50"
+              className="w-full bg-transparent border border-zinc-800 pl-11 pr-10 py-3 rounded-none text-[12px] font-medium tracking-wider text-white placeholder:text-zinc-600 outline-none transition-all focus:border-white focus:bg-zinc-900/50 focus:shadow-[0_0_15px_rgba(255,255,255,0.05)]"
             />
-            {/* Nút X để xóa nhanh nội dung tìm kiếm */}
+            {/* Nút X */}
             {searchTerm && (
               <button
                 onClick={() => setSearchTerm("")}
-                className="absolute right-4 top-1/2 -translate-y-1/2 text-stone-300 hover:text-rose-500 transition-colors"
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-500 hover:text-white transition-colors"
               >
                 <X size={14} />
               </button>
@@ -166,25 +158,25 @@ export default function ProductList() {
           <div className="relative w-full sm:w-auto" ref={dropdownRef}>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="group flex items-center justify-between w-full sm:min-w-[220px] gap-4 bg-white border border-stone-200 px-6 py-2.5 rounded-full transition-all duration-300 hover:border-rose-300 hover:shadow-lg hover:shadow-rose-50/50"
+              className="group flex items-center justify-between w-full sm:min-w-[220px] gap-4 bg-transparent border border-zinc-800 px-6 py-2.5 rounded-none transition-all duration-300 hover:border-white hover:shadow-[0_0_15px_rgba(255,255,255,0.05)]"
             >
               <div className="flex flex-col items-start">
-                <span className="text-[8px] uppercase tracking-[0.2em] text-stone-400 font-bold leading-none mb-1">
-                  Sort By
+                <span className="text-[8px] uppercase tracking-[0.2em] text-zinc-500 font-bold leading-none mb-1 group-hover:text-zinc-400 transition-colors">
+                  Sắp xếp theo
                 </span>
-                <span className="text-[11px] font-bold text-stone-800 uppercase tracking-wider">
+                <span className="text-[11px] font-bold text-white uppercase tracking-wider">
                   {currentLabel}
                 </span>
               </div>
               <ChevronDown
                 size={14}
-                className={`text-rose-300 transition-transform duration-500 ${isOpen ? "rotate-180" : ""}`}
+                className={`text-zinc-500 transition-transform duration-500 ${isOpen ? "rotate-180 text-white" : ""}`}
               />
             </button>
 
             {/* Menu Dropdown */}
             {isOpen && (
-              <div className="absolute right-0 mt-2 w-64 bg-white/90 backdrop-blur-xl border border-rose-50 rounded-3xl shadow-2xl z-[100] py-3 animate-in fade-in zoom-in-95 duration-200">
+              <div className="absolute right-0 mt-2 w-64 bg-[#0a0a0a]/95 backdrop-blur-xl border border-zinc-800 rounded-none shadow-2xl z-[100] py-3 animate-in fade-in zoom-in-95 duration-200">
                 {sortOptions.map((option, idx) => {
                   const isSelected =
                     sortBy === option.sort && order === option.order;
@@ -194,12 +186,12 @@ export default function ProductList() {
                       onClick={() => handleSelectSort(option)}
                       className={`w-full flex items-center justify-between px-5 py-3 text-[11px] uppercase tracking-widest transition-all ${
                         isSelected
-                          ? "bg-rose-50/50 text-rose-600 font-black"
-                          : "text-stone-500 hover:bg-stone-50 hover:text-stone-900"
+                          ? "bg-white/10 text-white font-black border-l-2 border-white"
+                          : "text-zinc-500 hover:bg-white/5 hover:text-white border-l-2 border-transparent"
                       }`}
                     >
                       {option.label}
-                      {isSelected && <Check size={12} />}
+                      {isSelected && <Check size={12} className="text-white" />}
                     </button>
                   );
                 })}
@@ -212,9 +204,9 @@ export default function ProductList() {
       {/* HIỂN THỊ DANH SÁCH SẢN PHẨM */}
       {loading ? (
         <div className="flex flex-col items-center justify-center py-40 space-y-4">
-          <Loader2 className="animate-spin text-rose-200" size={40} />
-          <p className="text-serif italic text-stone-400 tracking-widest text-xs">
-            Đang chuẩn bị bộ sưu tập...
+          <Loader2 className="animate-spin text-zinc-600" size={40} />
+          <p className="font-serif italic text-zinc-500 tracking-widest text-xs">
+            Đang khởi động cỗ máy...
           </p>
         </div>
       ) : (
@@ -223,17 +215,17 @@ export default function ProductList() {
             products.map((item) => <ProductCard key={item.id} product={item} />)
           ) : (
             <div className="col-span-3 text-center py-20">
-              <p className="text-stone-400 font-serif italic text-lg mb-4">
-                Không tìm thấy tạo tác nào phù hợp với tiêu chí của bạn.
+              <p className="text-zinc-500 font-serif italic text-lg mb-4">
+                Không tìm thấy tuyệt tác nào phù hợp với yêu cầu của ngài.
               </p>
               <button
                 onClick={() => {
                   setSearchTerm("");
                   setSortBy("id");
                 }}
-                className="text-[10px] uppercase tracking-widest font-bold text-rose-400 border-b border-rose-200 pb-1"
+                className="text-[10px] uppercase tracking-widest font-bold text-white border-b border-zinc-600 hover:border-white pb-1 transition-colors"
               >
-                Reset Filters
+                Khôi phục bộ lọc
               </button>
             </div>
           )}
@@ -243,15 +235,19 @@ export default function ProductList() {
       {/* PHÂN TRANG (PAGINATION) */}
       {totalPages > 1 && (
         <div className="mt-28 flex flex-col items-center space-y-8">
-          <div className="w-px h-16 bg-rose-100"></div>
+          <div className="w-px h-16 bg-zinc-800"></div>
           <div className="flex items-center space-x-12">
             <button
               onClick={() => currentPage > 1 && paginate(currentPage - 1)}
               disabled={currentPage === 1 || loading}
-              className={`flex items-center space-x-2 uppercase text-[10px] tracking-widest font-bold transition-all duration-300 text-stone-700 ${currentPage === 1 ? "opacity-20 cursor-not-allowed" : "hover:text-rose-600"}`}
+              className={`flex items-center space-x-2 uppercase text-[10px] tracking-widest font-bold transition-all duration-300 ${
+                currentPage === 1
+                  ? "opacity-20 cursor-not-allowed text-zinc-600"
+                  : "text-zinc-400 hover:text-white"
+              }`}
             >
               <ChevronLeft size={14} strokeWidth={2.5} />
-              <span>Prev</span>
+              <span>Trở Lại</span>
             </button>
 
             <div className="flex items-center space-x-6">
@@ -259,7 +255,11 @@ export default function ProductList() {
                 <button
                   key={i + 1}
                   onClick={() => paginate(i + 1)}
-                  className={`text-xs font-medium transition-all relative pb-2 ${currentPage === i + 1 ? "text-rose-600 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-rose-500" : "text-stone-300 hover:text-rose-500 hover:font-bold"}`}
+                  className={`text-xs font-medium transition-all relative pb-2 ${
+                    currentPage === i + 1
+                      ? "text-white after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[1px] after:bg-white"
+                      : "text-zinc-600 hover:text-zinc-300 hover:font-bold"
+                  }`}
                 >
                   {String(i + 1).padStart(2, "0")}
                 </button>
@@ -271,9 +271,13 @@ export default function ProductList() {
                 currentPage < totalPages && paginate(currentPage + 1)
               }
               disabled={currentPage === totalPages || loading}
-              className={`flex items-center space-x-2 uppercase text-[10px] tracking-widest font-bold transition-all duration-300 text-stone-700 ${currentPage === totalPages ? "opacity-20 cursor-not-allowed" : "hover:text-rose-600"}`}
+              className={`flex items-center space-x-2 uppercase text-[10px] tracking-widest font-bold transition-all duration-300 ${
+                currentPage === totalPages
+                  ? "opacity-20 cursor-not-allowed text-zinc-600"
+                  : "text-zinc-400 hover:text-white"
+              }`}
             >
-              <span>Next</span>
+              <span>Tiếp Theo</span>
               <ChevronRight size={14} strokeWidth={2.5} />
             </button>
           </div>

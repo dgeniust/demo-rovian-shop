@@ -52,17 +52,17 @@ const AnimatedRoutes = () => {
         />
 
         {/* Trang Shop */}
-        <Route element={<ShopLayout />}>
-          <Route
-            path="/shop"
-            element={
-              <PageWrapper>
-                <ShoppingPage />
-              </PageWrapper>
-            }
-          />
-        </Route>
-
+        {/* <Route element={<ShopLayout />}></Route> */}
+        <Route
+          path="/shop"
+          element={
+            <PageWrapper>
+              <Header variant="dark" />
+              <ShoppingPage />
+              <Footer variant="dark" />
+            </PageWrapper>
+          }
+        />
         {/* Trang About */}
         <Route
           path="/about"
