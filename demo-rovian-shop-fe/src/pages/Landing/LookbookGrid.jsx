@@ -79,7 +79,7 @@ const LookbookGrid = () => {
           transition={{ duration: 1 }}
           className="mb-12 md:mb-20 flex flex-col md:flex-row justify-between items-start md:items-end border-b border-rose-100 pb-6 md:pb-10 gap-4"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-tighter text-black italic leading-tight">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-black italic leading-tight">
             Bento <span className="text-rose-300 not-italic">Lookbook</span>
           </h2>
 
