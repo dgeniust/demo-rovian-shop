@@ -16,10 +16,8 @@ const HeroSection = () => {
           </p>
 
           {/* NEW SLOGAN DESIGN */}
-          <h2 className="flex flex-col items-center mb-10 font-['Playwrite_IE'] text-5xl md:text-7xl ">
-            <span className="font-light tracking-[0.2em] text-black mb-4">
-              Thay đồng hồ
-            </span>
+          <h2 className="flex flex-col items-center mb-10 font-light font-['Playfair_Display'] italic text-5xl md:text-7xl tracking-[0.2rem]">
+            <span className="text-black mb-4 ">Thay đồng hồ</span>
             <span className="text-rose-400/80 mt-[-2px] md:mt-[-3px] ml-22 md:ml-30">
               Đổi phong cách
             </span>
