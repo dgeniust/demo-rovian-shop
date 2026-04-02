@@ -19,6 +19,39 @@
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;
 
+  /* --- Font Families --- */
+  --font-main: "Google Sans Flex", sans-serif;
+  --font-serif:
+    "Playfair Display", "serif"; /* Dùng cho các chữ Italic sang trọng */
+  --font-mono:
+    "Roboto Mono", monospace; /* Có thể dùng cho các mã số Ref. hoặc Index */
+
+  /* --- Font Sizes --- */
+
+  /* 1. Display: Dùng cho Hero Section, Tiêu đề trang lớn nhất */
+  --fs-display: clamp(3.5rem, 8vw, 8rem);
+  --fs-h1: clamp(2.5rem, 5vw, 5rem);
+
+  /* 2. Headlines: Tiêu đề các Section */
+  --fs-h2: clamp(2rem, 4vw, 3.5rem);
+  --fs-h3: 1.5rem; /* 24px */
+  --fs-h4: 1.125rem; /* 18px */
+
+  /* 3. Body: Nội dung văn bản */
+  --fs-body-lg: 1.063rem; /* 17px - text-lg */
+  --fs-body: 0.875rem; /* 14px - text-sm */
+  --fs-body-sm: 0.813rem; /* 13px - nhỏ hơn cho các đoạn chú thích */
+
+  /* 4. Specialized: Các loại text đặc thù của phong cách Luxury */
+  --fs-tag: 0.625rem; /* 10px - Cực nhỏ, luôn đi kèm tracking-widest */
+  --fs-button: 0.75rem; /* 12px - Chữ trong button, luôn Uppercase */
+  --fs-price: 0.875rem; /* 14px - In đậm */
+
+  /* --- Letter Spacing (Tracking) --- */
+  --ls-widest: 0.6em; /* Cho Brand Tagline */
+  --ls-wider: 0.4em; /* Cho Label/Tag */
+  --ls-tight: -0.05em; /* Cho Display Headline (tạo cảm giác góc cạnh) */
+
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
   color-scheme: light dark;

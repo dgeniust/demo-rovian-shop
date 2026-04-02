@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#fffafb] text-black font-['Google_Sans_Flex'] py-24 px-6 md:px-12 lg:px-24 overflow-hidden">
-      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    <section className="bg-[#0a0a0a] min-h-screen text-white font-['Google_Sans_Flex'] py-24 px-6 md:px-12 lg:px-24 overflow-hidden relative">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
         {/* CỘT TRÁI: Typography lớn làm điểm nhấn */}
         <div className="lg:col-span-5">
           <motion.div
@@ -13,13 +13,13 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h2 className="text-[10px] uppercase tracking-[0.6em] text-rose-400 mb-8 font-semibold">
-              Cốt Cách Thương Hiệu
+            <h2 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase mb-8">
+              Triết Lý Chế Tác
             </h2>
-            <h3 className="text-5xl md:text-7xl font-light leading-tight tracking-tighter text-stone-900">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white leading-tight">
               Kiến tạo <br />
-              <span className="italic font-serif text-rose-300">
-                những đường nét
+              <span className="italic font-serif text-zinc-400">
+                những tuyệt tác
               </span>{" "}
               <br />
               vượt thời gian.
@@ -36,32 +36,32 @@ const AboutSection = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="space-y-8"
           >
-            <p className="text-lg md:text-xl font-light leading-relaxed text-stone-700 max-w-xl">
-              <span className="text-black font-medium border-b border-rose-200">
+            <p className="text-sm md:text-base leading-relaxed font-medium text-zinc-300">
+              <span className="text-white font-bold border-b border-zinc-700">
                 ROVIAN
               </span>{" "}
-              là biểu tượng thời trang xa xỉ, nơi giao thoa giữa triết lý kiến
-              trúc tối giản và nghệ thuật may đo đương đại. Chúng tôi tin rằng
-              sự thanh lịch thực thụ nằm ở việc chắt lọc những giá trị nguyên
-              bản nhất.
+              là biểu tượng của sự lịch lãm đích thực, nơi giao thoa giữa cơ khí
+              chính xác và nghệ thuật chế tác đương đại. Chúng tôi tin rằng đẳng
+              cấp thực thụ nằm ở sự tĩnh lặng và bản lĩnh vượt trội.
             </p>
 
-            <div className="space-y-6 text-sm md:text-base text-stone-500 font-light max-w-lg leading-loose">
+            <div className="space-y-6 text-sm md:text-base text-zinc-500 leading-relaxed font-medium">
               <p>
-                Mỗi tuyệt tác trong bộ sưu tập là lời cam kết về sự tỉ mỉ, được
-                dệt nên từ những sợi vải thượng hạng nhất. Thẩm mỹ của chúng tôi
-                định hình qua những đường cắt sắc sảo,
-                <span className="text-rose-300 italic ml-1">
-                  bảng màu dịu nhẹ
+                Mỗi tuyệt tác trong bộ sưu tập là minh chứng cho sự tỉ mỉ tột
+                cùng, được rèn giũa từ những vật liệu nguyên bản và thượng hạng
+                nhất. Thẩm mỹ của chúng tôi định hình qua những đường cắt nam
+                tính, sắc sảo,
+                <span className="text-zinc-400 italic ml-1">
+                  tinh tế trong từng chuyển động
                 </span>
-                , và một sự tự tin tĩnh lặng – thứ vẻ đẹp đứng ngoài mọi vòng
+                , và một phong thái tự tin – thứ bản lĩnh đứng ngoài mọi vòng
                 xoáy trào lưu.
               </p>
               <p>
-                Khởi nguồn từ trái tim của chủ nghĩa tối giản, ROVIAN không
-                ngừng tái định nghĩa tủ đồ cho những cá nhân tinh tế – những
-                người tìm kiếm sự sang trọng trong sự tự nhiên, không gắng
-                gượng.
+                Khởi nguồn từ khao khát vươn tới sự hoàn mỹ, ROVIAN không ngừng
+                tái định nghĩa chuẩn mực xa xỉ cho những quý ông hiện đại –
+                những cá nhân tìm kiếm sự khẳng định vị thế một cách tự nhiên và
+                đầy quyền uy.
               </p>
             </div>
 
@@ -71,8 +71,8 @@ const AboutSection = () => {
               className="inline-block group pt-4"
               whileHover={{ x: 10 }}
             >
-              <span className="text-[10px] uppercase tracking-[0.5em] pb-2 border-b border-rose-200 group-hover:border-rose-400 group-hover:text-rose-500 transition-colors cursor-pointer text-stone-400">
-                Di Sản Của Chúng Tôi —&gt;
+              <span className="pb-2 border-b border-zinc-800 group-hover:border-white group-hover:text-white transition-colors cursor-pointer text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase ">
+                Khám Phá Di Sản —&gt;
               </span>
             </motion.a>
           </motion.div>
@@ -80,8 +80,8 @@ const AboutSection = () => {
       </div>
 
       {/* Subtle branding */}
-      <div className="mt-32 flex justify-center opacity-[0.03]">
-        <span className="text-[15vw] font-bold tracking-[0.2em] select-none text-rose-900">
+      <div className="mt-32 flex justify-center opacity-[0.02] bottom-0 left-0 w-full pointer-events-none select-none z-0">
+        <span className="text-[17vw] font-bold tracking-[0.2em] text-white">
           ROVIAN
         </span>
       </div>

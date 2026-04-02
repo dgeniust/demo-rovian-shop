@@ -6,7 +6,7 @@ const ProductDetailPage = () => {
   const { id } = useParams();
 
   return (
-    <div className="min-h-screen bg-white text-black font-['Google_Sans_Flex']">
+    <div className="min-h-screen bg-black text-white font-['Google_Sans_Flex']">
       <main>
         <ProductDetail productId={id} />
         <FeaturedProducts />
