@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="bg-[#0a0a0a] text-white font-['Google_Sans_Flex'] py-24 px-6 md:px-12 lg:px-24 overflow-hidden relative">
+    <section className="bg-[#0a0a0a] min-h-screen text-white font-['Google_Sans_Flex'] py-24 px-6 md:px-12 lg:px-24 overflow-hidden relative">
       <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
         {/* CỘT TRÁI: Typography lớn làm điểm nhấn */}
         <div className="lg:col-span-5">
@@ -13,10 +13,10 @@ const AboutSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h2 className="text-[10px] uppercase tracking-[0.6em] text-zinc-500 mb-8 font-semibold">
+            <h2 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase mb-8">
               Triết Lý Chế Tác
             </h2>
-            <h3 className="text-5xl md:text-7xl font-light leading-tight tracking-tighter text-white">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white leading-tight">
               Kiến tạo <br />
               <span className="italic font-serif text-zinc-400">
                 những tuyệt tác
@@ -36,8 +36,8 @@ const AboutSection = () => {
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
             className="space-y-8"
           >
-            <p className="text-lg md:text-xl font-light leading-relaxed text-zinc-300 max-w-xl">
-              <span className="text-white font-medium border-b border-zinc-700">
+            <p className="text-sm md:text-base leading-relaxed font-medium text-zinc-300">
+              <span className="text-white font-bold border-b border-zinc-700">
                 ROVIAN
               </span>{" "}
               là biểu tượng của sự lịch lãm đích thực, nơi giao thoa giữa cơ khí
@@ -45,7 +45,7 @@ const AboutSection = () => {
               cấp thực thụ nằm ở sự tĩnh lặng và bản lĩnh vượt trội.
             </p>
 
-            <div className="space-y-6 text-sm md:text-base text-zinc-500 font-light max-w-lg leading-loose">
+            <div className="space-y-6 text-sm md:text-base text-zinc-500 leading-relaxed font-medium">
               <p>
                 Mỗi tuyệt tác trong bộ sưu tập là minh chứng cho sự tỉ mỉ tột
                 cùng, được rèn giũa từ những vật liệu nguyên bản và thượng hạng
@@ -71,7 +71,7 @@ const AboutSection = () => {
               className="inline-block group pt-4"
               whileHover={{ x: 10 }}
             >
-              <span className="text-[10px] uppercase tracking-[0.5em] pb-2 border-b border-zinc-800 group-hover:border-white group-hover:text-white transition-colors cursor-pointer text-zinc-500">
+              <span className="pb-2 border-b border-zinc-800 group-hover:border-white group-hover:text-white transition-colors cursor-pointer text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase ">
                 Khám Phá Di Sản —&gt;
               </span>
             </motion.a>
@@ -80,8 +80,8 @@ const AboutSection = () => {
       </div>
 
       {/* Subtle branding */}
-      <div className="mt-32 flex justify-center opacity-[0.02] absolute bottom-0 left-0 w-full pointer-events-none select-none z-0">
-        <span className="text-[15vw] font-bold tracking-[0.2em] text-white">
+      <div className="mt-32 flex justify-center opacity-[0.02] bottom-0 left-0 w-full pointer-events-none select-none z-0">
+        <span className="text-[17vw] font-bold tracking-[0.2em] text-white">
           ROVIAN
         </span>
       </div>

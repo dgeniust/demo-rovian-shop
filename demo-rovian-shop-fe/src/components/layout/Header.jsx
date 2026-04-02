@@ -58,7 +58,7 @@ const Header = () => {
       </NavLink>
 
       {/* Desktop Nav */}
-      <nav className="hidden md:flex items-center space-x-10 text-[14px] font-medium uppercase tracking-[0.3em]">
+      <nav className="hidden md:flex items-center space-x-10 font-medium text-xs md:text-sm uppercase tracking-[0.4em] ">
         {navLinks.map((item) => (
           <NavLink
             key={item.path}

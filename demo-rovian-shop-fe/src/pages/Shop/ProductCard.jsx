@@ -32,7 +32,7 @@ export default function ProductCard({ product }) {
         {/* --- NÚT MUA NGAY (Trượt lên khi hover) - Trắng/Đen tương phản mạnh --- */}
         <div className="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out z-30">
           <button
-            className="w-full bg-white/95 backdrop-blur-md text-black py-4 text-[12px] font-black uppercase tracking-[0.3em] hover:bg-white transition-colors shadow-[0_-10px_20px_rgba(0,0,0,0.5)] cursor-pointer"
+            className="w-full bg-white/95 backdrop-blur-md text-black py-4 font-medium uppercase hover:bg-white transition-colors shadow-[0_-10px_20px_rgba(0,0,0,0.5)] cursor-pointer text-xs md:text-sm uppercase tracking-[0.4em]"
             onClick={(e) => {
               e.stopPropagation(); // Ngăn click vào div cha
               handleRedirect();
@@ -45,7 +45,7 @@ export default function ProductCard({ product }) {
 
       {/* Thông tin sản phẩm */}
       <div className="space-y-2 px-1 text-center md:text-left">
-        <h3 className="text-[13px] md:text-[14px] font-bold tracking-[0.15em] uppercase leading-tight text-zinc-300 group-hover:text-white transition-colors duration-300 line-clamp-2">
+        <h3 className="tracking-[0.15em] uppercase text-zinc-300 group-hover:text-white transition-colors duration-300 line-clamp-2 text-xs md:text-sm leading-relaxed font-bold">
           {product?.name}
         </h3>
 

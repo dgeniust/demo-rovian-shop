@@ -35,7 +35,7 @@ const StatsSection = () => {
             <div className="space-y-4 md:space-y-6">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <span className="w-8 md:w-10 h-[1px] bg-current"></span>
-                <span className="text-[9px] md:text-[10px] uppercase tracking-[0.4em] md:tracking-[0.5em] font-bold">
+                <span className="uppercase tracking-[0.4em] md:tracking-[0.5em] text-zinc-400 text-sm md:text-base leading-relaxed font-medium">
                   Di Sản ROVIAN
                 </span>
               </div>
@@ -48,7 +48,7 @@ const StatsSection = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
-              <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed tracking-widest uppercase max-w-[240px] font-light">
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light max-w-[340px] ">
                 Vượt xa định nghĩa thời gian, chúng tôi kiến tạo những bảo vật
                 khẳng định đẳng cấp truyền đời.
               </p>
@@ -69,11 +69,12 @@ const StatsSection = () => {
           <div className="bg-zinc-900/40 border border-zinc-800 p-8 md:p-10 rounded-none flex flex-col justify-between transition-all hover:bg-zinc-900/60">
             <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
               <div className="space-y-2 md:space-y-3">
-                <h3 className="text-5xl md:text-6xl font-light tracking-tighter italic font-serif text-white">
+                <h3 className="text-5xl md:text-6xl font-light tracking-tighter italic text-white">
                   1450+
                 </h3>
-                <p className="text-[9px] md:text-[10px] uppercase tracking-[0.2em] font-bold text-zinc-500">
-                  Nhà Sưu Tầm Đẳng Cấp
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light uppercase">
+                  Nhà Sưu Tầm {""}
+                  <br /> Đẳng Cấp
                 </p>
               </div>
               <div className="flex -space-x-3 md:-space-x-4">
@@ -87,7 +88,7 @@ const StatsSection = () => {
                 ))}
               </div>
             </div>
-            <p className="mt-6 md:mt-8 text-[10px] md:text-[11px] text-zinc-400 font-light tracking-wider">
+            <p className="mt-6 md:mt-8 text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               Sự lựa chọn tối thượng của các quý ông tại hơn 40 quốc gia.
             </p>
           </div>
@@ -95,10 +96,10 @@ const StatsSection = () => {
           {/* Small Stats Grid */}
           <div className="grid grid-cols-2 gap-4 md:gap-8">
             <div className="bg-transparent border border-zinc-800 p-6 md:p-10 rounded-none flex flex-col justify-center transition-colors hover:bg-zinc-900/40">
-              <p className="text-[8px] md:text-[9px] uppercase tracking-widest text-zinc-500 mb-2 md:mb-4 font-bold">
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light uppercase">
                 Kiệt Tác
               </p>
-              <h4 className="text-3xl md:text-4xl font-light font-serif italic text-white">
+              <h4 className="text-zinc-400 text-xl md:text-2xl leading-relaxed font-medium">
                 300+
               </h4>
             </div>
@@ -109,10 +110,10 @@ const StatsSection = () => {
                 alt="Xưởng chế tác"
               />
               <div className="relative z-10 text-center">
-                <h4 className="text-3xl md:text-4xl font-bold tracking-tighter text-white">
+                <h4 className="text-zinc-200 text-xl md:text-2xl leading-relaxed font-medium">
                   20+
                 </h4>
-                <p className="text-[8px] md:text-[9px] uppercase tracking-[0.1em] opacity-80 font-bold text-zinc-400">
+                <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light uppercase">
                   Xưởng Chế Tác
                 </p>
               </div>
@@ -142,7 +143,7 @@ const StatsSection = () => {
               <h3 className="text-white font-serif italic text-lg md:text-2xl tracking-[0.1em] uppercase opacity-90">
                 Bản Lĩnh Của Sự Chính Xác
               </h3>
-              <div className="text-zinc-400 text-[8px] md:text-[9px] uppercase tracking-[0.3em] font-bold px-4 py-2 border border-zinc-600/50 rounded-none bg-black/50 backdrop-blur-sm">
+              <div className="text-xs md:text-sm uppercase tracking-[0.4em] font-light px-4 py-2 border border-zinc-600/50 rounded-none bg-black/50 backdrop-blur-sm">
                 Trải Nghiệm Đỉnh Cao
               </div>
             </div>

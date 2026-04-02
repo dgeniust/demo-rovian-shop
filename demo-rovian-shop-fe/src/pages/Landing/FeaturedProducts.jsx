@@ -29,23 +29,23 @@ const FeaturedProducts = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <span className="w-12 h-[1px] bg-zinc-600"></span>
-              <span className="text-xs uppercase tracking-[0.5em] text-zinc-400 font-bold">
+              <span className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
                 Dấu Ấn Thời Gian
               </span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tight text-white">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white italic leading-tight">
               Bộ Sưu Tập{" "}
-              <span className="italic font-serif text-zinc-500">Tiêu Biểu</span>
+              <span className="not-italic text-zinc-500">Tiêu Biểu</span>
             </h2>
           </div>
 
           <div className="flex flex-col items-start md:items-end">
-            <p className="text-zinc-500 text-sm max-w-[300px] mb-4 md:text-right leading-relaxed italic">
+            <p className="text-zinc-500 max-w-[300px] mb-4 md:text-right text-sm md:text-base leading-relaxed font-light">
               "Mỗi tích tắc trôi qua là một lời khẳng định cho bản lĩnh và phong
               thái của người dẫn đầu."
             </p>
             <button
-              className="group flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] font-bold text-zinc-300 hover:text-white transition-colors cursor-pointer"
+              className="group flex items-center gap-2 text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase hover:text-white transition-colors cursor-pointer"
               onClick={() => navigate("/shop")}
             >
               Xem Tất Cả Tuyệt Tác

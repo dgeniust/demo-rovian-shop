@@ -76,7 +76,7 @@ const LookbookGrid = () => {
           </h2>
 
           <div className="flex flex-col items-start md:items-end gap-1">
-            <span className="text-[9px] md:text-[11px] uppercase tracking-[0.4em] md:tracking-[0.6em] text-zinc-400 font-medium whitespace-nowrap">
+            <span className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
               Bộ Sưu Tập Thu Đông 2026
             </span>
             <div className="w-12 h-[1px] bg-zinc-700 md:hidden"></div>
@@ -92,7 +92,7 @@ const LookbookGrid = () => {
           >
             <motion.img
               src={LOOKBOOK_DATA[0].src}
-              className="w-full h-full object-cover opacity-70 grayscale-[0.3] group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[2000ms] group-hover:scale-105"
+              className="w-full h-full object-cover opacity-70 group-hover:opacity-100 transition-all duration-[2000ms] group-hover:scale-105"
               alt="Editorial"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-1000 flex items-end p-12">
@@ -109,7 +109,7 @@ const LookbookGrid = () => {
           >
             <img
               src={LOOKBOOK_DATA[1].src}
-              className="w-full h-full object-cover opacity-80 grayscale-[0.4] group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms]"
+              className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms]"
               alt="Texture"
             />
           </motion.div>
@@ -122,7 +122,7 @@ const LookbookGrid = () => {
             >
               <img
                 src={img.src}
-                className="w-full h-full object-cover opacity-80 grayscale-[0.5] group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-[2000ms] group-hover:scale-110"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-all duration-[2000ms] group-hover:scale-110"
                 alt="Detail"
               />
               <div className="absolute inset-0 flex items-center justify-center bg-black/50 opacity-0 group-hover:opacity-100 transition-all duration-700 backdrop-blur-[2px]">
@@ -139,7 +139,7 @@ const LookbookGrid = () => {
           <motion.div className="md:col-span-1 h-[500px] overflow-hidden group relative bg-zinc-900 border border-zinc-800/50">
             <img
               src={LOOKBOOK_DATA[4].src}
-              className="w-full h-full object-cover opacity-80 grayscale-[0.4] group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms]"
+              className="w-full h-full object-cover opacity-80  group-hover:opacity-100 group-hover:scale-105 transition-all duration-[2000ms]"
               alt="Mood"
             />
           </motion.div>
@@ -147,7 +147,7 @@ const LookbookGrid = () => {
           <motion.div className="md:col-span-2 h-[500px] overflow-hidden group relative bg-zinc-900 border border-zinc-800/50">
             <img
               src={LOOKBOOK_DATA[5].src}
-              className="w-full h-full object-cover opacity-40 grayscale-[0.5] group-hover:grayscale-0 group-hover:opacity-80 transition-all duration-[2500ms]"
+              className="w-full h-full object-cover opacity-40 group-hover:opacity-80 transition-all duration-[2500ms]"
               alt="Luxury"
             />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">

@@ -20,7 +20,7 @@ const Footer = () => {
               ROVIAN
             </h2>
             <p
-              className={`text-[13px] leading-relaxed max-w-xs font-light ${textMuted}`}
+              className={`text-sm md:text-base leading-relaxed font-medium text-zinc-400 ${textMuted}`}
             >
               Crafting timeless elegance since 2026. Our pieces represent the
               intersection of mechanical precision and absolute masculinity.
@@ -41,15 +41,15 @@ const Footer = () => {
           {/* Navigation Links */}
           <div className="lg:col-span-4 grid grid-cols-2 gap-8">
             <div className="space-y-8">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
+              <h4 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
                 Explore
               </h4>
-              <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium">
+              <ul className="space-y-5 ">
                 {["Collections", "Store", "About", "Journal"].map((item) => (
-                  <li key={item} className="flex justify-start">
+                  <li key={item} className="flex justify-center">
                     <NavLink
                       to={`/${item.toLowerCase()}`}
-                      className="text-zinc-500 hover:text-white transition-colors flex items-center group"
+                      className="hover:text-white transition-colors flex items-center group text-sm md:text-base leading-relaxed font-medium text-zinc-400"
                     >
                       {item}
                       <ArrowUpRight className="w-3 h-3 ml-1 opacity-0 -translate-y-1 translate-x-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:translate-x-0 transition-all duration-300" />
@@ -59,14 +59,14 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-y-8">
-              <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
+              <h4 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
                 Service
               </h4>
-              <ul className="space-y-5 text-[11px] uppercase tracking-[0.2em] font-medium text-zinc-500">
+              <ul className="space-y-5">
                 {["Shipping", "Returns", "Warranty", "Faq"].map((item) => (
                   <li
                     key={item}
-                    className="hover:text-white cursor-pointer transition-colors"
+                    className="flex justify-center hover:text-white transition-colors flex items-center group text-sm md:text-base leading-relaxed font-medium text-zinc-400"
                   >
                     {item}
                   </li>
@@ -77,10 +77,12 @@ const Footer = () => {
 
           {/* Newsletter Section */}
           <div className="lg:col-span-4 space-y-8">
-            <h4 className="text-[10px] font-bold uppercase tracking-[0.4em] text-zinc-400">
+            <h4 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
               Newsletter
             </h4>
-            <p className={`text-[13px] font-light ${textMuted}`}>
+            <p
+              className={` text-sm md:text-base leading-relaxed font-medium text-zinc-400 ${textMuted}`}
+            >
               Join our inner circle for exclusive previews and atelier updates.
             </p>
             <div className={`relative border-b ${borderClass} pb-3 group`}>
@@ -89,7 +91,7 @@ const Footer = () => {
                 placeholder="ENTER YOUR EMAIL"
                 className="bg-transparent w-full text-[10px] outline-none placeholder:text-zinc-600 tracking-widest uppercase text-white"
               />
-              <button className="absolute right-0 top-0 text-[10px] font-bold uppercase text-zinc-500 hover:text-white hover:italic transition-all duration-300">
+              <button className="absolute right-0 top-0 text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase hover:text-white hover:italic transition-all duration-300 cursor-pointer">
                 Submit
               </button>
               {/* Line effect khi focus */}
@@ -102,14 +104,14 @@ const Footer = () => {
         <div
           className={`flex flex-col md:flex-row justify-between items-center pt-10 border-t border-zinc-900`}
         >
-          <span className="text-[9px] uppercase tracking-[0.4em] text-zinc-600 font-light">
+          <span className="text-sm md:text-base leading-relaxed font-light text-zinc-600">
             © 2026 ROVIAN Luxury Group. All rights reserved.
           </span>
           <div className="flex space-x-10 mt-6 md:mt-0">
             {["Privacy Policy", "Terms of Use"].map((text) => (
               <span
                 key={text}
-                className="text-[9px] uppercase tracking-[0.4em] text-zinc-600 cursor-pointer hover:text-white transition-colors font-light"
+                className="text-sm md:text-base leading-relaxed font-light text-zinc-600 cursor-pointer hover:text-white transition-colors"
               >
                 {text}
               </span>

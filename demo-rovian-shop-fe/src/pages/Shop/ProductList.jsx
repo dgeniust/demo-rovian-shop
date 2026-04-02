@@ -114,15 +114,15 @@ export default function ProductList() {
       {/* HEADER: Chứa tiêu đề, Tìm kiếm và Sắp xếp */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 border-b border-zinc-800 pb-10 gap-8">
         <div className="space-y-4">
-          <h2 className="text-5xl font-extralight font-serif uppercase tracking-tight italic text-white leading-none">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white italic leading-tight">
             Bộ sưu tập{" "}
-            <span className="not-italic text-zinc-500 font-sans text-4xl block md:inline">
+            <span className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium not-italic whitespace-nowrap uppercase">
               / Tuyệt Tác Cơ Khí
             </span>
           </h2>
           <div className="flex items-center gap-4">
             <span className="h-px w-8 bg-zinc-600"></span>
-            <p className="text-[11px] text-zinc-400 uppercase tracking-[0.4em] font-bold">
+            <p className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium not-italic whitespace-nowrap uppercase">
               Est. 2026 — Khám phá {totalItems} Cỗ máy thời gian
             </p>
           </div>
@@ -164,7 +164,7 @@ export default function ProductList() {
                 <span className="text-[8px] uppercase tracking-[0.2em] text-zinc-500 font-bold leading-none mb-1 group-hover:text-zinc-400 transition-colors">
                   Sắp xếp theo
                 </span>
-                <span className="text-[11px] font-bold text-white uppercase tracking-wider">
+                <span className="text-white text-sm md:text-base leading-none font-medium">
                   {currentLabel}
                 </span>
               </div>

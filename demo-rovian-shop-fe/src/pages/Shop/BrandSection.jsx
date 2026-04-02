@@ -16,7 +16,7 @@ const BrandSection = () => {
     <section className="bg-[#0a0a0a] text-white py-24 px-6 md:px-12 lg:px-24 border-t border-zinc-900">
       {/* Header */}
       <div className="mb-20 text-center lg:text-left">
-        <h2 className="text-4xl md:text-6xl font-light uppercase tracking-tighter italic font-serif">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white italic leading-tight">
           Khám Phá <span className="not-italic text-zinc-500">Thương Hiệu</span>
         </h2>
         <div className="h-[1px] w-20 bg-zinc-700 mt-6 mx-auto lg:mx-0"></div>
@@ -60,7 +60,7 @@ const BrandSection = () => {
                 key={index}
                 href="#"
                 // Hover chuyển sang nền trắng, chữ đen quyền lực
-                className="group flex items-center justify-between py-8 border-b border-zinc-800 hover:bg-white hover:text-black transition-all duration-500 px-6 hover:italic"
+                className="group flex items-center justify-between py-8 border-b border-zinc-800 hover:bg-white hover:text-black transition-all duration-500 px-6"
               >
                 <span className="text-2xl md:text-4xl font-light font-serif tracking-tight uppercase text-zinc-300 group-hover:text-black">
                   {brand}
@@ -90,13 +90,13 @@ const BrandSection = () => {
 
             {/* Product Info */}
             <div className="space-y-3 relative z-10">
-              <h3 className="text-lg font-bold uppercase tracking-[0.2em] text-white">
+              <h3 className="text-zinc-100 text-base md:text-lg leading-relaxed font-bold">
                 SRWATCH{" "}
-                <span className="italic font-serif font-light text-zinc-400">
+                <span className="text-zinc-400 text-base md:text-lg leading-relaxed font-medium tracking-[0.1em] uppercase">
                   SL1611.1302TE
                 </span>
               </h3>
-              <p className="text-zinc-500 font-serif italic text-xl">
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
                 Liên hệ chế tác
               </p>
               <div className="pt-6">
@@ -108,18 +108,17 @@ const BrandSection = () => {
           </div>
 
           {/* Secondary Decor */}
-          <div className="hidden md:flex gap-6 items-center justify-end opacity-60 hover:opacity-100 transition-all duration-500">
+          {/* <div className="hidden md:flex gap-6 items-center justify-end opacity-60 hover:opacity-100 transition-all duration-500">
             <p className="text-right text-[10px] uppercase tracking-[0.3em] leading-loose max-w-[180px] text-zinc-500">
               The excellence of{" "}
               <span className="text-white font-medium">precision</span> in every
               movement.
             </p>
-            {/* Khối decor vuông góc cạnh, viền xám khói */}
             <div className="w-20 h-28 bg-zinc-900/50 border border-zinc-800 flex items-center justify-center relative overflow-hidden">
               <div className="w-10 h-[1px] bg-zinc-600 rotate-45 absolute"></div>
               <div className="w-10 h-[1px] bg-zinc-600 -rotate-45 absolute"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

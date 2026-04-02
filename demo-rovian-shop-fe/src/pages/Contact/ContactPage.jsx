@@ -44,10 +44,10 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest leading-none mb-1">
+                  <span className="text-xs md:text-sm uppercase tracking-[0.1em] leading-none mb-1">
                     Facebook
                   </span>
-                  <span className="text-sm font-bold text-zinc-300 tracking-tight group-hover:text-blue-400 transition-colors">
+                  <span className="text-sm font-bold text-zinc-300 tracking-tight group-hover:text-blue-400 transition-colors text-left">
                     Messenger
                   </span>
                 </div>
@@ -68,10 +68,10 @@ const ContactPage = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest leading-none mb-1">
+                  <span className="text-xs md:text-sm uppercase tracking-[0.1em] leading-none mb-1">
                     Kênh chính thức
                   </span>
-                  <span className="text-sm font-bold text-zinc-300 tracking-tight group-hover:text-sky-400 transition-colors">
+                  <span className="text-sm font-bold text-zinc-300 tracking-tight group-hover:text-sky-400 transition-colors text-left">
                     Zalo Chat
                   </span>
                 </div>
@@ -79,16 +79,16 @@ const ContactPage = () => {
             </div>
 
             <div>
-              <span className="text-[10px] uppercase tracking-[0.4em] text-zinc-500 mb-4 block font-bold border-l-2 border-zinc-700 pl-3">
+              <span className="text-xs md:text-sm uppercase tracking-[0.4em] text-zinc-400 mb-4 block font-medium border-l-2 border-zinc-700 pl-3">
                 Đặc Quyền Liên Hệ
               </span>
-              <h2 className="text-3xl md:text-4xl font-light  font-['Google_Sans_Flex'] tracking-tight leading-tight mb-4 text-white italic">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white not-italic leading-tight text-zinc-400 mb-4">
                 Khẳng định đẳng cấp qua <br />
-                <span className="font-bold not-italic">
+                <span className="font-bold text-white">
                   từng nhịp chuyển động.
                 </span>
               </h2>
-              <p className="text-sm text-zinc-400 mb-10 leading-relaxed font-light">
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light mb-8">
                 Mọi yêu cầu tư vấn chuyên sâu về các tuyệt tác cơ khí, dịch vụ
                 bảo dưỡng hoặc đặt hẹn riêng tư tại phòng khánh tiết. Vui lòng
                 gửi thư trực tiếp cho chuyên gia của chúng tôi qua:{" "}
@@ -100,12 +100,12 @@ const ContactPage = () => {
                 </a>
               </p>
 
-              <div className="grid sm:grid-cols-3 gap-8 text-sm">
+              <div className="grid sm:grid-cols-3 gap-8">
                 {[
                   {
                     title: "Bảo Dưỡng Chuyên Sâu",
                     desc: "Hỗ trợ thẩm định, sửa chữa và các yêu cầu kỹ thuật cơ khí.",
-                    contact: "rovianwatch@gmail.com",
+                    contact: "rovianwatch",
                   },
                   {
                     title: "Phòng Khánh Tiết",
@@ -120,15 +120,15 @@ const ContactPage = () => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="space-y-2 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-4 sm:pt-0 sm:pl-5"
+                    className="flex flex-col gap-2 border-t sm:border-t-0 sm:border-l border-zinc-800 pt-4 sm:pt-0 sm:pl-5 h-full"
                   >
-                    <h4 className="font-bold text-[13px] text-zinc-200 tracking-wide">
+                    <h4 className="text-sm md:text-base uppercase tracking-[0.1em] text-zinc-400 font-medium">
                       {item.title}
                     </h4>
-                    <p className="text-zinc-500 text-xs leading-relaxed font-light">
+                    <p className="text-zinc-500 text-sm md:text-base leading-relaxed font-light flex-grow">
                       {item.desc}
                     </p>
-                    <p className="font-medium text-white mt-2 text-[11px] tracking-wider uppercase">
+                    <p className="text-zinc-400 text-xs md:text-xs leading-relaxed font-bold uppercase">
                       {item.contact}
                     </p>
                   </div>

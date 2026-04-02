@@ -8,14 +8,14 @@ const AboutPage = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-20">
         {/* Left: Text Content */}
         <div className="lg:col-span-4 space-y-8">
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-light tracking-tighter leading-[0.8] uppercase italic font-serif text-white">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white italic leading-none">
             CÂU <br /> <span className="text-zinc-500 not-italic">CHUYỆN</span>
           </h1>
           <div className="space-y-6 pt-10 flex justify-center flex-col items-center lg:items-start">
-            <p className="text-[11px] uppercase tracking-[0.4em] font-bold text-zinc-500">
+            <p className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
               Bậc Thầy Chế Tác Cơ Khí
             </p>
-            <p className="text-[17px] leading-relaxed text-zinc-400 max-w-xs font-light italic text-center lg:text-left">
+            <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light max-w-xs italic text-center lg:text-left">
               Di sản được kiến tạo từ sự chính xác tuyệt đối và bản lĩnh của
               người dẫn đầu, nơi mỗi giây trôi qua là một lời khẳng định vị thế.
             </p>
@@ -44,10 +44,10 @@ const AboutPage = () => {
             />
           </div>
           <div className="space-y-4">
-            <h3 className="text-xl font-serif italic text-white tracking-tight">
+            <h3 className="text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase">
               Triết lý cội nguồn
             </h3>
-            <p className="text-[17px] leading-relaxed text-zinc-400 font-light">
+            <p className="text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               "Tại ROVIAN, chúng tôi không chỉ lắp ráp cơ khí; chúng tôi rèn
               giũa kim loại và sapphire, chế tác nên một cỗ máy thời gian uy
               quyền, sát cánh cùng quý ông trong những khoảnh khắc định hình
@@ -58,19 +58,19 @@ const AboutPage = () => {
       </div>
 
       {/* SECTION 2: DETAILED BRAND INTRODUCTION */}
-      <div className="mb-40 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="mb-40 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-6 order-2 lg:order-1">
           <div className="space-y-10">
-            <div className="inline-block px-6 py-2 bg-transparent text-white text-[11px] uppercase tracking-[0.3em] font-bold rounded-none border border-zinc-700">
+            <div className="inline-block px-6 py-2 bg-transparent text-sm md:text-base leading-relaxed tracking-[0.2em] md:tracking-[0.3em] text-zinc-400 font-medium whitespace-nowrap uppercase rounded-none border border-zinc-700">
               Di Sản & Uy Quyền
             </div>
-            <h2 className="text-4xl md:text-5xl font-light tracking-tighter uppercase leading-tight font-serif italic">
+            <h2 className="font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-['Roboto_Slab'] font-[350] tracking-tighter text-white italic leading-none text-zinc-400">
               Hành trình <br />{" "}
-              <span className="not-italic text-white font-bold border-b-2 border-zinc-600 pb-1">
+              <span className="not-italic text-white font-medium border-b-2 border-zinc-600 pb-1">
                 chinh phục đỉnh cao
               </span>
             </h2>
-            <div className="space-y-6 text-zinc-400 leading-relaxed text-[17px] font-light">
+            <div className="space-y-6 text-zinc-400 text-sm md:text-base leading-relaxed font-light">
               <p>
                 Lịch sử của{" "}
                 <strong className="text-white font-medium">ROVIAN</strong> gắn
