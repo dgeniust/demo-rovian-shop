@@ -10,6 +10,7 @@ import {
   X,
 } from "lucide-react";
 import productService from "../../services/productService";
+import clarityService from "../../services/clarityService";
 
 export default function ProductList() {
   const [products, setProducts] = useState([]);
@@ -57,6 +58,11 @@ export default function ProductList() {
 
       setProducts(response.data || []);
       setTotalItems(response.total || 0);
+
+      // Track search event with Clarity
+      if (debouncedSearch) {
+        clarityService.trackSearch(debouncedSearch, response.data?.length || 0);
+      }
     } catch (err) {
       console.error("Error fetching collections:", err);
     } finally {
