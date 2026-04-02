@@ -12,7 +12,7 @@ const clarityService = {
   initialize: (projectId) => {
     if (projectId) {
       clarity.init(projectId);
-      console.log("✓ Clarity initialized with project ID:", projectId);
+      console.log("✓ Clarity initialized with project");
     } else {
       console.warn("⚠ Clarity Project ID not found in environment variables");
     }
@@ -33,10 +33,10 @@ const clarityService = {
     });
 
     // Log lại cho debugging
-    console.log("📊 Product View Tracked:", {
-      name: product.name,
-      price: product.price,
-    });
+    // console.log("📊 Product View Tracked:", {
+    //   name: product.name,
+    //   price: product.price,
+    // });
   },
 
   /**
@@ -54,7 +54,7 @@ const clarityService = {
       timestamp: new Date().toISOString(),
     });
 
-    console.log("🛒 Checkout Initiated Tracked:", product.name);
+    // console.log("🛒 Checkout Initiated Tracked:", product.name);
   },
 
   /**
