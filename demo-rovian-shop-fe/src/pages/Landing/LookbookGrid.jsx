@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
-import rovianBentoGrid from "../../assets/Rovian_BentoGrid.png";
 import model1 from "../../assets/model1_lbgrid.jpeg";
 import model2 from "../../assets/model2_lbgrid.jpeg";
 import model3 from "../../assets/model3_lbgrid.jpeg";
