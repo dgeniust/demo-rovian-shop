@@ -38,7 +38,7 @@ const HeroSection = () => {
         { label: "Chống nước", value: "5 ATM" },
       ],
       btn1: { text: "Xem Bộ Sưu Tập", path: "/shop" },
-      btn2: { text: "Chế Tác Thủ Công", path: "/craftsmanship" },
+      btn2: { text: "Chế Tác Thủ Công", path: "/about" },
     },
     {
       subtitle: "Biểu Tượng Quyền Lực",
@@ -53,7 +53,7 @@ const HeroSection = () => {
         { label: "Đường kính", value: "40mm" },
       ],
       btn1: { text: "Sản Phẩm Mới", path: "/shop" },
-      btn2: { text: "Dịch Vụ Đặc Quyền", path: "/services" },
+      btn2: { text: "Dịch Vụ Đặc Quyền", path: "/contact" },
     },
   ];
 
@@ -88,7 +88,7 @@ const HeroSection = () => {
 
                 <h2 className="flex flex-col mb-12 font-light font-['Playfair_Display'] text-5xl md:text-7xl tracking-[0.2rem]">
                   <span className="text-white mb-4">{slide.titleLine1}</span>
-                  <span className="text-zinc-500 mt-[-2px] md:mt-[-3px] ml-0 md:ml-32">
+                  <span className="text-zinc-500 mt-[-2px] md:mt-[-3px] ml-0 md:ml-8">
                     {slide.titleLine2}
                   </span>
                 </h2>
@@ -122,11 +122,11 @@ const HeroSection = () => {
                 <img
                   src={slide.image}
                   alt={slide.titleLine1}
-                  className="relative w-full max-w-[350px] md:max-w-[500px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] filter grayscale-[0.2] hover:grayscale-0 transition-all duration-700 z-10"
+                  className="relative w-full max-w-[300px] md:max-w-[450px] h-auto object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] filter grayscale-[0.2] hover:grayscale-0 transition-all duration-700 z-10"
                 />
 
                 {/* Specs Floating Box (Glassmorphism) */}
-                <div className="absolute -bottom-6 md:bottom-10 left-1/2 md:-left-8 -translate-x-1/2 md:translate-x-0 w-[90%] md:w-auto bg-black/40 backdrop-blur-md border border-white/10 p-5 shadow-2xl z-20">
+                <div className="absolute -bottom-6 md:bottom-10 left-1/2 md:-left-1 -translate-x-1/2 md:translate-x-0 w-[90%] md:w-auto bg-black/40 backdrop-blur-md border border-white/10 p-5 shadow-2xl z-20">
                   <ul className="space-y-3">
                     {slide.specs.map((spec, i) => (
                       <li
