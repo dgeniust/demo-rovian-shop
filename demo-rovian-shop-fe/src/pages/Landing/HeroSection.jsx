@@ -27,8 +27,8 @@ const HeroSection = () => {
     },
     {
       subtitle: "Kiệt Tác Thời Gian",
-      titleLine1: "Tinh hoa cơ khí",
-      titleLine2: "Tuyệt tác vĩnh cửu",
+      titleLine1: "Thương hiệu đồng hồ",
+      titleLine2: "Số 1 Việt Nam",
       description: `"Mỗi chiếc đồng hồ ROVIAN là một bản giao hưởng của hàng trăm chi tiết vi mô, được tinh chỉnh và lắp ráp hoàn toàn thủ công bởi những nghệ nhân bậc thầy."`,
       image: h2,
       specs: [
