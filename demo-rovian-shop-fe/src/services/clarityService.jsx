@@ -1,5 +1,4 @@
-import Clarity from "@microsoft/clarity";
-
+import { clarity } from "@microsoft/clarity"; // Thay đổi cách import này
 /**
  * Clarity Service - Quản lý tracking thông số mua sản phẩm
  * Theo dõi: Product views, purchases, cart interactions
@@ -12,7 +11,7 @@ const clarityService = {
    */
   initialize: (projectId) => {
     if (projectId) {
-      Clarity.init(projectId);
+      clarity.init(projectId);
       console.log("✓ Clarity initialized with project ID:", projectId);
     } else {
       console.warn("⚠ Clarity Project ID not found in environment variables");
@@ -26,7 +25,7 @@ const clarityService = {
   trackProductView: (product) => {
     if (!product) return;
 
-    Clarity.event("product_view", {
+    clarity.event("product_view", {
       product_id: product.id || product.sku || "unknown",
       product_name: product.name || "Unknown Product",
       product_price: String(product.price || 0),
@@ -47,7 +46,7 @@ const clarityService = {
   trackCheckoutInitiated: (product) => {
     if (!product) return;
 
-    Clarity.event("checkout_initiated", {
+    clarity.event("checkout_initiated", {
       product_id: product.id || product.sku || "unknown",
       product_name: product.name || "Unknown Product",
       product_price: String(product.price || 0),
@@ -78,7 +77,7 @@ const clarityService = {
       eventData.transaction_id = transactionId;
     }
 
-    Clarity.event("purchase", eventData);
+    clarity.event("purchase", eventData);
 
     console.log("✅ Purchase Tracked:", {
       product: product.name,
@@ -136,7 +135,7 @@ const clarityService = {
   trackSearch: (searchQuery, resultsCount = 0) => {
     if (!searchQuery) return;
 
-    Clarity.event("search", {
+    clarity.event("search", {
       search_query: searchQuery,
       results_count: String(resultsCount),
       timestamp: new Date().toISOString(),
@@ -156,7 +155,7 @@ const clarityService = {
   trackCustomEvent: (eventName, eventData = {}) => {
     if (!eventName) return;
 
-    Clarity.event(eventName, {
+    clarity.event(eventName, {
       ...eventData,
       timestamp: new Date().toISOString(),
     });
@@ -171,11 +170,11 @@ const clarityService = {
    */
   setSessionData: (userId = null, customData = {}) => {
     if (userId) {
-      Clarity.setSessionProperty("user_id", userId);
+      clarity.setSessionProperty("user_id", userId);
     }
 
     Object.entries(customData).forEach(([key, value]) => {
-      Clarity.setSessionProperty(key, String(value));
+      clarity.setSessionProperty(key, String(value));
     });
 
     console.log("👤 Session Data Set:", { userId, ...customData });
@@ -189,7 +188,7 @@ const clarityService = {
   tagElement: (element, tagName) => {
     if (!element) return;
 
-    Clarity.tag(element, tagName);
+    clarity.tag(element, tagName);
     console.log("🏷️ Element Tagged:", { tag: tagName });
   },
 };
