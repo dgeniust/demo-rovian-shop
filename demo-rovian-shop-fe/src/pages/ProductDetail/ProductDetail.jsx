@@ -7,6 +7,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import productService from "../../services/productService";
+import clarityService from "../../services/clarityService";
 import fb from "../../assets/fb.png";
 
 const ProductDetail = ({ productId }) => {
@@ -29,6 +30,18 @@ const ProductDetail = ({ productId }) => {
       fetchProductDetails(productId);
     }
   }, [productId]);
+
+  // Track product view with Clarity
+  useEffect(() => {
+    if (selectedProduct && selectedProduct.name) {
+      clarityService.trackProductView({
+        id: selectedProduct.id,
+        sku: selectedProduct.id,
+        name: selectedProduct.name,
+        price: selectedProduct.price,
+      });
+    }
+  }, [selectedProduct]);
 
   const contactLinks = {
     zalo: "https://zalo.me/0708110906",
@@ -68,6 +81,15 @@ const ProductDetail = ({ productId }) => {
     }).format(num);
 
   const handleOpenURL = (url) => {
+    // Track checkout/purchase initiation before opening URL
+    if (product && product.name !== "Đang tải...") {
+      clarityService.trackCheckoutInitiated({
+        id: selectedProduct.id,
+        sku: selectedProduct.id,
+        name: product.name,
+        price: product.price,
+      });
+    }
     window.open(url, "_blank");
   };
 

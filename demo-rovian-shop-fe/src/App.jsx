@@ -23,9 +23,16 @@ import AdminLayout from "./components/layout/AdminLayout";
 import ProductManager from "./pages/Admin/ProductManager";
 import ProtectedRoute from "./components/layout/ProtectedRoute";
 import ProductDetailPage from "./pages/ProductDetail/ProductDetailPage";
+import clarityService from "./services/clarityService";
 // Tạo một Component bọc các Route để xử lý hiệu ứng chuyển trang
+const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_PROJECT_ID;
+
 const AnimatedRoutes = () => {
   const location = useLocation();
+
+  useEffect(() => {
+    clarityService.initialize(CLARITY_PROJECT_ID);
+  }, []);
   return (
     // mode="wait": Chờ trang cũ biến mất xong mới hiện trang mới
     <AnimatePresence mode="wait">
