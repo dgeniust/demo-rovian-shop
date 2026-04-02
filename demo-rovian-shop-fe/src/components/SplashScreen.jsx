@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import logo from "../assets/whiteHorizontal_final.png"; // Sử dụng logo trắng cho nền tối
+import logo from "../assets/final_Logo.png"; // Sử dụng logo trắng cho nền tối
 
 const SplashScreen = ({ finishLoading }) => {
   const [startFade, setStartFade] = useState(false);

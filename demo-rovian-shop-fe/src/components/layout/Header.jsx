@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import whiteLogo from "../../assets/whiteHorizontal_final.png";
+import whiteLogo from "../../assets/final_Logo.png";
 // Bỏ blackLogo vì trên nền đen ta sẽ luôn dùng logo trắng
 
 const Header = () => {
@@ -53,7 +53,7 @@ const Header = () => {
         <img
           src={whiteLogo}
           alt="ROVIAN Logo"
-          className="h-7 md:h-10 object-contain"
+          className="h-6 md:h-9 object-contain"
         />
       </NavLink>
 

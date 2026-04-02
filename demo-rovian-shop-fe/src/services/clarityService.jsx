@@ -1,4 +1,4 @@
-import { clarity } from "@microsoft/clarity"; // Thay đổi cách import này
+import clarity from "@microsoft/clarity"; // Thay đổi cách import này
 /**
  * Clarity Service - Quản lý tracking thông số mua sản phẩm
  * Theo dõi: Product views, purchases, cart interactions
