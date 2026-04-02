@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import whiteLogo from "../../assets/final_Logo.png";
+import whiteLogo from "../../assets/final2_Logo.png";
 // Bỏ blackLogo vì trên nền đen ta sẽ luôn dùng logo trắng
 
 const Header = () => {
