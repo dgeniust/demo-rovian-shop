@@ -35,7 +35,10 @@
   },
   "overrides": {
     "vite-react-ssg": {
-      "react-router-dom": "$react-router-dom"
+      "react-router-dom": "$react-router-dom",
+      "vite": "$vite",
+      "react": "$react",
+      "react-dom": "$react-dom"
     }
   }
 }
