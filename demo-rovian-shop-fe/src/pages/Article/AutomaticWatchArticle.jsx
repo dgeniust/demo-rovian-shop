@@ -19,7 +19,7 @@ const AutomaticWatchArticle = () => {
           name: "Your Watch Blog",
           logo: {
             "@type": "ImageObject",
-            url: "src/assets/black-crowd.png",
+            url: "/assets/black-crowd.png",
           },
         },
         mainEntityOfPage: {
@@ -74,7 +74,13 @@ const AutomaticWatchArticle = () => {
       },
     ],
   };
-
+  useEffect(() => {
+    // Đợi 1 giây để đảm bảo Helmet đã gắn xong thẻ Meta, rồi mới cho Prerender chụp
+    const timer = setTimeout(() => {
+      window.prerenderReady = true;
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <Helmet>

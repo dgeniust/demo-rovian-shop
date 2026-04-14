@@ -17,7 +17,7 @@ export default async function middleware(request) {
     /bot|facebook|whatsapp|telegram|zalo|viber|twitter|slack|linkedin|skype/i.test(
       userAgent,
     );
-
+  console.log(`[Middleware Check] User-Agent: ${userAgent} | Is Bot? ${isBot}`);
   // 3. Nếu là Bot, chuyển hướng nó sang Prerender.io
   if (isBot) {
     // Thay 'YOUR_PRERENDER_TOKEN_HERE' bằng token bạn lấy ở Bước 1
