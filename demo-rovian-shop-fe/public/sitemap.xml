@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://rovianwatch.com/</loc>
   </url>
+
   <url>
     <loc>https://rovianwatch.com/about</loc>
   </url>
+
   <url>
     <loc>https://rovianwatch.com/shop</loc>
   </url>
+
   <url>
     <loc>https://rovianwatch.com/contact</loc>
   </url>
+
   <url>
     <loc>https://rovianwatch.com/kien-thuc/may-co-automatic-la-gi</loc>
-    </url>
-    <url>
-    <loc>
-        https://rovianwatch.com/kien-thuc/top-5-dong-ho-nam-tot-nhat-duoi-5-trieu-2025
-    </loc>
   </url>
+
   <url>
-    <loc>
-        https://rovianwatch.com/kien-thuc/cach-chon-dong-ho-nam
-    </loc>
+    <loc>https://rovianwatch.com/kien-thuc/top-5-dong-ho-nam-tot-nhat-duoi-5-trieu-2025</loc>
   </url>
-    <url>
-     <loc>
-        https://rovianwatch.com/kien-thuc/danh-gia-srwatch-nam-SG1077-1101TE
-    </loc>
+
+  <url>
+    <loc>https://rovianwatch.com/kien-thuc/cach-chon-dong-ho-nam</loc>
   </url>
-    <url>
-         <loc>
-         https://rovianwatch.com/kien-thuc/casio-mtp-vs-srwatch-timepiece-te
-    </loc>
+
+  <url>
+    <loc>https://rovianwatch.com/kien-thuc/danh-gia-srwatch-nam-SG1077-1101TE</loc>
+  </url>
+
+  <url>
+    <loc>https://rovianwatch.com/kien-thuc/casio-mtp-vs-srwatch-timepiece-te</loc>
   </url>
 
 </urlset>
