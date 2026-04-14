@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ARTICLE_ROUTES } from "../../config/articleLinks";
 
 const DanhGiaSRWatchSG1077 = () => {
   const schemaData = [
@@ -128,6 +130,15 @@ const DanhGiaSRWatchSG1077 = () => {
               SRWATCH Là Thương Hiệu Gì? Vì Sao Được Chọn Làm "Đồng Hồ Quốc
               Dân"?
             </h2>
+            <div>
+              <div className="mb-12 overflow-hidden bg-gray-50 flex items-center justify-center group-hover:shadow-xl transition-shadow duration-500">
+                <img
+                  src="https://srwatch.vn/wp-content/uploads/2026/01/dong-ho-nam-srwatch-bst-te-SG1903.1101TE.jpg"
+                  alt="Đồng hồ nam dưới 5 triệu SRWatch Nam SG1077.1101TE"
+                  className="w-1/2 h-1/2 object-contain transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
+            </div>
             <div className="text-xl md:text-2xl text-gray-700 space-y-8">
               <p>
                 Trước khi đi vào đánh giá cụ thể chiếc đồng hồ SRWatch nam
@@ -243,6 +254,13 @@ const DanhGiaSRWatchSG1077 = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 border-b border-gray-100 pb-4 font-serif">
               Bộ Máy Quartz Miyota – Độ Chính Xác Nhật Bản Ở Mức Giá Phải Chăng
             </h2>
+            <div className="mb-10">
+              <img
+                src="https://cdn.tgdd.vn/News/1491201/nhung-thong-tin-ban-can-biet-ve-may-dong-ho(6)-800x495.jpg"
+                alt="Đồng hồ nam dưới 5 triệu SRWatch Nam SG1077.1101TE"
+                className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-xl md:text-2xl text-gray-700">
               <div className="space-y-6">
                 <p>
@@ -476,6 +494,39 @@ const DanhGiaSRWatchSG1077 = () => {
               </p>
             </div>
           </div>
+
+          {/* --- READ MORE SECTION --- */}
+          <section className="mb-16 py-12 border-t border-gray-100 pt-12">
+            <div className="space-y-4">
+              <Link
+                to={ARTICLE_ROUTES.AUTOMATIC.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Máy Cơ Automatic Là Gì?]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.TOP5_DUOI_5_TRIEU.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Top 5 Đồng Hồ Nam Dưới 5 Triệu]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CACH_CHON_DONG_HO.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Cách Chọn Đồng Hồ Nam]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CASIO_VS_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [So Sánh Casio và SRWATCH]
+              </Link>
+            </div>
+          </section>
 
           <footer className="mt-20 pt-10 border-t border-gray-100 text-gray-500 text-sm italic">
             <p>

@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ARTICLE_ROUTES } from "../../config/articleLinks";
 
 const SoSanhCasioVaSRWatch = () => {
   const schemaData = [
@@ -124,6 +126,18 @@ const SoSanhCasioVaSRWatch = () => {
             </p>
           </section>
 
+          <div className="w-full flex items-center justify-between mb-5">
+            <img
+              src="https://srwatch.vn/wp-content/uploads/2026/01/dong-ho-nam-srwatch-bst-atl-SG1070.1201TE-2.jpg"
+              alt="SRWATCH Timepiece TE SG107x"
+              className="w-1/2 h-1/2 object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <img
+              src="https://cdn.tgdd.vn/Products/Images/7264/209057/casio-mtp-v006l-7budf-nam-1-750x500.jpg"
+              alt="Casio MTP-V006"
+              className="w-1/2 h-1/2 object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
           {/* --- SECTION 1: COMPARISON TABLE --- */}
           <section className="mb-24 overflow-x-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 font-serif uppercase border-b border-gray-100 pb-4">
@@ -215,6 +229,13 @@ const SoSanhCasioVaSRWatch = () => {
               So Sánh Thiết Kế và Phong Cách: Đâu Là Đồng Hồ Nam Đẹp Hơn Trên Cổ
               Tay?
             </h2>
+            <div className="w-full flex items-center justify-center">
+              <img
+                src="https://srwatch.vn/wp-content/uploads/2026/01/dong-ho-nam-srwatch-bst-atl-SG1070.1202TE-4.jpg"
+                alt="Cận cảnh thiết kế siêu mỏng 6mm của đồng hồ nam Nhật Bản SRWATCH Timepiece TE"
+                className="w-1/2 h-1/2 object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
             <div className="text-xl md:text-2xl text-gray-700 space-y-12">
               <div className="space-y-4">
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif">
@@ -367,6 +388,13 @@ const SoSanhCasioVaSRWatch = () => {
               So Sánh Khả Năng Chống Nước: 3ATM vs 5ATM — Khác Biệt Thực Tế Ra
               Sao?
             </h2>
+            <div className="w-full flex items-center justify-center mb-8">
+              <img
+                src="https://donghoduyanh.com/upload_images/images/2025/02/08/%C4%90%E1%BB%93ng%20h%E1%BB%93%20ch%E1%BB%91ng%20n%C6%B0%E1%BB%9Bc.jpg"
+                alt="Bảng tiêu chuẩn chống nước 3ATM và 5ATM trên đồng hồ nam Casio và SRWATCH"
+                className="w-1/2 h-1/2 object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
             <div className="text-xl md:text-2xl text-gray-700 space-y-8">
               <div className="space-y-4">
                 <h4 className="font-bold text-gray-900">
@@ -541,6 +569,39 @@ const SoSanhCasioVaSRWatch = () => {
                   Nhật Bản.
                 </p>
               </div>
+            </div>
+          </section>
+
+          {/* --- READ MORE SECTION --- */}
+          <section className="mb-16 py-12 border-t border-gray-100 pt-12">
+            <div className="space-y-4">
+              <Link
+                to={ARTICLE_ROUTES.AUTOMATIC.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Máy Cơ Automatic Là Gì?]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.TOP5_DUOI_5_TRIEU.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Top 5 Đồng Hồ Nam Dưới 5 Triệu]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CACH_CHON_DONG_HO.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Cách Chọn Đồng Hồ Nam]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.DANH_GIA_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Đánh Giá SRWATCH SG1077]
+              </Link>
             </div>
           </section>
 

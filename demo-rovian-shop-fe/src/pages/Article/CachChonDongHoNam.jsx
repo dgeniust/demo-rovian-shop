@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ARTICLE_ROUTES } from "../../config/articleLinks";
 
 const CachChonDongHoNam = () => {
   const schemaData = [
@@ -95,7 +97,13 @@ const CachChonDongHoNam = () => {
               <time dateTime="2026-04-14">Kiến thức chuyên sâu</time>
             </div>
           </header>
-
+          <div className="mb-12 overflow-hidden bg-gray-50 aspect-[16/9] flex items-center justify-center group-hover:shadow-xl transition-shadow duration-500">
+            <img
+              src="https://donghoduyanh.com/images/news/2023/06/21/large/nam-deo-dong-ho-tay-nao-1_1687335803.jpg"
+              alt="Phong Cách Và Kích Thước – Chọn Đồng Hồ Nam Sao Cho Đẹp Trên Tay"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+          </div>
           {/* --- INTRO SECTION --- */}
           <div className="max-w-none text-gray-800 mb-20 text-base md:text-2xl">
             <p className="mb-10 first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 first-letter:mr-2 first-letter:float-left first-letter:leading-none">
@@ -244,6 +252,14 @@ const CachChonDongHoNam = () => {
               3. Phong Cách Và Kích Thước – Chọn Đồng Hồ Nam Sao Cho Đẹp Trên
               Tay
             </h2>
+            <div className="mb-10">
+              <img
+                src="https://file.hstatic.net/200000597439/article/cach-deo-dong-ho-nam_e6fad59d9e19439cbad6b416d751ca94.png"
+                alt="Phong Cách Và Kích Thước – Chọn Đồng Hồ Nam Sao Cho Đẹp Trên
+              Tay"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+            </div>
             <div className="text-xl md:text-2xl text-gray-700 space-y-10">
               <p>
                 Một chiếc đồng hồ đẹp trên tay người này có thể trông lạc quẻ
@@ -477,6 +493,39 @@ const CachChonDongHoNam = () => {
               Khám Phá Bộ Sưu Tập ROVIAN
             </a>
           </div>
+
+          {/* --- READ MORE SECTION --- */}
+          <section className="mb-16 py-12 border-t border-gray-100 pt-12">
+            <div className="space-y-4">
+              <Link
+                to={ARTICLE_ROUTES.AUTOMATIC.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Máy Cơ Automatic Là Gì?]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.TOP5_DUOI_5_TRIEU.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Top 5 Đồng Hồ Nam Dưới 5 Triệu]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.DANH_GIA_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Đánh Giá SRWATCH SG1077]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CASIO_VS_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [So Sánh Casio và SRWATCH]
+              </Link>
+            </div>
+          </section>
 
           <footer className="mt-24 pt-10 text-gray-400 italic text-lg border-t border-gray-50 font-sans leading-relaxed">
             Bản thảo biên soạn bởi ROVIAN (2025). Mức giá ước tính có thể biến

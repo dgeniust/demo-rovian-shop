@@ -1,5 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ARTICLE_ROUTES } from "../../config/articleLinks";
 
 const Top5DongHoNamDuoi5Trieu = () => {
   const schemaData = [
@@ -641,6 +643,39 @@ const Top5DongHoNamDuoi5Trieu = () => {
                   bạn đeo hàng ngày đi làm.
                 </p>
               </div>
+            </div>
+          </section>
+
+          {/* --- READ MORE SECTION --- */}
+          <section className="mb-16 py-12 border-t border-gray-100 pt-12">
+            <div className="space-y-4">
+              <Link
+                to={ARTICLE_ROUTES.AUTOMATIC.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Máy Cơ Automatic Là Gì?]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CASIO_VS_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Casio MTP vs SRWATCH Timepiece TE]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.CACH_CHON_DONG_HO.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Cách Chọn Đồng Hồ Nam]
+              </Link>
+              <br />
+              <Link
+                to={ARTICLE_ROUTES.DANH_GIA_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Đánh Giá SRWATCH SG1077]
+              </Link>
             </div>
           </section>
 

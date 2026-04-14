@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import ARTICLE_ROUTES from "../../config/articleLinks";
 
 const AutomaticWatchArticle = () => {
   const schemaData = {
@@ -189,10 +191,13 @@ const AutomaticWatchArticle = () => {
                   trị kỹ thuật vượt trội. Đây là sự đánh đổi có chủ đích mà
                   người chơi đồng hồ thường xuyên chấp nhận.
                 </p>
-                <p className="font-sans text-lg text-gray-400 uppercase tracking-widest mt-4 italic">
-                  🔗 Đọc thêm: [Đồng hồ Quartz là gì? So sánh với máy cơ
-                  Automatic]
-                </p>
+                <Link
+                  to={ARTICLE_ROUTES.TOP5_DUOI_5_TRIEU.path}
+                  className="font-sans text-lg text-gray-400 uppercase tracking-widest mt-4 italic inline-block hover:text-gray-600 transition-colors"
+                >
+                  🔗 Đọc thêm: [Top 5 Đồng Hồ Nam Tốt Nhất Dưới 5 Triệu 2025 –
+                  Đánh Giá Thực Tế]
+                </Link>
               </div>
             </div>
           </section>
@@ -319,10 +324,13 @@ const AutomaticWatchArticle = () => {
                 </div>
               </div>
             </div>
-            <p className="font-sans text-lg text-gray-500 uppercase tracking-widest mt-12 italic text-center">
-              🔗 Đọc thêm: [Các bộ phận cơ bản của đồng hồ đeo tay và chức năng
-              từng bộ phận]
-            </p>
+            <Link
+              to={ARTICLE_ROUTES.CACH_CHON_DONG_HO.path}
+              className="font-sans text-lg text-gray-500 uppercase tracking-widest mt-12 italic text-center inline-block hover:text-gray-700 transition-colors"
+            >
+              🔗 Đọc thêm: [Cách Chọn Đồng Hồ Nam Phù Hợp – Hướng Dẫn Từ A–Z
+              (2025)]
+            </Link>
           </section>
 
           {/* --- PROS & CONS --- */}
@@ -407,9 +415,13 @@ const AutomaticWatchArticle = () => {
                 xuyên, hãy đầu tư thêm một hộp xoay đồng hồ (watch winder) —
                 thiết bị tự xoay để giữ cho dây cót luôn được nạp khi không đeo.
               </p>
-              <p className="font-sans text-lg text-gray-400 uppercase tracking-widest mt-4 italic">
-                🔗 Đọc thêm: [Hộp xoay đồng hồ là gì? Có cần thiết không?]
-              </p>
+              <Link
+                to={ARTICLE_ROUTES.DANH_GIA_SRWATCH.path}
+                className="font-sans text-lg text-gray-400 uppercase tracking-widest mt-4 italic inline-block hover:text-gray-600 transition-colors"
+              >
+                🔗 Đọc thêm: [Đồng Hồ SRWatch Nam SG1077.1101TE – Đánh Giá Chi
+                Tiết Từ Chuyên Gia]
+              </Link>
             </div>
           </section>
 
@@ -500,10 +512,6 @@ const AutomaticWatchArticle = () => {
 
           {/* --- FOOTER NOTE --- */}
           <footer className="pt-12 border-t border-gray-100 text-gray-400 italic text-xl leading-relaxed">
-            <p className="mb-8">
-              Gợi ý Alt Text: [Sơ đồ cấu tạo máy cơ Automatic], [Rotor đồng hồ
-              cơ Automatic], [So sánh kim giây sweeping vs Quartz tick]
-            </p>
             <p>
               Bài viết được biên soạn dựa trên kiến thức horology và dữ liệu kỹ
               thuật từ các nhà sản xuất đồng hồ uy tín. Thông số trữ cót và sai
