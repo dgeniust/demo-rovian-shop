@@ -5,6 +5,7 @@ import AboutSection from "./AboutSection";
 import ContactSection from "./ContactSection";
 import FeaturedProducts from "./FeaturedProducts";
 import { Helmet } from "react-helmet-async";
+import FeaturedArticles from "./FeaturedArticles";
 const LandingPage = () => {
   return (
     <>
@@ -37,6 +38,8 @@ const LandingPage = () => {
         <FeaturedProducts />
 
         <AboutSection />
+
+        <FeaturedArticles />
 
         <ContactSection />
       </div>
