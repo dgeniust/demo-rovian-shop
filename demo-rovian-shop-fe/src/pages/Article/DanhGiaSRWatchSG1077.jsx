@@ -71,285 +71,420 @@ const DanhGiaSRWatchSG1077 = () => {
     <>
       <Helmet>
         <title>
-          Đồng Hồ SRWatch SG1077.1101TE – Đánh Giá Chuyên Sâu | ROVIAN
+          Đồng Hồ SRWatch Nam SG1077.1101TE – Đánh Giá Chi Tiết Từ Chuyên Gia |
+          ROVIAN
         </title>
         <meta
           name="description"
-          content="Đánh giá chi tiết đồng hồ SRWatch nam tầm trung SG1077.1101TE: kính Sapphire, thép 316L, máy Quartz Miyota. Xem ngay ưu nhược điểm và mức giá."
-        />
-        <meta
-          name="keywords"
-          content="đồng hồ SRWatch nam tầm trung, SRWATCH SG1077.1101TE, đánh giá đồng hồ SRWatch, đồng hồ nam dưới 3 triệu, đồng hồ kính sapphire giá rẻ"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="Đồng Hồ SRWatch Nam SG1077.1101TE – Đánh Giá Chi Tiết Từ Chuyên Gia"
-        />
-        <meta
-          property="og:description"
-          content="Tìm hiểu chi tiết chiếc đồng hồ quốc dân SRWatch SG1077.1101TE: Kính Sapphire, thép 316L và máy Miyota bền bỉ."
-        />
-        <meta
-          property="og:image"
-          content="https://yourdomain.com/images/srwatch-sg1077-1101te-thumbnail.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://yourdomain.com/kien-thuc/danh-gia-dong-ho-srwatch-nam-sg1077-1101te"
-        />
-
-        <link
-          rel="canonical"
-          href="https://yourdomain.com/kien-thuc/danh-gia-dong-ho-srwatch-nam-sg1077-1101te"
+          content="Đánh giá chi tiết đồng hồ SRWatch nam tầm trung SG1077.1101TE: kính Sapphire, thép 316L, máy Quartz Miyota."
         />
       </Helmet>
 
-      <main className="max-w-4xl mx-auto px-5 py-16 bg-white mt-10 text-left font-serif">
+      <main className="w-full mx-auto px-10 md:px-32 py-24 bg-white mt-2 text-left font-sans leading-[1.8]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
 
         <article>
-          {/* Header */}
-          <header className="mb-16 border-b border-gray-900 pb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gray-500 uppercase mb-5 block">
+          {/* --- HEADER --- */}
+          <header className="mb-24 border-b border-gray-100 pb-16 font-serif">
+            <span className="text-lg font-bold tracking-[0.3em] text-gray-400 uppercase mb-4 block font-sans">
               Đánh Giá Chuyên Sâu
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 leading-tight mb-8">
-              Đồng Hồ SRWatch SG1077.1101TE: Vẻ Đẹp Tối Giản Vượt Tầm Giá
-            </h1>
-            <div className="flex items-center text-xs text-gray-500 font-sans tracking-widest uppercase">
-              <span className="font-semibold text-gray-900">
-                Ban Biên Tập ROVIAN
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-[1.15] mb-12">
+              Đồng Hồ SRWatch Nam SG1077.1101TE <br />
+              <span className="text-gray-400 italic text-3xl md:text-5xl leading-tight block mt-4">
+                Đánh Giá Chi Tiết Từ Chuyên Gia
               </span>
-              <span className="mx-3">|</span>
-              <time dateTime="2026-04-14">Xuất bản năm 2025</time>
+            </h1>
+            <div className="flex flex-wrap gap-4 items-center text-sm text-gray-400 tracking-widest uppercase font-sans">
+              <span className="text-gray-900 font-semibold uppercase">
+                Từ khóa chính: đồng hồ SRWatch nam tầm trung
+              </span>
+              <span className="mx-2 text-gray-200">|</span>
+              <span>Độ dài: ~1.500 từ</span>
+              <span className="mx-2 text-gray-200">|</span>
+              <span>Mật độ từ khóa: ~1.2%</span>
             </div>
           </header>
 
-          {/* Intro Section */}
-          <div className="prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed mb-16">
-            <p className="first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:text-gray-900 first-letter:mr-3 first-letter:float-left first-letter:leading-none">
-              Bạn đang tìm một chiếc đồng hồ nam vừa thanh lịch, bền bỉ, vừa
-              không "đau ví" — nhưng vẫn toát lên phong thái chỉn chu mỗi khi đi
-              làm hay dự tiệc? Mẫu{" "}
-              <strong>đồng hồ SRWatch nam tầm trung</strong> dòng Timepiece TE,
-              cụ thể là model <strong>SG1077.1101TE</strong>, đang là cái tên
-              được giới mộ điệu chú ý nhờ sự kết hợp hài hòa giữa chất liệu chế
-              tác và mức giá tiếp cận.
-            </p>
-
-            {/* <figure className="my-16">
-              <img
-                src="/images/srwatch-sg1077-1101te-main.jpg"
-                alt="Mặt số đen sang trọng của đồng hồ SRWatch nam tầm trung SG1077.1101TE"
-                className="w-full h-auto object-cover grayscale-[15%]"
-                loading="lazy"
-              />
-              <figcaption className="text-left text-xs font-sans uppercase tracking-widest text-gray-500 mt-4 border-b border-gray-200 pb-4">
-                Mặt số đen huyền bí đặc trưng của SG1077.1101TE
-              </figcaption>
-            </figure> */}
-          </div>
-
-          {/* Section 1 */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-8 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              1. Khởi Nguồn Thương Hiệu
-            </h2>
-            <p>
-              SRWATCH ra đời năm 1985 tại Nhật Bản, được định hình bởi kỹ sư
-              Kama. Tên "SR" mang hàm ý <em>"Save time for real life"</em> —
-              trân trọng từng khoảnh khắc cuộc sống đích thực.
-            </p>
-            <p>
-              Triết lý xuyên suốt của hãng là: Một chiếc đồng hồ tốt không nhất
-              thiết phải mang một mức giá xa xỉ. Sử dụng bộ máy Miyota từ tập
-              đoàn Citizen, các dòng đồng hồ SRWatch khẳng định vị thế vững chắc
-              trong phân khúc tầm trung với độ tin cậy chuẩn Nhật.
+          {/* --- INTRO SECTION --- */}
+          <section className="mb-20 text-lg md:text-2xl text-gray-800">
+            <p className="mb-10 first-letter:text-8xl first-letter:font-bold first-letter:text-gray-900 first-letter:mr-2 first-letter:float-left first-letter:leading-none">
+              Bạn đang tìm một chiếc đồng hồ nam vừa đẹp, vừa bền, vừa không
+              "đau ví" — nhưng vẫn toát lên phong thái chỉn chu mỗi khi đi làm
+              hay dự tiệc? Đồng hồ SRWatch nam dòng Timepiece TE, cụ thể là
+              model SG1077.1101TE, đang là cái tên được nhiều người tìm kiếm
+              trong phân khúc tầm trung nhờ sự kết hợp hoàn hảo giữa chất liệu
+              cao cấp và mức giá cực kỳ hợp lý. Bài đánh giá này sẽ giúp bạn
+              hiểu rõ từng chi tiết trước khi ra quyết định.
             </p>
           </section>
 
-          {/* Section 2 */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-8 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              2. Ngôn Ngữ Thiết Kế Tối Giản
+          {/* --- SECTION 1: BRAND --- */}
+          <section className="mb-24 space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-4 font-serif">
+              SRWATCH Là Thương Hiệu Gì? Vì Sao Được Chọn Làm "Đồng Hồ Quốc
+              Dân"?
             </h2>
-            <p>
-              Mặt số tròn màu đen kết hợp với bộ kim được vát cạnh sắc sảo tạo
-              ra độ tương phản thị giác tuyệt vời. Các vạch số được thiết kế
-              dạng đường kẻ dứt khoát — phản ánh đúng tinh thần Minimalism của
-              Nhật Bản: tối giản nhưng không hề đơn điệu.
-            </p>
-            <p>
-              Với đường kính 39mm và độ dày vỏ chỉ khoảng 6–7mm, chiếc đồng hồ
-              dễ dàng trượt nhẹ nhàng dưới cổ tay áo sơ mi, tạo nên sự thanh
-              lịch, gọn gàng và vừa vặn cho cổ tay nam giới Á Đông.
-            </p>
-          </section>
-
-          {/* Section 3 */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-8 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              3. Chất Liệu Vượt Kỳ Vọng
-            </h2>
-
-            <ul className="list-none pl-0 space-y-8 my-10 font-sans text-base">
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  Thép Không Gỉ 316L
-                </strong>
-                <span className="text-gray-600">
-                  Khung vỏ và dây đeo sử dụng thép y tế cao cấp, chống gỉ sét,
-                  duy trì độ bóng và hoàn toàn thân thiện với làn da.
-                </span>
-              </li>
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  Kính Sapphire Nguyên Khối
-                </strong>
-                <span className="text-gray-600">
-                  Với độ cứng 9/10 (chỉ sau kim cương), mặt kính chống trầy xước
-                  gần như tuyệt đối. Đây là lợi thế cạnh tranh áp đảo ở phân
-                  khúc này.
-                </span>
-              </li>
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  Chống Nước 5ATM
-                </strong>
-                <span className="text-gray-600">
-                  Đảm bảo an toàn tuyệt đối khi rửa tay, đi mưa hoặc bơi lội nhẹ
-                  trên mặt nước. Khuyến cáo không sử dụng khi lặn sâu hoặc tắm
-                  hơi.
-                </span>
-              </li>
-            </ul>
-          </section>
-
-          {/* Section 4 */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-8 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              4. Trái Tim Bộ Máy Miyota
-            </h2>
-            <p>
-              SG1077.1101TE vận hành bởi cỗ máy Quartz Miyota danh tiếng, mang
-              lại độ chính xác ấn tượng với sai số chỉ ±15 giây/tháng. Thiết kế
-              loại bỏ kim giây rườm rà giúp tối ưu hóa năng lượng. Người dùng
-              không cần bận tâm đến việc lên cót, đồng thời tận hưởng sự bền bỉ,
-              dễ dàng bảo trì và tuổi thọ pin kéo dài từ 3 đến 5 năm.
-            </p>
-          </section>
-
-          {/* Section 5: Comparison Matrix */}
-          <section className="my-24">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2">
-              5. Đối Chiếu & So Sánh
-            </h2>
-
-            <div className="overflow-x-auto font-sans mb-8">
-              <table className="w-full text-left text-sm border-collapse">
-                <thead className="border-b-2 border-gray-900 text-gray-900 uppercase tracking-widest text-xs">
-                  <tr>
-                    <th className="py-4 pr-4 font-bold w-1/4">Tiêu Chí</th>
-                    <th className="py-4 px-4 font-bold border-b-2 border-gray-900 w-1/4">
-                      SG1077.1101TE
-                    </th>
-                    <th className="py-4 px-4 font-bold text-gray-500 w-1/4">
-                      Casio MTP
-                    </th>
-                    <th className="py-4 pl-4 font-bold text-gray-500 w-1/4">
-                      Orient Bambino
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 text-gray-700">
-                  <tr className="hover:bg-gray-50 transition-colors">
-                    <td className="py-5 pr-4 font-semibold text-gray-900 uppercase text-xs tracking-wider">
-                      Mức Giá
-                    </td>
-                    <td className="py-5 px-4 font-bold text-gray-900">
-                      ~1.8M – 2.5M
-                    </td>
-                    <td className="py-5 px-4 text-gray-500">~0.8M – 1.2M</td>
-                    <td className="py-5 pl-4 text-gray-500">~3.0M – 5.0M</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors">
-                    <td className="py-5 pr-4 font-semibold text-gray-900 uppercase text-xs tracking-wider">
-                      Mặt Kính
-                    </td>
-                    <td className="py-5 px-4 font-bold text-gray-900">
-                      Sapphire
-                    </td>
-                    <td className="py-5 px-4 text-gray-500">Mineral</td>
-                    <td className="py-5 pl-4 text-gray-500">Domed Mineral</td>
-                  </tr>
-                  <tr className="hover:bg-gray-50 transition-colors">
-                    <td className="py-5 pr-4 font-semibold text-gray-900 uppercase text-xs tracking-wider">
-                      Bộ Máy
-                    </td>
-                    <td className="py-5 px-4 font-bold text-gray-900">
-                      Quartz (Nhật)
-                    </td>
-                    <td className="py-5 px-4 text-gray-500">Quartz</td>
-                    <td className="py-5 pl-4 text-gray-500">Automatic</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-8">
+              <p>
+                Trước khi đi vào đánh giá cụ thể chiếc đồng hồ SRWatch nam
+                SG1077.1101TE, hãy cùng nhìn lại thương hiệu đứng sau nó.
+              </p>
+              <p>
+                SRWATCH ra đời năm 1985 tại Nhật Bản, được sáng lập bởi kỹ sư
+                Kama — người sống sót sau thảm họa bom nguyên tử tại Hiroshima
+                và xây dựng sự nghiệp từ một xưởng đồng hồ nhỏ. Tên "SR" được
+                ghép từ tên hai người con của ông: S – Santoso (bình yên) và R –
+                Ruby (ngọc quý). Theo năm tháng, SR còn được giải nghĩa là "Save
+                time for real life" — trân trọng từng khoảnh khắc cuộc sống đích
+                thực.
+              </p>
+              <p>
+                Triết lý xuyên suốt của hãng là: đồng hồ tốt không cần phải đắt
+                tiền. Chính quan điểm đó đã giúp SRWATCH chiếm lĩnh thị trường
+                châu Á, đặc biệt là Việt Nam — nơi thương hiệu được gọi thân
+                thương là "đồng hồ quốc dân". Với mức giá từ 1 đến 5 triệu đồng
+                cho phần lớn sản phẩm và bộ máy Miyota (thuộc tập đoàn Citizen
+                Nhật Bản), SRWATCH cạnh tranh sòng phẳng với nhiều thương hiệu
+                cùng phân khúc nhưng ít tên tuổi hơn.
+              </p>
             </div>
-
-            <blockquote className="border-l-4 border-gray-900 pl-8 py-2 text-xl font-serif italic text-gray-700">
-              Nhận định: Chiếc SG1077 hoàn toàn áp đảo các mẫu Casio phổ thông
-              về chất liệu kính bảo vệ và độ hoàn thiện khung vỏ. So với Orient
-              Bambino, nó mang tính thực dụng cao hơn nhờ cỗ máy thạch anh chuẩn
-              xác và chi phí bảo trì gần như bằng không.
-            </blockquote>
           </section>
 
-          {/* Conclusion */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-8 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              Lời Kết
+          {/* --- SECTION 2: DESIGN --- */}
+          <section className="mb-24 p-12 bg-stone-50">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-serif">
+              Thiết Kế SRWATCH SG1077.1101TE – Sang Trọng Theo Phong Cách Nhật
+              Tối Giản
             </h2>
-            <p>
-              Nếu ngân sách dự định của bạn nằm dưới 3 triệu đồng, SRWATCH
-              SG1077.1101TE là một khoản đầu tư hoàn toàn xứng đáng. Thiết kế
-              này thiết lập một tiêu chuẩn mới về độ hoàn thiện vật liệu trong
-              phân khúc, lý tưởng cho những quý ông công sở yêu thích sự thanh
-              lịch, hoặc đóng vai trò như một món quà trao tặng đầy tinh tế và ý
-              nghĩa.
+            <div className="text-xl md:text-2xl text-gray-700 space-y-6">
+              <p>
+                Nhìn lần đầu, chiếc đồng hồ SRWatch nam SG1077.1101TE gây ấn
+                tượng ngay bởi sự tinh tế trong từng đường nét. Mặt số tròn màu
+                đen huyền bí kết hợp với kim chỉ giờ được cắt cạnh chính xác,
+                tạo ra độ tương phản rõ nét và dễ đọc giờ dù trong điều kiện ánh
+                sáng yếu.
+              </p>
+              <p>
+                Các vạch số được thiết kế dạng đường kẻ dứt khoát, không rườm rà
+                — đây là ngôn ngữ thiết kế đặc trưng của dòng Timepiece TE: tối
+                giản nhưng không đơn điệu. Khung viền vỏ kim loại ánh bạc làm
+                nổi bật tổng thể, trong khi logo đôi cánh SRWATCH được đặt khéo
+                léo ở vị trí 12 giờ như một dấu ấn thương hiệu đầy tự tin.
+              </p>
+              <p>
+                Đường kính mặt 39mm là kích thước lý tưởng cho cổ tay phổ thông
+                của nam giới Việt Nam — không quá to để trông "cồng kềnh", không
+                quá nhỏ để mất đi sự mạnh mẽ. Độ dày vỏ chỉ khoảng 6–7mm, giúp
+                chiếc đồng hồ trượt nhẹ nhàng dưới cổ tay áo sơ mi, phù hợp cả
+                môi trường công sở lẫn dịp ra ngoài bạn bè.
+              </p>
+            </div>
+          </section>
+
+          {/* --- SECTION 3: MATERIAL --- */}
+          <section className="mb-24 bg-gray-900 text-white p-12 md:p-20 rounded-sm">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 border-b border-gray-700 pb-6 uppercase tracking-widest text-center font-serif">
+              Chất Liệu Vỏ, Dây và Mặt Kính – "Tiền Nào Của Đó" Hay Vượt Kỳ
+              Vọng?
+            </h2>
+            <div className="grid grid-cols-1 gap-12 text-xl md:text-2xl">
+              <p className="text-gray-300 italic text-center mb-4">
+                Đây chính là điểm mà nhiều người mua đồng hồ SRWatch nam tầm
+                trung bất ngờ nhất.
+              </p>
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">01</span>
+                <div>
+                  <h4 className="font-bold text-white mb-2 uppercase tracking-wide font-serif">
+                    Thép Không Gỉ 316L
+                  </h4>
+                  <p className="text-gray-400">
+                    Vỏ và dây đeo được làm từ thép không gỉ 316L — loại thép y
+                    tế cao cấp thường thấy trên đồng hồ có giá gấp đôi, gấp ba.
+                    Chất liệu này không chỉ chống gỉ sét, chống ăn mòn theo thời
+                    gian mà còn cực kỳ thân thiện với da, không gây kích ứng
+                    ngay cả khi đeo suốt ngày dài trong thời tiết nóng ẩm của
+                    Việt Nam.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">02</span>
+                <div>
+                  <h4 className="font-bold text-white mb-2 uppercase tracking-wide font-serif">
+                    Kính Sapphire Nguyên Khối
+                  </h4>
+                  <p className="text-gray-400">
+                    Mặt kính Sapphire nguyên khối là điểm cộng lớn nhất của
+                    SG1077.1101TE. Kính Sapphire có độ cứng lên đến 9 trên thang
+                    Mohs (chỉ thua kim cương), nghĩa là bạn gần như không cần lo
+                    lắng về việc mặt kính bị xước dù vô tình va chạm với bàn làm
+                    việc, khung cửa hay đồng xu trong túi. Ở phân khúc 1–5 triệu
+                    đồng tại Việt Nam, việc có kính Sapphire là lợi thế cạnh
+                    tranh rõ rệt so với nhiều model dùng kính Hardlex hay kính
+                    khoáng thông thường.
+                  </p>
+                </div>
+              </div>
+              <p className="text-gray-400">
+                Dây đeo demi kim loại (kết hợp đánh bóng và xước) mang đến cảm
+                giác chắc tay và sang trọng, đồng thời tương đối nhẹ, không gây
+                cảm giác nặng nề sau nhiều giờ đeo.
+              </p>
+            </div>
+          </section>
+
+          {/* --- SECTION 4: MOVEMENT --- */}
+          <section className="mb-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 border-b border-gray-100 pb-4 font-serif">
+              Bộ Máy Quartz Miyota – Độ Chính Xác Nhật Bản Ở Mức Giá Phải Chăng
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-xl md:text-2xl text-gray-700">
+              <div className="space-y-6">
+                <p>
+                  Không ít người lo ngại về chất lượng bộ máy khi chọn đồng hồ
+                  SRWatch nam tầm trung. Câu trả lời ngắn gọn: bạn không cần lo.
+                </p>
+                <p>
+                  SG1077.1101TE sử dụng bộ máy Quartz Miyota — thương hiệu máy
+                  Nhật Bản thuộc tập đoàn Citizen, được trang bị trong hàng loạt
+                  đồng hồ từ phổ thông đến trung cao cấp trên toàn thế giới. Máy
+                  Quartz Miyota hoạt động bằng pin, cho độ chính xác cao với sai
+                  số chỉ ±15 giây/tháng (tương đương ±3 giây/tuần) — hoàn toàn
+                  đủ tin cậy cho sinh hoạt hằng ngày.
+                </p>
+              </div>
+              <div className="bg-stone-50 p-8">
+                <h4 className="font-bold text-gray-900 mb-4 font-serif uppercase">
+                  Ưu điểm lớn của máy Quartz:
+                </h4>
+                <ul className="space-y-4 text-lg list-none p-0">
+                  <li>
+                    • Không cần lên cót, không lo quên đeo vài ngày đồng hồ bị
+                    chết giờ
+                  </li>
+                  <li>• Tuổi thọ pin 3–5 năm, thay pin đơn giản và rẻ</li>
+                  <li>
+                    • Bảo trì đơn giản, ít hỏng hóc, chi phí sửa chữa thấp
+                  </li>
+                  <li>• Chính xác hơn máy cơ cùng tầm giá về độ sai số</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-xl md:text-2xl text-gray-700 mt-8">
+              Với người mua đồng hồ lần đầu hoặc muốn một chiếc "dùng cho yên
+              tâm mỗi ngày", đây là lựa chọn thực dụng và thông minh hơn nhiều
+              so với việc chọn đồng hồ cơ giá rẻ có chất lượng không đảm bảo.
             </p>
           </section>
 
-          {/* Call to Action */}
-          <div className="mt-24 pt-12 border-t border-gray-900 text-left">
-            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-              Trải Nghiệm Sự Chuẩn Xác
+          {/* --- SECTION 5: WATER RESISTANCE --- */}
+          <section className="mb-24 p-12 border border-gray-100">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-serif">
+              Khả Năng Chống Nước 5ATM – Đủ Dùng Cho Mọi Hoạt Động Thường Ngày
             </h2>
-            <p className="font-sans text-xs uppercase tracking-widest text-gray-500 mb-8 max-w-xl leading-relaxed">
-              Miễn phí giao hàng toàn quốc — Bảo hành chính hãng — Đổi trả trong
-              7 ngày
-            </p>
-            <a
-              href="/san-pham/srwatch-sg1077-1101te"
-              className="inline-block bg-black text-white font-sans text-sm font-bold uppercase tracking-[0.15em] py-4 px-12 hover:bg-gray-800 transition-colors duration-300"
-            >
-              Khám Phá Chi Tiết Sản Phẩm
-            </a>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-6">
+              <p>
+                5ATM (tương đương 50 mét cột nước) là tiêu chuẩn chống nước được
+                kiểm nghiệm thực tế trên SG1077.1101TE. Điều này có nghĩa là gì
+                trong cuộc sống hằng ngày?
+              </p>
+              <ul className="space-y-4 list-none p-0">
+                <li>Rửa tay, đi mưa, tắm gội — hoàn toàn thoải mái</li>
+                <li>
+                  Bơi lội ở hồ hoặc biển trong điều kiện bình thường — được phép
+                </li>
+                <li>
+                  Lặn sâu, bơi lội chuyên nghiệp hay tắm hơi — không khuyến
+                  khích
+                </li>
+              </ul>
+              <p>
+                Đối với một chiếc đồng hồ SRWatch nam tầm trung phục vụ mục đích
+                đeo hàng ngày, khả năng chống nước 5ATM là quá đủ và thậm chí
+                vượt trội so với nhiều đối thủ cùng phân khúc chỉ đạt 3ATM.
+              </p>
+            </div>
+          </section>
 
-            {/* Footer Note */}
-            <p className="font-sans text-[10px] text-gray-400 uppercase tracking-wider mt-12 mb-2">
-              — Thông tin từ Tòa soạn —
+          {/* --- SECTION 6: COMPARISON TABLE --- */}
+          <section className="mb-24 overflow-x-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 font-serif uppercase">
+              So Sánh Nhanh: SRWATCH SG1077.1101TE vs Casio MTP-V006 và Orient
+              Bambino
+            </h2>
+            <table className="w-full text-left text-xl border-collapse font-sans">
+              <thead className="bg-stone-50 border-b-2 border-gray-900 font-serif">
+                <tr>
+                  <th className="p-6">Tiêu chí</th>
+                  <th className="p-6">SRWATCH SG1077.1101TE</th>
+                  <th className="p-6">Casio MTP-V006</th>
+                  <th className="p-6">Orient Bambino</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100 text-lg md:text-xl">
+                <tr>
+                  <td className="p-6 font-bold font-serif">Mức giá</td>
+                  <td className="p-6">~1,8 – 2,5 triệu</td>
+                  <td className="p-6">~800K – 1,2 triệu</td>
+                  <td className="p-6">~3 – 5 triệu</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold font-serif">Bộ máy</td>
+                  <td className="p-6">Quartz Miyota (Nhật)</td>
+                  <td className="p-6">Quartz (Casio)</td>
+                  <td className="p-6">Automatic (Orient)</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold font-serif">Mặt kính</td>
+                  <td className="p-6">Sapphire</td>
+                  <td className="p-6">Mineral (khoáng)</td>
+                  <td className="p-6">Sapphire</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold font-serif">Chất liệu vỏ</td>
+                  <td className="p-6">Thép 316L</td>
+                  <td className="p-6">Thép không gỉ</td>
+                  <td className="p-6">Thép không gỉ</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold font-serif">Chống nước</td>
+                  <td className="p-6">5ATM</td>
+                  <td className="p-6">5ATM</td>
+                  <td className="p-6">3ATM</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold font-serif">Phong cách</td>
+                  <td className="p-6">Tối giản – công sở</td>
+                  <td className="p-6">Phổ thông</td>
+                  <td className="p-6">Dress watch cổ điển</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="mt-8 text-xl text-gray-700 italic border-l-4 border-gray-900 pl-6">
+              Nhận xét: So với Casio MTP-V006 — đối thủ phổ biến nhất ở phân
+              khúc dưới 1,5 triệu — SG1077.1101TE nhỉnh hơn rõ ràng về chất liệu
+              kính (Sapphire vs khoáng), hoàn thiện vỏ và thẩm mỹ tổng thể. So
+              với Orient Bambino thuộc phân khúc cao hơn, SRWatch mất điểm ở chỗ
+              không có máy cơ Automatic — nhưng bù lại rẻ hơn đáng kể, ít đòi
+              hỏi bảo trì hơn và chống nước tốt hơn. Với người tìm đồng hồ
+              SRWatch nam tầm trung để đeo mỗi ngày mà không cần bận tâm "lên
+              cót hay chưa", SG1077.1101TE là lựa chọn thực tế hơn.
             </p>
-            <p className="font-sans text-xs text-gray-500 leading-relaxed max-w-md">
-              Các mức giá tham khảo trong bài viết được cập nhật đầu năm 2025
-              tại thị trường Việt Nam và có thể biến động theo chính sách phân
-              phối của từng đại lý.
+          </section>
+
+          {/* --- SECTION 7: AUDIENCE --- */}
+          <section className="mb-24">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 border-b border-gray-100 pb-4 font-serif">
+              Ai Phù Hợp Với SRWATCH SG1077.1101TE?
+            </h2>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-6">
+              <p>Chiếc đồng hồ này phù hợp nhất với:</p>
+              <ul className="space-y-4 list-none p-0">
+                <li>
+                  • Dân văn phòng muốn có phụ kiện chỉn chu, không quá nổi bật
+                  nhưng đủ để gây ấn tượng
+                </li>
+                <li>
+                  • Người mua đồng hồ lần đầu đang muốn "đầu tư đúng chỗ" với
+                  ngân sách dưới 3 triệu
+                </li>
+                <li>
+                  • Các bạn trẻ 22–35 tuổi yêu thích phong cách tối giản, lịch
+                  lãm nhưng không cần đeo thương hiệu đắt tiền
+                </li>
+                <li>
+                  • Người tìm quà tặng cho bạn bè, người thân trong các dịp sinh
+                  nhật, tốt nghiệp hay lễ tết
+                </li>
+              </ul>
+              <p>
+                Nếu bạn là người thích đồng hồ cơ lộ máy hoặc đồng hồ thể thao
+                nhiều tính năng như chronograph, lịch trăng, thì nên cân nhắc
+                các dòng khác của SRWATCH hoặc thương hiệu khác phù hợp hơn với
+                nhu cầu đó.
+              </p>
+            </div>
+          </section>
+
+          {/* --- SECTION 8: SERVICE --- */}
+          <section className="mb-24 p-12 bg-stone-50">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-serif">
+              Bảo Hành và Dịch Vụ Hậu Mãi
+            </h2>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-6">
+              <p>
+                SRWATCH cung cấp bảo hành chính hãng 12 tháng cho máy và pin.
+                Nhiều đại lý ủy quyền còn tặng thêm bảo hành mở rộng lên đến 4–5
+                năm, bao gồm cả hỗ trợ thay pin miễn phí trọn đời — đây là điều
+                hiếm thấy trong phân khúc tầm trung.
+              </p>
+              <div className="bg-white p-8 border border-gray-200">
+                <h4 className="font-bold text-gray-900 mb-4 font-serif uppercase text-lg">
+                  Khi mua, hãy chú ý:
+                </h4>
+                <ul className="space-y-2 text-lg list-none p-0">
+                  <li>
+                    • Chọn đại lý hoặc website chính hãng để đảm bảo có tem
+                    chống giả
+                  </li>
+                  <li>
+                    • Kiểm tra hộp, sổ bảo hành đầy đủ trước khi nhận hàng
+                  </li>
+                  <li>• Yêu cầu hóa đơn VAT nếu có nhu cầu khấu trừ chi phí</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          {/* --- CONCLUSION CTA --- */}
+          <div className="mt-24 pt-16 text-center border-t-2 border-gray-900">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 font-serif uppercase leading-tight">
+              Kết Luận – Nên Mua SRWATCH SG1077.1101TE Không?
+            </h2>
+            <p className="text-xl md:text-2xl mb-12 text-gray-600 max-w-4xl mx-auto">
+              Câu trả lời ngắn gọn: Có, nếu bạn đang tìm một chiếc đồng hồ
+              SRWatch nam tầm trung dưới 3 triệu mà không muốn đánh đổi chất
+              liệu vật liệu.
             </p>
+            <p className="text-xl md:text-2xl mb-12 text-gray-700 max-w-4xl mx-auto">
+              SG1077.1101TE mang đến bộ ba giá trị khó có đối thủ ở cùng mức
+              giá: kính Sapphire thật sự, vỏ thép 316L cao cấp và bộ máy Miyota
+              đáng tin cậy. Thiết kế tối giản kiểu Nhật giúp chiếc đồng hồ này
+              dễ phối đồ, bền đẹp theo thời gian và không bao giờ lỗi mốt.
+            </p>
+            <div className="space-y-8">
+              <a
+                href="/san-pham/srwatch-sg1077-1101te"
+                className="inline-block bg-black text-white font-bold uppercase tracking-[0.2em] py-6 px-16 hover:bg-gray-800 transition-colors font-sans text-xl"
+              >
+                Mua SRWATCH SG1077.1101TE Ngay Hôm Nay
+              </a>
+              <p className="text-lg text-gray-800 italic">
+                Đừng để chiếc đồng hồ lý tưởng tuột khỏi tay — nhấn "Mua ngay"
+                để kiểm tra giá ưu đãi mới nhất, hoặc xem thêm các model khác
+                trong dòng Timepiece TE nếu bạn muốn so sánh thêm trước khi
+                quyết định.
+              </p>
+              <p className="text-sm text-gray-400 uppercase tracking-widest font-bold">
+                Miễn phí giao hàng toàn quốc · Bảo hành chính hãng · Đổi trả
+                trong 7 ngày
+              </p>
+            </div>
           </div>
+
+          <footer className="mt-20 pt-10 border-t border-gray-100 text-gray-500 text-sm italic">
+            <p>
+              Bài viết được biên soạn dựa trên thông số kỹ thuật chính thức từ
+              SRWATCH và trải nghiệm thực tế từ cộng đồng người dùng. Giá bán có
+              thể thay đổi theo thời điểm — vui lòng kiểm tra tại trang sản phẩm
+              để cập nhật mức giá chính xác nhất.
+            </p>
+          </footer>
         </article>
       </main>
     </>

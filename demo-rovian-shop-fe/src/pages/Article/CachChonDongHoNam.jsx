@@ -70,404 +70,419 @@ const CachChonDongHoNam = () => {
         />
         <meta
           name="keywords"
-          content="cách chọn đồng hồ nam, đồng hồ nam tầm trung, mua đồng hồ nam lần đầu, thương hiệu đồng hồ nam uy tín, đồng hồ nam phong cách công sở, nên mua đồng hồ nam ở đâu chính hãng"
-        />
-
-        <meta property="og:type" content="article" />
-        <meta
-          property="og:title"
-          content="Cách Chọn Đồng Hồ Nam Phù Hợp – Hướng Dẫn Từ A–Z (2025)"
-        />
-        <meta
-          property="og:description"
-          content="Chưa biết cách chọn đồng hồ nam? Hướng dẫn từ A–Z: nhu cầu, ngân sách, phong cách, thương hiệu & nơi mua uy tín."
-        />
-        <meta
-          property="og:image"
-          content="https://yourdomain.com/images/cach-chon-dong-ho-nam.jpg"
-        />
-        <meta
-          property="og:url"
-          content="https://yourdomain.com/kien-thuc/cach-chon-dong-ho-nam"
-        />
-
-        <link
-          rel="canonical"
-          href="https://yourdomain.com/kien-thuc/cach-chon-dong-ho-nam"
+          content="cách chọn đồng hồ nam, đồng hồ nam tầm trung, mua đồng hồ nam lần đầu, ROVIAN"
         />
       </Helmet>
 
-      <main className="max-w-4xl mx-auto px-5 py-16 bg-white mt-10 text-left font-serif">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
-
+      <main className="w-full mx-auto px-10 md:px-32 py-24 bg-white mt-2 text-left font-sans leading-[1.8]">
         <article>
-          {/* Header */}
-          <header className="mb-16 border-b border-gray-900 pb-12">
-            <span className="text-xs font-bold tracking-[0.25em] text-gray-500 uppercase mb-5 block">
+          {/* --- HEADER --- */}
+          <header className="mb-24 border-b border-gray-100 pb-16 font-serif">
+            <span className="text-lg font-bold tracking-[0.3em] text-gray-400 uppercase mb-4 block font-sans">
               Cẩm Nang Định Hình Phong Cách
             </span>
-            <h1 className="text-4xl md:text-6xl font-serif font-bold text-gray-900 leading-tight mb-8">
-              Nghệ Thuật Chọn Đồng Hồ Nam: Hướng Dẫn Từ A–Z Cho Lần Mua Đầu Tiên
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 leading-[1.15] mb-12">
+              Cách Chọn Đồng Hồ Nam Phù Hợp: <br />
+              <span className="text-gray-400 italic text-3xl md:text-5xl leading-tight block mt-4">
+                Hướng Dẫn Đầy Đủ Từ A–Z Cho Người Mua Lần Đầu
+              </span>
             </h1>
-            <div className="flex items-center text-xs text-gray-500 font-sans tracking-widest uppercase">
-              <span className="font-bold text-gray-900">
+            <div className="flex items-center text-sm text-gray-400 tracking-widest uppercase font-sans">
+              <span className="text-gray-900 font-semibold uppercase">
                 Ban Biên Tập ROVIAN
               </span>
-              <span className="mx-3">|</span>
-              <time dateTime="2026-04-14">Cẩm nang 2025</time>
+              <span className="mx-4 text-gray-200">|</span>
+              <time dateTime="2026-04-14">Kiến thức chuyên sâu</time>
             </div>
           </header>
 
-          {/* Intro Section */}
-          <div className="prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed mb-16">
-            <p className="first-letter:text-7xl first-letter:font-serif first-letter:font-bold first-letter:text-gray-900 first-letter:mr-3 first-letter:float-left first-letter:leading-none">
-              Bạn đang đứng trước một thế giới của bánh răng, con lắc và tinh
-              thể, với hàng chục cái tên như Seiko, Citizen, Casio, Orient… ngợp
-              trong thông số. Bạn lướt qua hàng trăm thiết kế nhưng vẫn ngần
-              ngại chưa dám đưa ra quyết định vì sợ chọn sai phong cách hoặc
-              lãng phí ngân sách?
+          {/* --- INTRO SECTION --- */}
+          <div className="max-w-none text-gray-800 mb-20 text-base md:text-2xl">
+            <p className="mb-10 first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 first-letter:mr-2 first-letter:float-left first-letter:leading-none">
+              Bạn đang đứng trước hàng chục model đồng hồ với những cái tên như
+              Seiko, Citizen, Casio, Orient… và không biết nên bắt đầu từ đâu?
+              Hoặc bạn đã lướt web cả tiếng đồng hồ mà vẫn chưa chốt được vì sợ
+              chọn nhầm, mua hớ?
             </p>
             <p>
-              Đừng lo lắng. Đây là chướng ngại vật mà hầu hết mọi người đàn ông
-              khi chạm ngõ thế giới cỗ máy thời gian đều phải vượt qua. Bản thảo
-              dưới đây không chỉ là một bài viết tư vấn, nó là một lộ trình được
-              thiết kế tinh gọn — từ việc thấu hiểu bản thân thực sự cần gì, đến
-              nghệ thuật giải mã giá trị của từng thương hiệu.
+              Bạn không đơn độc. Hầu hết người mua đồng hồ nam lần đầu đều gặp
+              đúng bài toán này. Bài hướng dẫn dưới đây sẽ giúp bạn đi từng bước
+              — từ việc xác định mình thực sự cần gì, đến việc biết đâu là nơi
+              mua an toàn — để cuối cùng cầm trên tay đúng chiếc đồng hồ xứng
+              đáng với số tiền bỏ ra.
             </p>
           </div>
 
-          {/* Section 1: Purpose */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              1. Khởi Điểm: Xác Định Mục Đích
+          {/* --- SECTION 1: PURPOSE --- */}
+          <section className="mb-24 space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-4 font-serif">
+              1. Xác Định Mục Đích Sử Dụng – Bước Đầu Tiên Khi Chọn Đồng Hồ Nam
             </h2>
-            <p>
-              Trước khi bị dẫn dắt bởi tên tuổi thương hiệu hay màu sắc mặt số,
-              hãy tự hỏi:
-              <em>"Chiếc đồng hồ này sẽ đồng hành cùng mình ở đâu?"</em>. Mục
-              đích sử dụng chiếm 50% sự thành bại trong việc định hình phong
-              cách cá nhân của bạn.
-            </p>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-10">
+              <p>
+                Trước khi nghĩ đến thương hiệu hay màu sắc, hãy trả lời thật
+                thành thật một câu hỏi: Bạn mua đồng hồ này để làm gì?
+              </p>
+              <p>
+                Mục đích sử dụng quyết định đến 50% lựa chọn của bạn, bởi mỗi
+                chiếc đồng hồ được thiết kế tối ưu cho một hoàn cảnh nhất định.
+              </p>
 
-            <h3 className="text-xl font-bold text-gray-900 font-sans uppercase tracking-wide mt-12 mb-4">
-              Môi Trường Công Sở (Dress Watch)
-            </h3>
-            <p>
-              Không gian chuyên nghiệp yêu cầu sự tinh tế chứ không phải phô
-              trương. Một mặt số tròn tối giản, độ mỏng vừa phải để trượt nhẹ
-              dưới tay áo sơ mi, đi kèm dây da hoặc kim loại mắt nhỏ là quy
-              chuẩn. Kích thước an toàn nhất luôn nằm trong khoảng 38–42mm.
-              <br />
-              <span className="text-sm font-sans text-gray-500 uppercase tracking-wider block mt-3 font-bold">
-                Đại diện kinh điển: Orient Bambino, Casio MTP-V006.
-              </span>
-            </p>
+              <div className="space-y-12">
+                <div className="bg-stone-50 p-10 border-l-4 border-gray-900">
+                  <h3 className="text-2xl font-bold text-gray-900 font-serif mb-4">
+                    Đồng hồ nam đi làm văn phòng, công sở
+                  </h3>
+                  <p>
+                    Nếu bạn làm việc trong môi trường chuyên nghiệp — ngân hàng,
+                    luật sư, kinh doanh — một chiếc đồng hồ tối giản, mặt tròn,
+                    dây da hoặc dây kim loại mỏng là lựa chọn an toàn nhất. Kích
+                    thước mặt lý tưởng là 38–42mm. Ví dụ điển hình: Orient
+                    Bambino (3–5 triệu đồng) với thiết kế dress-watch cổ điển,
+                    hoặc Casio MTP-V006 (khoảng 700.000–1.200.000 đồng) cho
+                    người mới bắt đầu.
+                  </p>
+                </div>
 
-            <h3 className="text-xl font-bold text-gray-900 font-sans uppercase tracking-wide mt-12 mb-4">
-              Hoạt Động Vận Động (Sport Watch)
-            </h3>
-            <p>
-              Dành cho những tâm hồn tự do và lối sống xê dịch. Khung vỏ nguyên
-              khối chống va đập, khả năng kháng nước tối thiểu 10ATM, dạ quang
-              sáng rõ và dây đeo bằng cao su hoặc NATO là những yếu tố không thể
-              thỏa hiệp.
-              <br />
-              <span className="text-sm font-sans text-gray-500 uppercase tracking-wider block mt-3 font-bold">
-                Đại diện kinh điển: Hệ sinh thái Casio G-Shock.
-              </span>
-            </p>
+                <div className="bg-stone-50 p-10 border-l-4 border-gray-400">
+                  <h3 className="text-2xl font-bold text-gray-900 font-serif mb-4">
+                    Đồng hồ nam thể thao, dã ngoại, đi biển
+                  </h3>
+                  <p>
+                    Bạn hoạt động ngoài trời nhiều, leo núi, bơi lội hoặc đơn
+                    giản là thích phong cách mạnh mẽ? Ưu tiên những mẫu có chống
+                    nước tối thiểu 10ATM, vỏ chắc chắn và dây cao su hoặc dây
+                    NATO. Casio G-Shock (từ 2–5 triệu) là cái tên bền vững nhất
+                    ở phân khúc này với khả năng chịu va đập và chống nước vượt
+                    trội.
+                  </p>
+                </div>
 
-            <h3 className="text-xl font-bold text-gray-900 font-sans uppercase tracking-wide mt-12 mb-4">
-              Nghệ Thuật Tặng Quà
-            </h3>
-            <p>
-              Khi chiếc đồng hồ mang ý nghĩa biểu tượng thay lời muốn nói, hãy
-              ưu tiên các thiết kế trung tính, bảng màu an toàn (mặt
-              trắng/đen/xanh navy) và đến từ những nhà chế tác có bề dày lịch sử
-              để tôn vinh sự trân trọng.
-              <br />
-              <span className="text-sm font-sans text-gray-500 uppercase tracking-wider block mt-3 font-bold">
-                Đại diện kinh điển: Seiko 5 Sports.
-              </span>
-            </p>
-          </section>
-
-          {/* Section 2: Budget */}
-          <section className="my-20 prose prose-xl prose-stone max-w-none font-serif text-gray-800 leading-relaxed">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2 not-prose">
-              2. Giải Mã Phân Khúc Ngân Sách
-            </h2>
-            <p>
-              Giá trị của một chiếc đồng hồ không nằm ở số số 0 trên hóa đơn, mà
-              nằm ở tỉ lệ thuận giữa số tiền bạn bỏ ra và công năng vật liệu bạn
-              nhận lại.
-            </p>
-
-            <ul className="list-none pl-0 space-y-8 my-10 font-sans text-base">
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  Dưới 1.5 Triệu Đồng (Phân khúc cơ bản)
-                </strong>
-                <span className="text-gray-600">
-                  Ưu tiên tính ứng dụng hàng ngày. Vật liệu chế tác thường dừng
-                  ở mức kính khoáng (Mineral) và vỏ thép hợp kim cơ bản.
-                </span>
-              </li>
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  1.5 – 5.0 Triệu Đồng (Phân khúc tối ưu)
-                </strong>
-                <span className="text-gray-600">
-                  Lãnh địa "vàng" của thị trường Việt Nam. Bạn dễ dàng sở hữu
-                  tinh thể Sapphire chống xước, thép phẫu thuật 316L và cỗ máy
-                  Nhật Bản bền bỉ.
-                </span>
-              </li>
-              <li className="relative pl-6 before:content-['—'] before:absolute before:left-0 before:text-gray-400">
-                <strong className="text-gray-900 uppercase tracking-wide block mb-1">
-                  5.0 – 15.0 Triệu Đồng (Cao cấp phổ thông)
-                </strong>
-                <span className="text-gray-600">
-                  Bắt đầu chạm đến các bộ máy cơ học tinh xảo hơn, nghệ thuật
-                  hoàn thiện mặt số phức tạp (Guilloché, Sunburst) và vật liệu
-                  Titanium.
-                </span>
-              </li>
-            </ul>
-
-            <blockquote className="border-l-4 border-gray-900 pl-8 py-2 text-xl font-serif italic text-gray-700">
-              Ghi chú từ chuyên gia: Nếu đây là lần chạm ngõ đầu tiên, hãy giới
-              hạn ngân sách ở khoảng 1.5 đến 4 triệu đồng để trải nghiệm và định
-              hình phong cách cá nhân trước khi đưa ra những quyết định đầu tư
-              lớn hơn.
-            </blockquote>
-          </section>
-
-          {/* Section 3: Wrist Size */}
-          <section className="my-24">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2">
-              3. Tỷ Lệ Vàng Trên Cổ Tay
-            </h2>
-            <p className="text-xl text-gray-800 leading-relaxed mb-10 font-serif">
-              Chu vi cổ tay trung bình của nam giới Việt Nam dao động trong
-              khoảng 16cm đến 19cm. Dựa vào đó, một chiếc đồng hồ có đường kính
-              mặt số từ 38mm đến 42mm được xem là chuẩn mực an toàn nhất.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 font-sans">
-              <div className="border-t border-gray-300 pt-6">
-                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
-                  Chu Vi &lt; 17cm
-                </span>
-                <span className="text-3xl font-light text-gray-900">
-                  36<span className="text-lg">mm</span> — 39
-                  <span className="text-lg">mm</span>
-                </span>
-              </div>
-              <div className="border-t-2 border-gray-900 pt-6">
-                <span className="block text-xs font-bold text-gray-900 uppercase tracking-widest mb-3">
-                  Chu Vi 17 – 18.5cm
-                </span>
-                <span className="text-3xl font-bold text-gray-900">
-                  39<span className="text-lg font-normal">mm</span> — 42
-                  <span className="text-lg font-normal">mm</span>
-                </span>
-                <p className="text-xs text-gray-500 mt-2 italic">
-                  Kích thước phổ quát nhất
-                </p>
-              </div>
-              <div className="border-t border-gray-300 pt-6">
-                <span className="block text-xs font-bold text-gray-400 uppercase tracking-widest mb-3">
-                  Chu Vi &gt; 18.5cm
-                </span>
-                <span className="text-3xl font-light text-gray-900">
-                  42<span className="text-lg">mm</span> — 45
-                  <span className="text-lg">mm</span>
-                </span>
+                <div className="bg-stone-50 p-10 border-l-4 border-stone-300">
+                  <h3 className="text-2xl font-bold text-gray-900 font-serif mb-4">
+                    Đồng hồ nam làm quà tặng
+                  </h3>
+                  <p>
+                    Đây là tình huống phổ biến nhất — tặng sinh nhật, tốt
+                    nghiệp, hay kỷ niệm. Trong trường hợp này, ưu tiên chọn
+                    thiết kế trung tính, dễ phối đồ, và đến từ thương hiệu có
+                    tên tuổi để người nhận cảm nhận được giá trị. Seiko 5 Sports
+                    (từ 2,5–5 triệu) là gợi ý cân bằng tốt giữa thẩm mỹ và ý
+                    nghĩa thương hiệu.
+                  </p>
+                </div>
               </div>
             </div>
           </section>
 
-          {/* Section 4: Brands */}
-          <section className="my-24">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2">
-              4. Danh Viện Thương Hiệu
+          {/* --- SECTION 2: BUDGET (DARK BOX) --- */}
+          <section className="mb-24 bg-gray-900 text-white p-12 md:p-20 rounded-sm">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 border-b border-gray-700 pb-6 uppercase tracking-widest text-center font-serif">
+              2. Ngân Sách Thực Tế – Đồng Hồ Nam Tốt Bao Nhiêu Tiền Là Đủ?
             </h2>
+            <p className="text-xl md:text-2xl mb-12 text-gray-400 italic font-sans">
+              Một trong những hiểu lầm phổ biến nhất khi mua đồng hồ nam lần đầu
+              là nghĩ rằng phải chi thật nhiều mới có đồng hồ tốt. Thực tế không
+              hẳn vậy. Thị trường đồng hồ nam tại Việt Nam hiện nay có thể chia
+              thành các phân khúc rõ ràng như sau:
+            </p>
+            <div className="grid grid-cols-1 gap-12 text-xl md:text-2xl font-sans">
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">01</span>
+                <p>
+                  <span className="text-white font-bold font-serif">
+                    Dưới 1,5 triệu đồng — Phổ thông:
+                  </span>{" "}
+                  Ở mức giá này, bạn sẽ tìm được các mẫu Casio MTP, Casio F-91W
+                  hoặc SRWATCH cơ bản. Chất liệu vỏ và kính thường là thép không
+                  gỉ thông thường và kính khoáng.
+                </p>
+              </div>
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">02</span>
+                <p>
+                  <span className="text-white font-bold font-serif">
+                    1,5–5 triệu đồng — Tầm trung:
+                  </span>{" "}
+                  Phân khúc đáng chi nhất cho người mua lần đầu. Sở hữu kính
+                  Sapphire chống trầy, vỏ thép 316L cao cấp và bộ máy Nhật Bản
+                  bền bỉ.
+                </p>
+              </div>
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">03</span>
+                <p>
+                  <span className="text-white font-bold font-serif">
+                    5–15 triệu đồng — Cao cấp phổ thông:
+                  </span>{" "}
+                  Vùng của Seiko Presage, Citizen Eco-Drive hoặc Orient Star. Bộ
+                  máy tốt hơn, thiết kế chau chuốt, chất liệu hoàn thiện vượt
+                  trội.
+                </p>
+              </div>
+              <div className="flex gap-8">
+                <span className="text-gray-500 font-bold text-5xl">04</span>
+                <p>
+                  <span className="text-white font-bold font-serif">
+                    Trên 15 triệu đồng — Luxury tầm trung:
+                  </span>{" "}
+                  Tissot, Longines, Frederique Constant — những chiếc đồng hồ
+                  thực sự giữ giá và có thể truyền lại.
+                </p>
+              </div>
+            </div>
+            <p className="mt-12 p-8 border border-gray-700 italic text-gray-300">
+              Lời khuyên thực tế: Nếu bạn chưa từng đeo đồng hồ thường xuyên,
+              hãy bắt đầu ở phân khúc 1,5–4 triệu để "thử cảm giác" trước khi
+              đầu tư lớn hơn.
+            </p>
+          </section>
 
-            <div className="grid md:grid-cols-2 gap-12 font-sans">
-              <div>
-                <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 inline-block pb-2 mb-4">
-                  Đế Chế Casio
+          {/* --- SECTION 3: STYLE & SIZE --- */}
+          <section className="mb-24 space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 border-b border-gray-100 pb-4 font-serif">
+              3. Phong Cách Và Kích Thước – Chọn Đồng Hồ Nam Sao Cho Đẹp Trên
+              Tay
+            </h2>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-10">
+              <p>
+                Một chiếc đồng hồ đẹp trên tay người này có thể trông lạc quẻ
+                trên tay người khác. Có hai yếu tố quyết định điều này: phong
+                cách thiết kế và kích thước phù hợp cổ tay.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div className="space-y-4">
+                  <h4 className="font-bold font-serif text-gray-900 text-2xl">
+                    Tối giản (Dress Watch)
+                  </h4>
+                  <p>
+                    Mặt tròn, dây da hoặc kim loại mảnh. Đại diện: Orient
+                    Bambino, Casio MTP, SRWATCH Classic.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="font-bold font-serif text-gray-900 text-2xl">
+                    Thể thao (Sport Watch)
+                  </h4>
+                  <p>
+                    Vỏ dày, bezel nổi, chống nước cao. Đại diện: Casio G-Shock,
+                    Seiko Prospex, Citizen Promaster.
+                  </p>
+                </div>
+                <div className="space-y-4">
+                  <h4 className="font-bold font-serif text-gray-900 text-2xl">
+                    Cơ khí (Automatic)
+                  </h4>
+                  <p>
+                    Thích nhìn thấy bộ máy hoạt động. Đại diện: Orient Sun and
+                    Moon, Seiko Presage Cocktail Time.
+                  </p>
+                </div>
+              </div>
+
+              <div className="bg-stone-50 p-10 font-sans">
+                <h4 className="font-bold font-serif text-2xl mb-6">
+                  Kích thước mặt phù hợp cổ tay Việt
                 </h4>
-                <p className="text-base text-gray-600 leading-relaxed font-serif">
-                  Kẻ thống trị tuyệt đối phân khúc dưới 2 triệu. Dòng G-Shock
-                  đại diện cho sự bất khả chiến bại về độ bền cơ học, trong khi
-                  dòng MTP mang đến sự thanh lịch với mức chi phí tối giản nhất.
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                  <div className="border-r border-stone-200">
+                    <span className="block font-bold text-gray-400">
+                      Dưới 17cm
+                    </span>
+                    <span className="text-3xl font-serif">36–39mm</span>
+                  </div>
+                  <div className="border-r border-stone-200">
+                    <span className="block font-bold text-gray-900 uppercase tracking-widest text-xs mb-2">
+                      Phổ biến nhất
+                    </span>
+                    <span className="text-4xl font-serif font-bold">
+                      39–42mm
+                    </span>
+                    <span className="block text-gray-400 text-sm mt-1">
+                      17–18,5cm
+                    </span>
+                  </div>
+                  <div>
+                    <span className="block font-bold text-gray-400">
+                      Trên 18,5cm
+                    </span>
+                    <span className="text-3xl font-serif">44–45mm</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* --- SECTION 4: BRANDS --- */}
+          <section className="mb-24 space-y-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif uppercase tracking-tight">
+              4. Nên Chọn Thương Hiệu Đồng Hồ Nam Nào?
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-xl md:text-2xl text-gray-700">
+              <div className="space-y-6">
+                <h4 className="font-serif font-bold text-gray-900 text-3xl">
+                  Casio & Seiko
+                </h4>
+                <p>
+                  <span className="font-bold">Casio:</span> Lựa chọn đầu tiên
+                  cho ví tiền dưới 2 triệu. G-Shock bất khả chiến bại về chống
+                  sốc trong tầm 2–5 triệu.
+                </p>
+                <p>
+                  <span className="font-bold">Seiko:</span> Thương hiệu hơn 140
+                  năm, ngọt nhất ở phân khúc 3–6 triệu với Seiko 5 Sports quân
+                  đội.
                 </p>
               </div>
-              <div>
-                <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 inline-block pb-2 mb-4">
-                  Di Sản Seiko
+              <div className="space-y-6">
+                <h4 className="font-serif font-bold text-gray-900 text-3xl">
+                  Orient & Citizen
                 </h4>
-                <p className="text-base text-gray-600 leading-relaxed font-serif">
-                  Hơn 140 năm lịch sử chế tác. Tỏa sáng rực rỡ nhất ở phân khúc
-                  từ 3 đến 6 triệu với các thiết kế huyền thoại toàn cầu như
-                  Seiko 5 Sports hay phong cách quân đội bụi bặm.
+                <p>
+                  <span className="font-bold">Orient:</span> Đồng hồ cơ Nhật tốt
+                  nhất dưới 5 triệu. Bambino là đỉnh cao của phong cách
+                  dress-watch tối giản.
                 </p>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 inline-block pb-2 mb-4">
-                  Tuyệt Tác Orient
-                </h4>
-                <p className="text-base text-gray-600 leading-relaxed font-serif">
-                  Nhà tiên phong mang cỗ máy Automatic in-house xuống phân khúc
-                  dưới 5 triệu. Dòng Orient Bambino luôn giữ vững vị trí độc tôn
-                  trong thế giới Dress Watch cổ điển.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest border-b border-gray-200 inline-block pb-2 mb-4">
-                  Công Nghệ Citizen
-                </h4>
-                <p className="text-base text-gray-600 leading-relaxed font-serif">
-                  Nổi bật với cỗ máy Eco-Drive hấp thụ ánh sáng độc quyền, biến
-                  định nghĩa "thay pin định kỳ" trở thành dĩ vãng, kết hợp cùng
-                  các thiết kế mang hơi hướng tương lai.
+                <p>
+                  <span className="font-bold">Citizen:</span> Công nghệ
+                  Eco-Drive độc quyền, không cần thay pin, tuổi thọ lên đến 8–10
+                  năm.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 5: Matrix */}
-          <section className="my-24">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-12 border-b-2 border-gray-900 inline-block pb-2">
-              5. Bảng Đối Chiếu Nhanh
+          {/* --- SECTION 5: WHERE TO BUY --- */}
+          <section className="mb-24 py-16 border-t border-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 font-serif uppercase">
+              5. Nên Mua Đồng Hồ Nam Ở Đâu?
             </h2>
-
-            <div className="overflow-x-auto font-sans">
-              <table className="w-full text-left text-sm border-collapse">
-                <thead className="border-b-2 border-gray-900 text-gray-900 uppercase tracking-widest text-xs">
-                  <tr>
-                    <th className="py-4 pr-4 font-bold">Hạn Mức Ngân Sách</th>
-                    <th className="py-4 px-4 font-bold">Nhu Cầu Tiêu Biểu</th>
-                    <th className="py-4 px-4 font-bold">
-                      Thiết Kế Khuyên Dùng
-                    </th>
-                    <th className="py-4 pl-4 font-bold">Giá Ước Tính</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-gray-200 text-gray-700">
-                  <tr className="transition-colors hover:bg-gray-50">
-                    <td className="py-5 pr-4 font-semibold text-gray-900">
-                      Dưới 1.5 Triệu
-                    </td>
-                    <td className="py-5 px-4">Tối giản công sở, Sinh viên</td>
-                    <td className="py-5 px-4">Casio MTP, SRWATCH Dây Da</td>
-                    <td className="py-5 pl-4">700K – 1.5M</td>
-                  </tr>
-                  <tr className="transition-colors hover:bg-gray-50">
-                    <td className="py-5 pr-4 font-semibold text-gray-900">
-                      1.5M – 3.0M
-                    </td>
-                    <td className="py-5 px-4">Chống xước cao, Thực dụng</td>
-                    <td className="py-5 px-4">
-                      Casio G-Shock, SRWATCH Sapphire
-                    </td>
-                    <td className="py-5 pl-4">1.5M – 2.8M</td>
-                  </tr>
-                  <tr className="transition-colors hover:bg-gray-50">
-                    <td className="py-5 pr-4 font-semibold text-gray-900">
-                      3.0M – 5.0M
-                    </td>
-                    <td className="py-5 px-4">
-                      Cơ học cổ điển, Hoàn thiện tinh xảo
-                    </td>
-                    <td className="py-5 px-4">Orient Bambino, Seiko 5</td>
-                    <td className="py-5 pl-4">3.0M – 5.0M</td>
-                  </tr>
-                  <tr className="transition-colors hover:bg-gray-50">
-                    <td className="py-5 pr-4 font-semibold text-gray-900">
-                      Trên 10 Triệu
-                    </td>
-                    <td className="py-5 px-4">Quà tặng di sản, Thụy Sĩ</td>
-                    <td className="py-5 px-4">Tissot PRX, Longines Présence</td>
-                    <td className="py-5 pl-4">10M – 30M</td>
-                  </tr>
-                </tbody>
-              </table>
+            <div className="text-xl md:text-2xl text-gray-700 space-y-12">
+              <p>
+                Đây là bước quan trọng nhất mà người mua lần đầu dễ bỏ qua. Thị
+                trường Việt Nam hiện có không ít hàng nhái, hàng xách tay không
+                rõ nguồn gốc.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                  <h4 className="font-serif font-bold text-gray-900 mb-4">
+                    Dấu hiệu nơi bán uy tín
+                  </h4>
+                  <p className="text-lg">
+                    Đại lý ủy quyền chính thức, thẻ bảo hành đóng dấu serial,
+                    cho phép kiểm tra hàng trước khi thanh toán và chính sách
+                    đổi trả rõ ràng.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-serif font-bold text-gray-900 mb-4">
+                    Lưu ý quyền lợi
+                  </h4>
+                  <p className="text-lg">
+                    Kiểm tra số serial khớp thẻ bảo hành, hộp sách đầy đủ. Với
+                    đồng hồ cơ, hãy yêu cầu nhân viên lên cót và kiểm tra trực
+                    tiếp.
+                  </p>
+                </div>
+              </div>
             </div>
           </section>
 
-          {/* FAQ Section */}
-          <section className="my-24">
-            <h2 className="text-2xl font-bold font-sans uppercase tracking-widest text-gray-900 mb-10 border-b-2 border-gray-900 inline-block pb-2">
-              Giải Đáp Từ Chuyên Gia
+          {/* --- SECTION 6: TABLE --- */}
+          <section className="mb-24 overflow-x-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-10 font-serif uppercase">
+              6. Bảng So Sánh Nhanh
             </h2>
+            <table className="w-full text-left text-xl border-collapse font-sans">
+              <thead className="bg-stone-50 border-b-2 border-gray-900 font-serif">
+                <tr>
+                  <th className="p-6">Ngân sách</th>
+                  <th className="p-6">Nhu cầu chính</th>
+                  <th className="p-6">Gợi ý cụ thể</th>
+                  <th className="p-6">Giá tham khảo</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr>
+                  <td className="p-6 font-bold">Dưới 1,5tr</td>
+                  <td className="p-6">Hàng ngày, sinh viên</td>
+                  <td className="p-6 text-gray-500">Casio MTP, SRWATCH</td>
+                  <td className="p-6 font-bold">700K – 1,5M</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold">1,5 – 3tr</td>
+                  <td className="p-6">Tầm trung, Sapphire</td>
+                  <td className="p-6 text-gray-500">SRWATCH TE, GA-100</td>
+                  <td className="p-6 font-bold">1,5M – 2,8M</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold">3 – 5tr</td>
+                  <td className="p-6">Cơ / Dress watch</td>
+                  <td className="p-6 text-gray-500">Seiko 5, Orient Bambino</td>
+                  <td className="p-6 font-bold">2,5M – 5M</td>
+                </tr>
+                <tr>
+                  <td className="p-6 font-bold">Trên 10tr</td>
+                  <td className="p-6">Quà tặng cao cấp</td>
+                  <td className="p-6 text-gray-500">Tissot PRX, Longines</td>
+                  <td className="p-6 font-bold">10M – 30M</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
 
-            <div className="divide-y divide-gray-200 font-sans border-t border-b border-gray-900">
-              <details className="group py-6 cursor-pointer">
-                <summary className="font-bold text-lg text-gray-900 list-none flex justify-between items-center outline-none">
-                  Mua đồng hồ online: Rủi ro hay tiện lợi?
-                  <span className="text-2xl text-gray-400 group-open:rotate-45 transition-transform duration-300 font-light">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 text-base text-gray-600 leading-relaxed pr-8">
-                  Sự tiện lợi luôn đi kèm với rủi ro nếu bạn chọn sai điểm đặt
-                  niềm tin. Việc mua online hoàn toàn an toàn khi giao dịch qua
-                  các website đại lý ủy quyền hoặc Mall chính hãng. Hãy loại trừ
-                  ngay các sản phẩm không đi kèm hóa đơn VAT, thẻ bảo hành mộc
-                  đỏ và các mức giá rẻ hơn 30% so với niêm yết toàn thị trường.
+          {/* --- FAQ --- */}
+          <section className="mb-24 py-16 border-y border-gray-100 font-sans">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 font-serif uppercase">
+              Câu Hỏi Thường Gặp (FAQ)
+            </h2>
+            <div className="space-y-12 text-xl md:text-2xl">
+              <div className="space-y-4">
+                <h4 className="font-bold text-gray-900 font-serif">
+                  H: Cách chọn đồng hồ nam phù hợp phong cách công sở?
+                </h4>
+                <p className="text-gray-600">
+                  Đ: Ưu tiên mặt tròn, 38–42mm, dây da nâu/đen hoặc dây kim loại
+                  đơn sắc. Tránh đồng hồ Bezel to hoặc sặc sỡ. Orient Bambino là
+                  gợi ý tuyệt vời.
                 </p>
-              </details>
-
-              <details className="group py-6 cursor-pointer">
-                <summary className="font-bold text-lg text-gray-900 list-none flex justify-between items-center outline-none">
-                  Cuộc chiến giữa cỗ máy Cơ (Automatic) và Pin (Quartz)?
-                  <span className="text-2xl text-gray-400 group-open:rotate-45 transition-transform duration-300 font-light">
-                    +
-                  </span>
-                </summary>
-                <p className="mt-4 text-base text-gray-600 leading-relaxed pr-8">
-                  Về tính thực dụng thuần túy, Quartz luôn dẫn đầu: không yêu
-                  cầu nạp năng lượng cót, độ sai số gần như bằng không và chi
-                  phí bảo dưỡng tối thiểu. Đổi lại, cỗ máy Cơ Học lại mang trong
-                  mình linh hồn của nghệ thuật cơ khí, là tuyên ngôn của sự
-                  trưởng thành dù đòi hỏi sự chăm sóc bảo dưỡng định kỳ.
+              </div>
+              <div className="space-y-4">
+                <h4 className="font-bold text-gray-900 font-serif">
+                  H: Máy Cơ hay máy Quartz tốt hơn cho người mới?
+                </h4>
+                <p className="text-gray-600">
+                  Đ: Quartz thực dụng hơn (ít hỏng, chính xác cao, giá thấp).
+                  Máy Cơ dành cho người thích nghệ thuật cơ khí và sẵn sàng bảo
+                  dưỡng định kỳ.
                 </p>
-              </details>
+              </div>
             </div>
           </section>
 
-          {/* Call to Action */}
-          <div className="mt-24 pt-12 border-t border-gray-900 text-left">
-            <h2 className="text-2xl font-serif font-bold text-gray-900 mb-4">
-              Định Hình Dấu Ấn Của Riêng Bạn
+          {/* --- CTA --- */}
+          <div className="mt-24 pt-16 text-center border-t-2 border-gray-900">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-8 font-serif uppercase">
+              Tóm Lại: Cách Chọn Đồng Hồ Nam Đúng Nhất Là Gì?
             </h2>
-            <p className="font-sans text-xs uppercase tracking-widest text-gray-500 mb-8 max-w-xl leading-relaxed">
-              Mọi lý thuyết đều trở nên hoàn thiện khi bạn trực tiếp chạm vào
-              thiết kế. Hãy lựa chọn sự chính xác và an tâm.
+            <p className="text-xl md:text-2xl mb-12 text-gray-600">
+              Không có công thức duy nhất, nhưng nguyên tắc không sai: chọn đúng
+              mục đích trước, thương hiệu sau, và luôn mua từ nơi uy tín.
             </p>
             <a
               href="/shop"
-              className="inline-block bg-black text-white font-sans text-sm font-bold uppercase tracking-[0.15em] py-4 px-12 hover:bg-gray-800 transition-colors duration-300"
+              className="inline-block bg-black text-white font-bold uppercase tracking-[0.2em] py-6 px-16 hover:bg-gray-800 transition-colors"
             >
               Khám Phá Bộ Sưu Tập ROVIAN
             </a>
-
-            {/* Footer Note */}
-            <p className="font-sans text-[10px] text-gray-400 uppercase tracking-wider mt-12 mb-2">
-              — Thông tin từ Tòa soạn —
-            </p>
-            <p className="font-sans text-xs text-gray-500 leading-relaxed max-w-md">
-              Bản thảo hướng dẫn này là tài sản biên tập của ROVIAN (2025). Mức
-              giá ước tính có thể biến động nhẹ phụ thuộc vào chiến lược phân
-              phối của từng đại lý trên thị trường.
-            </p>
           </div>
+
+          <footer className="mt-24 pt-10 text-gray-400 italic text-lg border-t border-gray-50 font-sans leading-relaxed">
+            Bản thảo biên soạn bởi ROVIAN (2025). Mức giá ước tính có thể biến
+            động nhẹ phụ thuộc vào chiến lược phân phối của từng đại lý trên thị
+            trường.
+          </footer>
         </article>
       </main>
     </>
