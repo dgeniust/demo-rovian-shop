@@ -24,6 +24,11 @@ import ProductManager from "./pages/Admin/ProductManager";
 import ProtectedRoute from "./components/layout/ProtectedRoute";
 import ProductDetailPage from "./pages/ProductDetail/ProductDetailPage";
 import clarityService from "./services/clarityService";
+import AutomaticWatchArticle from "./pages/Article/AutomaticWatchArticle";
+import Top5DongHoNamDuoi5Trieu from "./pages/Article/Top5DongHoNamDuoi5Trieu";
+import CachChonDongHoNam from "./pages/Article/CachChonDongHoNam";
+import SoSanhCasioVaSRWatch from "./pages/Article/SoSanhCasioVaSRWatch";
+import DanhGiaSRWatchSG1077 from "./pages/Article/DanhGiaSRWatchSG1077";
 // Tạo một Component bọc các Route để xử lý hiệu ứng chuyển trang
 const CLARITY_PROJECT_ID = import.meta.env.VITE_CLARITY_PROJECT_ID;
 
@@ -108,103 +113,69 @@ const AnimatedRoutes = () => {
             <Route path="/admin" element={<ProductManager />} />
           </Route>
         </Route>
+        <Route
+          path="/kien-thuc/may-co-automatic-la-gi"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              {/* Trang Component chứa HTML Semantic và Schema JSON-LD đã viết trước đó */}
+              <AutomaticWatchArticle />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/kien-thuc/top-5-dong-ho-nam-tot-nhat-duoi-5-trieu-2025"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              {/* Trang Component chứa HTML Semantic và Schema JSON-LD đã viết trước đó */}
+              <Top5DongHoNamDuoi5Trieu />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/kien-thuc/cach-chon-dong-ho-nam"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              {/* Trang Component chứa HTML Semantic và Schema JSON-LD đã viết trước đó */}
+              <CachChonDongHoNam />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/kien-thuc/danh-gia-srwatch-nam-SG1077-1101TE"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              {/* Trang Component chứa HTML Semantic và Schema JSON-LD đã viết trước đó */}
+              <DanhGiaSRWatchSG1077 />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/kien-thuc/casio-mtp-vs-srwatch-timepiece-te"
+          element={
+            <PageWrapper>
+              <Header variant="shop" />
+              {/* Trang Component chứa HTML Semantic và Schema JSON-LD đã viết trước đó */}
+              <SoSanhCasioVaSRWatch />
+              <Footer variant="light" />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
 };
 
-// Component tạo hiệu ứng "màn che" mỗi khi chuyển trang
-// const PageWrapper = ({ children }) => {
-//   const brandName = "ROVIAN";
-
-//   // 1. Container cho các chữ cái: Chạy ngay khi trang mới "nhập cuộc"
-//   const logoContainerVariants = {
-//     initial: { opacity: 1 },
-//     animate: {
-//       opacity: 0,
-//       y: -10,
-//       transition: {
-//         duration: 0.4,
-//         delay: 0.7, // Thời gian này phải khớp với lúc chữ cuối hiện xong
-//         ease: "easeIn",
-//       },
-//     },
-//   };
-
-//   // 2. Từng chữ cái lẻ: Hiện lên theo kiểu "Stagger"
-//   const letterVariants = {
-//     initial: { opacity: 0, y: 10 },
-//     animate: (i) => ({
-//       opacity: 1,
-//       y: 0,
-//       transition: {
-//         delay: i * 0.08, // Mỗi chữ cách nhau 0.08s
-//         duration: 0.3,
-//         ease: "easeOut",
-//       },
-//     }),
-//   };
-
-//   return (
-//     <motion.div
-//       initial="initial"
-//       animate="animate"
-//       exit="exit"
-//       className="relative"
-//     >
-//       {/* LỚP MÀN CHE */}
-//       <motion.div
-//         className="fixed inset-0 bg-[#fffafb] z-[9999] pointer-events-none flex items-center justify-center"
-//         variants={{
-//           initial: { opacity: 1 },
-//           animate: {
-//             opacity: 0,
-//             transition: {
-//               duration: 0.4, // Tan nhanh dứt khoát
-//               delay: 0.8, // Đợi chữ ROVIAN hiện xong (0.08 * 6 + padding) là tan ngay
-//               ease: "circOut",
-//             },
-//           },
-//           exit: { opacity: 1, transition: { duration: 0.3 } },
-//         }}
-//       >
-//         <motion.div
-//           variants={logoContainerVariants}
-//           className="flex text-3xl font-serif tracking-[0.4em] uppercase text-rose-300"
-//         >
-//           {brandName.split("").map((char, index) => (
-//             <motion.span
-//               key={index}
-//               custom={index} // Truyền index vào để tính delay từng chữ
-//               variants={letterVariants}
-//             >
-//               {char}
-//             </motion.span>
-//           ))}
-//         </motion.div>
-//       </motion.div>
-
-//       {/* NỘI DUNG TRANG CHÍNH */}
-//       <motion.div
-//         variants={{
-//           initial: { opacity: 0 },
-//           animate: {
-//             opacity: 1,
-//             transition: {
-//               delay: 0.8, // Khớp tuyệt đối với màn tan
-//               duration: 0.5,
-//             },
-//           },
-//           exit: { opacity: 0 },
-//         }}
-//       >
-//         {children}
-//       </motion.div>
-//     </motion.div>
-//   );
-// };
 function App() {
-  const [initialLoading, setInitialLoading] = useState(true);
+  const isServerContext = typeof window === "undefined" || import.meta.env.SSR;
+  const [initialLoading, setInitialLoading] = useState(!isServerContext);
   useEffect(() => {
     // Khi người dùng reload trang (F5), ta xóa flag cũ đi để Splash xong không bị dính Loader
     window.onbeforeunload = () => {
