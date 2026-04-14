@@ -19,12 +19,12 @@ const AutomaticWatchArticle = () => {
           name: "Your Watch Blog",
           logo: {
             "@type": "ImageObject",
-            url: "https://yourdomain.com/logo.png",
+            url: "src/assets/black-crowd.png",
           },
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": "https://yourdomain.com/may-co-automatic-la-gi",
+          "@id": "https://www.rovianwatch.com/kien-thuc/may-co-automatic-la-gi",
         },
       },
       {
@@ -101,16 +101,16 @@ const AutomaticWatchArticle = () => {
         />
         <meta
           property="og:image"
-          content="https://yourdomain.com/images/so-do-cau-tao-automatic.jpg"
+          content="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=2080&auto=format&fit=crop"
         />
         <meta
           property="og:url"
-          content="https://yourdomain.com/kien-thuc/may-co-automatic-la-gi"
+          content="https://www.rovianwatch.com/kien-thuc/may-co-automatic-la-gi"
         />
 
         <link
           rel="canonical"
-          href="https://yourdomain.com/kien-thuc/may-co-automatic-la-gi"
+          href="https://www.rovianwatch.com/kien-thuc/may-co-automatic-la-gi"
         />
       </Helmet>
 
