@@ -1,0 +1,12 @@
+# Allow all crawlers
+User-agent: *
+
+# Allow access to all standard pages
+Allow: /
+
+# Block access to admin and authentication areas
+Disallow: /admin
+Disallow: /auth
+
+# Sitemap location
+Sitemap: https://www.rovianwatch.com/sitemap.xml

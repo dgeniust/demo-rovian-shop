@@ -1,0 +1,22 @@
+{
+  "src/main.jsx": {
+    "file": "main.mjs",
+    "name": "main",
+    "src": "src/main.jsx",
+    "isEntry": true,
+    "assets": [
+      "assets/SRWATCH_SL1611.1302TE-removebg-preview-nZn6yIZr.png",
+      "assets/SRWATCH_SL5010.1302BL-removebg-preview-DwUIzJ6c.png",
+      "assets/SRWATCH_SL5011.9102BL-removebg-preview-CvoSppgX.png",
+      "assets/model1_lbgrid-zp0kMvL2.jpeg",
+      "assets/model2_lbgrid-BUVTA4JQ.jpeg",
+      "assets/model3_lbgrid-BLvDU8bM.jpeg",
+      "assets/prod1_lbgrid-DSku7D_Z.png",
+      "assets/prod2_lbgrid-Ouan20M0.png",
+      "assets/prod3_lbgrid-D652dOvp.png",
+      "assets/final2_Logo-h7M4iHQ6.png",
+      "assets/blackHorizontal_final-i7cajpdB.png",
+      "assets/fb-DuWYw8SO.png"
+    ]
+  }
+}
